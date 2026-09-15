@@ -1,0 +1,4 @@
+:HL["/_next/static/chunks/0zc9vrde2xxkh.css","style"]
+:HL["/_next/static/media/GeistMono_subset-s.p.0u02ug4wyru27.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/Geist_subset-s.p.3a4ipagx0bfv-.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"blog","param":null,"prefetchHints":4160,"slots":{"children":{"name":"slug","param":{"type":"d","key":"czy-ai-zastapi-pracownikow","siblings":["feed.json","feed.xml","kategoria"]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"WE1QtG5e_GYrgcZWbAeHe"}

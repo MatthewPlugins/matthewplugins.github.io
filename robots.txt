@@ -1,0 +1,24 @@
+User-Agent: *
+Allow: /
+
+User-Agent: GPTBot
+User-Agent: OAI-SearchBot
+User-Agent: ChatGPT-User
+User-Agent: ClaudeBot
+User-Agent: Claude-SearchBot
+User-Agent: Claude-User
+User-Agent: PerplexityBot
+User-Agent: Perplexity-User
+User-Agent: Google-Extended
+User-Agent: Applebot-Extended
+User-Agent: Bytespider
+User-Agent: cohere-ai
+Allow: /
+
+User-Agent: CCBot
+User-Agent: omgili
+User-Agent: omgilibot
+User-Agent: Diffbot
+User-Agent: Timpibot
+Disallow: /
+

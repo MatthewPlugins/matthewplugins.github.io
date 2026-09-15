@@ -1,0 +1,144 @@
+# Automatic AI
+
+> Tworzymy rozwiązania AI, automatyzacje, agentów i dedykowane aplikacje, które pomagają firmom oszczędzać czas i skalować procesy.
+
+Zespół z Polski. Budujemy automatyzacje procesów, agentów AI i dedykowane
+oprogramowanie. Serwis jest statyczny, w całości po polsku, i składa się
+z części ofertowej oraz bazy wiedzy liczącej 31 artykułów.
+
+Kontakt i zakres współpracy: https://automaticai.pl/kontakt/
+
+## Usługi
+
+- [AI Automation](https://automaticai.pl/uslugi/ai-automation/): Automatyzujemy powtarzalne procesy i eliminujemy ręczną pracę — od przenoszenia danych po generowanie dokumentów i raportów.
+- [AI Agents](https://automaticai.pl/uslugi/ai-agents/): Tworzymy agentów AI, którzy analizują informacje, podejmują działania i wykonują określone zadania w Twoich narzędziach.
+- [AI Software](https://automaticai.pl/uslugi/ai-software/): Budujemy dedykowane aplikacje, narzędzia i systemy wykorzystujące AI — od MVP po rozwiązania produkcyjne.
+- [Integracje & Workflows](https://automaticai.pl/uslugi/integracje/): Łączymy istniejące narzędzia i systemy w jeden spójny, zautomatyzowany workflow.
+
+## Szkolenia
+
+Kursy wideo i systemy pracy z AI. Sprzedaż rusza razem ze sklepem; do tego
+czasu strona zbiera zapisy przez formularz kontaktowy.
+
+- [Jak poprawnie używać GitHuba](https://automaticai.pl/szkolenia/jak-uzywac-githuba/): GitHub wytłumaczony po ludzku, na prawdziwym projekcie — nie na slajdach. Repozytoria, commity, branche i pull requesty w kolejności, w której naprawdę się ich używa, z miejscami, w których wszyscy się wykładają. Po kursie pracujesz jak zespół, a nie jak archiwum „final_v7”.
+- [Jak poprawnie korzystać z Claude](https://automaticai.pl/szkolenia/jak-korzystac-z-claude/): Nie kolejne nagrania o AI, tylko system pracy: prowadzisz Claude metodą, na plikach i zadaniach Twojej firmy. Uczysz się od praktyka, który wdraża AI w polskich firmach — i wychodzisz z promptami i gotowymi przepisami pracy do użycia tego samego dnia, nie z notatkami.
+
+Katalog: https://automaticai.pl/szkolenia/
+
+## Realizacje
+
+Opisy wdrożeń: problem, rozwiązanie, rezultat.
+
+Dane poglądowe — nie zmierzone wyniki wdrożeń.
+
+- [AI Lead Assistant](https://automaticai.pl/realizacje/ai-lead-assistant/): System AI, który kwalifikuje każdy lead w kilka sekund i oddaje handlowcom czas na sprzedawanie.
+- [Document Intelligence](https://automaticai.pl/realizacje/document-intelligence/): Pipeline AI, który czyta faktury i zlecenia szybciej i dokładniej niż człowiek — a wyjątki oddaje ludziom.
+- [AI Support Assistant](https://automaticai.pl/realizacje/ai-support-assistant/): Asystent AI, który odpowiada klientom sklepu w mniej niż minutę — i wie, kiedy oddać rozmowę człowiekowi.
+
+## Portfolio
+
+Zbudowane projekty — publiczny kod, działająca strona albo rozpisana budowa,
+żeby dało się je ocenić bez pytania nas o zdanie. Katalog: https://automaticai.pl/portfolio/
+
+- [Czarodziejski Dworek — strona przedszkola](https://automaticai.pl/portfolio/czarodziejski-dworek/): Wielostronicowy serwis przedszkola: program, rekrutacja, blog i galeria. Statyczny frontend z dopracowanym SEO i działającymi formularzami zapisów. (Live; https://matthewplugins.github.io/czarodziejski-dworek/, https://github.com/MatthewPlugins/czarodziejski-dworek)
+- [MP Offer Automation Suite](https://automaticai.pl/portfolio/mp-offer-automation-suite/): Zestaw trzech wtyczek WooCommerce prowadzących zapytanie ofertowe od formularza do gotowej oferty: kwalifikacja leada, kalkulacja ceny i PDF dla handlowca. (Live; https://github.com/krzysiek2115op/mp-offer-automation-suite)
+- [Automatic AI — ta strona](https://automaticai.pl/portfolio/automatic-ai/): Strona, którą właśnie przeglądasz: statyczny Next.js z autorskim systemem designu, blogiem technicznym i CI pilnującym wydajności i dostępności. (Live; https://matthewplugins.github.io/)
+- [Sklep zoologiczny — WooCommerce z dwiema wtyczkami](https://automaticai.pl/portfolio/sklep-zoologiczny/): Sklep z karmą i akcesoriami na WooCommerce z dwiema autorskimi wtyczkami: doborem opakowania pod konkretne zwierzę i synchronizacją katalogu z hurtownią. (Live)
+- [Asystent zakupowy do akcesoriów AGD](https://automaticai.pl/portfolio/asystent-zakupowy-agd/): Doradca w rozmowie dla sklepu z akcesoriami AGD: prowadzi klienta od „mam pralkę Bosch” do jednej pasującej części, a zgodność bierze z katalogu. (Live)
+- [Przydział zamówień — rejon, opieka i wolumen](https://automaticai.pl/portfolio/przydzial-zamowien/): Automatyzacja, która segreguje każde zamówienie i wydaje je właściwemu handlowcowi: po opiece nad klientem, progu wolumenu i rejonie — w tej kolejności. (Live)
+- [CRM z agentami AI dla importera z Chin](https://automaticai.pl/portfolio/crm-importer-chiny/): System CRM dla importera z Chin: magazyn wielostanowy od zamówienia po wydanie, koszt wyładowany i agenci pilnujący zdarzeń zakupu, magazynu i sprzedaży. (Live)
+- [Skaner konkurencji — zdjęcie z telefonu, ceny rynku](https://automaticai.pl/portfolio/skaner-konkurencji-moda/): Aplikacja na pulpit dla branży modowej: zdjęcie z telefonu staje się zapytaniem, a wynikiem są oferty konkurencji z cenami, platformami i sprzedawcami. (Live)
+
+## Baza wiedzy
+
+Wszystkie materiały: https://automaticai.pl/blog/
+Kanał RSS (15 najnowszych, pełne treści): https://automaticai.pl/blog/feed.xml
+Kanał JSON (wszystkie 31, zajawki): https://automaticai.pl/blog/feed.json
+
+### AI dla biznesu
+
+Zbiór: https://automaticai.pl/blog/kategoria/ai-dla-biznesu/
+
+- [AI w firmie — od czego naprawdę zacząć?](https://automaticai.pl/blog/ai-w-firmie-od-czego-zaczac/): Nie od wyboru narzędzia i nie od zatrudniania „specjalisty od AI”. Pierwszy krok jest nudniejszy i tańszy: znaleźć jeden proces, który boli najbardziej. Pokazujemy, jak to zrobić w tydzień.
+- [10 procesów, które najczęściej warto zautomatyzować w pierwszej kolejności](https://automaticai.pl/blog/10-procesow-ktore-warto-zautomatyzowac/): Lista sprawdzona w praktyce: dziesięć procesów, które w małych i średnich firmach zwracają się najszybciej — z krótkim opisem, co konkretnie robi automat i od czego zależy opłacalność.
+- [Ile naprawdę kosztuje wdrożenie AI w firmie?](https://automaticai.pl/blog/ile-kosztuje-wdrozenie-ai/): Widełki, składniki kosztów i rzeczy, które dostawcy przemilczają. Bez obietnic „od 99 zł miesięcznie” i bez straszenia — konkretne przedziały dla trzech typowych poziomów wdrożeń.
+- [Czy AI zastąpi pracowników? Uczciwa odpowiedź z perspektywy wdrożeń](https://automaticai.pl/blog/czy-ai-zastapi-pracownikow/): Nie zwalniamy ludzi — zdejmujemy z nich robotę, której nikt nie chce robić. Co naprawdę dzieje się z zespołami po automatyzacji: obserwacje z projektów, nie z nagłówków.
+- [5 sygnałów, że Twój biznes traci czas przez ręczną pracę](https://automaticai.pl/blog/5-sygnalow-ze-firma-traci-czas/): Niektóre koszty nie bolą, bo rozkładają się na drobne. Pięć codziennych sygnałów, że firma płaci „podatek od ręcznej pracy” — i szybki test, ile on u Ciebie wynosi.
+
+### Automatyzacja
+
+Zbiór: https://automaticai.pl/blog/kategoria/automatyzacja/
+
+- [Automatyzacja leadów B2B — jak wygląda cały proces od formularza do CRM](https://automaticai.pl/blog/automatyzacja-leadow-b2b-caly-proces/): Od chwili, gdy ktoś wypełnia formularz, do umówionego spotkania mija u wielu firm kilka dni ręcznej pracy. Rozkładamy ten proces na części i pokazujemy, co automatyzować w jakiej kolejności.
+- [Jak znaleźć proces, który warto zautomatyzować? Audyt w 5 krokach](https://automaticai.pl/blog/jak-znalezc-proces-warty-automatyzacji/): Nie każda żmudna czynność opłaca się automatyzować. Prosty audyt, który robimy z klientami na starcie: pięć kroków od listy czynności do procesu z policzonym potencjałem.
+- [Jak AI może odciążyć dział obsługi klienta — bez wkurzania klientów](https://automaticai.pl/blog/jak-automatyzowac-obsluge-klienta/): Automatyzacja obsługi kojarzy się z botem, który nie rozumie i nie przełącza do człowieka. Da się inaczej: warstwowo, z AI tam, gdzie pomaga, i człowiekiem tam, gdzie jest niezastąpiony.
+- [Czym jest automatyzacja procesów biznesowych — i czym nie jest?](https://automaticai.pl/blog/czym-jest-automatyzacja-procesow/): Automatyzacja to nie roboty i nie zwalnianie ludzi. To zdejmowanie z zespołu pracy, która nie wymaga myślenia — żeby czas szedł tam, gdzie myślenie jest potrzebne. Elementarz na start.
+- [Automatyzacja dokumentów: z PDF-a do systemu bez przepisywania](https://automaticai.pl/blog/automatyzacja-dokumentow-faktury-zlecenia/): Faktury, zlecenia, umowy — dokumenty to najbardziej niedoceniany obszar automatyzacji. Modele AI czytają dziś dowolne układy PDF-ów, a walidacja pilnuje, żeby błąd nie wszedł do ERP.
+
+### Agenci AI
+
+Zbiór: https://automaticai.pl/blog/kategoria/agenci-ai/
+
+- [Agent AI vs chatbot vs automatyzacja — czego naprawdę potrzebujesz?](https://automaticai.pl/blog/agent-ai-vs-chatbot-vs-automatyzacja/): Te trzy pojęcia są używane zamiennie, a oznaczają zupełnie różne rzeczy — o różnych kosztach i różnym ryzyku. Prosty przewodnik, jak dobrać poziom rozwiązania do problemu.
+- [Jak działa agent AI? Pętla, narzędzia i granice — od środka](https://automaticai.pl/blog/jak-dziala-agent-ai/): Rozbieramy agenta na części pierwsze: pętla decyzyjna, wywołania narzędzi, pamięć i mechanizmy bezpieczeństwa. Dla tych, którzy chcą rozumieć, a nie tylko używać.
+- [Agent AI — co to właściwie jest? Wyjaśnienie bez technicznego bełkotu](https://automaticai.pl/blog/agent-ai-co-to-wlasciwie-jest/): Słowo „agent” robi dziś za przyprawę do wszystkiego. Wyjaśniamy, czym agent AI różni się od zwykłego czatu z modelem — na przykładzie, który zna każda firma.
+- [Kiedy firma naprawdę potrzebuje agenta AI? Pięć sygnałów](https://automaticai.pl/blog/kiedy-firma-potrzebuje-agenta-ai/): Agent AI to najdroższy poziom automatyzacji — i czasem jedyny właściwy. Pięć sygnałów, że Twój proces przerósł zwykłe workflow, oraz trzy sytuacje, w których agent to przerost formy.
+- [Jak agent AI może pracować z Twoim CRM?](https://automaticai.pl/blog/jak-agent-ai-moze-pracowac-z-crm/): CRM to naturalne środowisko pracy agenta: dane są ustrukturyzowane, akcje policzalne, a każda zaoszczędzona minuta mnoży się przez cały zespół. Cztery scenariusze od najprostszego.
+
+### Narzędzia
+
+Zbiór: https://automaticai.pl/blog/kategoria/narzedzia/
+
+- [Claude vs ChatGPT — co wybrać do firmy?](https://automaticai.pl/blog/claude-vs-chatgpt-co-wybrac-dla-firmy/): Nie ma jednej odpowiedzi, ale są konkretne kryteria. Porównujemy oba ekosystemy tak, jak wybiera się je do realnej pracy: interfejs dla zespołu, API do automatyzacji, praca na dokumentach i koszty.
+- [Make vs n8n — które narzędzie automatyzacji wybrać?](https://automaticai.pl/blog/make-vs-n8n-ktore-narzedzie-wybrac/): Dwa najpopularniejsze kombajny do automatyzacji, dwie różne filozofie. Porównujemy je tak, jak wybiera się je naprawdę: kosztami przy skali, elastycznością i tym, kto będzie to utrzymywał.
+- [Supabase w projektach AI — baza, auth i wektory w jednym](https://automaticai.pl/blog/supabase-w-projektach-ai/): Dlaczego tak często wybieramy Supabase jako zaplecze aplikacji AI: PostgreSQL z pgvector, autoryzacja, storage i realtime w jednym, bez sklejania pięciu usług.
+- [Czym jest n8n i dla kogo ma sens?](https://automaticai.pl/blog/czym-jest-n8n-i-dla-kogo/): Narzędzie, które łączy Wasze systemy w automatyczne przepływy — z opcją własnego serwera i pełnej kontroli nad danymi. Krótkie wprowadzenie dla osób nietechnicznych.
+
+### Inżynieria
+
+Zbiór: https://automaticai.pl/blog/kategoria/technical/
+
+- [RAG — czym jest i kiedy ma sens?](https://automaticai.pl/blog/rag-czym-jest-i-kiedy-ma-sens/): Model językowy nie zna Twoich dokumentów. RAG to sposób, żeby odpowiadał na ich podstawie — bez trenowania własnego modelu. Wyjaśniamy, jak działa i kiedy się opłaca.
+- [Embeddings — po co są i jak działają w praktyce?](https://automaticai.pl/blog/embeddings-po-co-sa/): Embeddingi zamieniają tekst na liczby, które niosą znaczenie. To one sprawiają, że wyszukiwanie znajduje „urlop” po zapytaniu o „wolne”. Wyjaśniamy bez matematyki — i z jednym wzorem, który warto znać.
+- [MCP — co to jest i dlaczego warto je znać?](https://automaticai.pl/blog/mcp-co-to-jest-i-dlaczego-warto-znac/): Model Context Protocol to otwarty standard łączenia modeli AI z narzędziami i danymi firmy. Zamiast pisać osobną integrację dla każdej pary „model + system”, piszesz jeden serwer MCP.
+- [Function calling — jak model AI wywołuje Twój kod](https://automaticai.pl/blog/function-calling-jak-dziala/): Mechanizm, na którym stoi każdy agent i każda poważna integracja AI: model nie wykonuje kodu — prosi o wywołanie funkcji, a Twój system decyduje i odpowiada. Z przykładem krok po kroku.
+- [Jak zaprojektować workflow AI krok po kroku](https://automaticai.pl/blog/jak-zaprojektowac-workflow-ai/): Dobry workflow AI projektuje się od końca: najpierw definicja rezultatu i wyjątków, potem kroki, na końcu wybór modeli. Szkielet, którego używamy przy każdym wdrożeniu.
+
+### Strategia
+
+Zbiór: https://automaticai.pl/blog/kategoria/strategia/
+
+- [5 błędów podczas wdrażania AI, które widzimy najczęściej](https://automaticai.pl/blog/5-bledow-podczas-wdrazania-ai/): Nie technologia zabija projekty AI — zabijają je decyzje z pierwszych dwóch tygodni. Pięć błędów, które oglądamy regularnie, i proste sposoby, żeby ich nie popełnić.
+- [Jak policzyć ROI z automatyzacji — bez czarów i bez Excela na 40 zakładek](https://automaticai.pl/blog/jak-policzyc-roi-z-automatyzacji/): Prosty model liczenia zwrotu z automatyzacji, którego używamy przy wycenach: koszt procesu, koszt wdrożenia, koszt utrzymania — i trzy pułapki, przez które firmy liczą to źle.
+- [AI proof of concept — jak zacząć bez wielkiego budżetu?](https://automaticai.pl/blog/ai-proof-of-concept-jak-zaczac/): PoC nie służy do „sprawdzenia, czy AI działa” — służy do sprawdzenia, czy działa NA WASZYCH danych i procesach. Jak ustawić czterotygodniowy pilotaż, który kończy się decyzją, a nie prezentacją.
+- [Kupować czy budować? Jak podjąć decyzję o rozwiązaniu AI](https://automaticai.pl/blog/kupowac-czy-budowac-rozwiazania-ai/): Gotowy SaaS, budowa szyta na miarę, a pomiędzy — składanie z klocków. Framework decyzyjny, którego używamy z klientami, plus scenariusze, w których każda z opcji wygrywa.
+
+### Z naszej praktyki
+
+Zbiór: https://automaticai.pl/blog/kategoria/z-praktyki/
+
+- [Case study: jak zautomatyzowaliśmy kwalifikację leadów w firmie B2B](https://automaticai.pl/blog/jak-zautomatyzowalismy-kwalifikacje-leadow/): Od 20 minut ręcznej analizy na każde zgłoszenie do kwalifikacji w 5 minut z uzasadnieniem. Przebieg wdrożenia etap po etapie: analiza, budowa, uruchomienie i to, co poszło nie po naszej myśli.
+- [5 rzeczy, których nauczyliśmy się, budując rozwiązania AI](https://automaticai.pl/blog/czego-nauczylismy-sie-budujac-ai/): Notatki z pola, bez lukru: o danych, które kłamią, użytkownikach, którzy obchodzą systemy, promptach, które nie są programowaniem, i o tym, dlaczego nudne rozwiązania wygrywają.
+- [AI hype vs realny biznes — co faktycznie działa w firmach?](https://automaticai.pl/blog/ai-hype-vs-realny-biznes/): Po kilkunastu wdrożeniach mamy prostą obserwację: to, co działa, jest nudniejsze niż nagłówki, i to, co działa, prawie nigdy nie jest tym, o czym firma pytała na początku. Subiektywnie.
+
+## O zespole
+
+- [O nas](https://automaticai.pl/o-nas/): kim jesteśmy i jak pracujemy.
+- [Proces](https://automaticai.pl/proces/): etapy współpracy od rozpoznania do wdrożenia.
+- [FAQ](https://automaticai.pl/faq/): najczęstsze pytania o koszty, czas i zakres.
+
+### Autorzy bazy wiedzy
+
+Spis: https://automaticai.pl/autor/
+
+- [Krzysztof Leszczyński](https://automaticai.pl/autor/krzysztof/): Automation & Plugins; 11 materiałów w bazie wiedzy.
+- [Konrad Szydłowski](https://automaticai.pl/autor/konrad/): Automation & Integrations; 8 materiałów w bazie wiedzy.
+- [Mariusz Perzyński](https://automaticai.pl/autor/mariusz/): Client Relations & Operations; 7 materiałów w bazie wiedzy.
+- [Mateusz Leszczyński](https://automaticai.pl/autor/mateusz/): Marketing & Brand; 3 materiały w bazie wiedzy.
+
+## Uwagi
+
+- Treści są po polsku i dotyczą rynku polskiego.
+- Ceny podawane w artykułach są widełkami orientacyjnymi, nie ofertą.
+- Mapa strony: https://automaticai.pl/sitemap.xml
+- Zgłaszanie podatności: https://automaticai.pl/.well-known/security.txt
