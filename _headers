@@ -1,0 +1,107 @@
+# Nagłówki bezpieczeństwa dla hostingów, które czytają ten plik
+# (Netlify, Cloudflare Pages). GitHub Pages GO IGNORUJE — nie ma tam
+# żadnego sposobu na własne nagłówki HTTP, więc dopóki podgląd stoi
+# na Pages, ten plik nic nie robi i tak ma być.
+#
+# Dlaczego mimo to leży w repo: cztery pozycje z docs/security-checklist.md
+# są zablokowane wyłącznie na braku hostingu, który potrafi ustawić nagłówki.
+# Kiedy domena automaticai.pl trafi na Netlify, Cloudflare Pages albo własny
+# serwer, ta konfiguracja ma być gotowa, a nie odtwarzana z pamięci.
+#
+# Odpowiedniki dla innych hostingów: docs/naglowki-hostingu.md
+#
+# Czego tu NIE MA i dlaczego:
+#   Content-Security-Policy — jest już wstrzykiwane jako <meta> przez
+#   scripts/wstrzyknij-csp.mjs, z hashem każdego inline skryptu. Powtórzenie
+#   go tutaj rozjechałoby się z hashami przy pierwszym buildzie.
+
+/*
+  # Klikjacking. Tego JEDNEGO nie da się ustawić z <meta> — przeglądarki
+  # ignorują tam frame-ancestors, a X-Frame-Options nigdy nie działał
+  # jako meta. Dopóki strona stoi na Pages, jest bez tej ochrony.
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+
+  # Blokuje zgadywanie typu pliku wbrew nagłówkowi Content-Type.
+  X-Content-Type-Options: nosniff
+
+  # Do innych witryn wychodzi samo pochodzenie, bez ścieżki i parametrów.
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Strona nie używa żadnej z tych rzeczy — wyłączamy je wprost, żeby
+  # ewentualny wstrzyknięty skrypt też nie mógł ich użyć.
+
+  # Wszystkie funkcje przeglądarki, które da się wyłączyć — wyłączone.
+  #
+  # Poprzednia wersja wymieniała sześć: kamerę, mikrofon, geolokalizację,
+  # płatności, USB i FLoC. To pokrywało te najczęściej wymieniane w poradnikach,
+  # a nie te, które ta strona faktycznie może chcieć zablokować.
+  #
+  # Serwis jest statyczny i nie korzysta z ŻADNEJ z tych funkcji. Lista
+  # pozytywna („czego wolno") byłaby więc pusta, a każda nazwa, której tu nie
+  # ma, zostaje dozwolona domyślnie. Dlatego wymieniamy komplet: wyłączenie
+  # czegoś, czego i tak nie używamy, nie kosztuje nic, a zamyka furtkę
+  # wstrzykniętemu skryptowi i osadzonej ramce.
+  #
+  # Nagłówek HTTP NIE MOŻE być zawijany — to musi zostać jedną linią.
+  Permissions-Policy: accelerometer=(), ambient-light-sensor=(), attribution-reporting=(), autoplay=(), bluetooth=(), browsing-topics=(), camera=(), compute-pressure=(), display-capture=(), encrypted-media=(), fullscreen=(), gamepad=(), geolocation=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), interest-cohort=(), local-fonts=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-create=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), storage-access=(), usb=(), window-management=(), xr-spatial-tracking=()
+
+  # HSTS włączyć DOPIERO gdy domena i wszystkie subdomeny na pewno
+  # serwują HTTPS — cofnięcie tego wymaga odczekania max-age u każdego,
+  # kto stronę odwiedził. Zaczynać od krótkiego max-age, bez preload.
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+  # ── Izolacja miedzyzrodlowa ────────────────────────────────────────────
+  # Strona nie osadza niczego z obcych hostow i nie chce byc osadzana.
+  #
+  #   COOP  — okno otwarte z innej witryny nie dostaje uchwytu do naszego
+  #           (ani nasze do jego). Zamyka klase atakow przez `window.opener`
+  #           przy `target="_blank"`.
+  #   CORP  — nasze pliki nie daja sie zaciagnac przez obca witryne jako
+  #           obrazek, skrypt czy font.
+  #   COEP  — celowo `credentialless`, nie `require-corp`: wszystkie zasoby
+  #           sa wlasne, wiec twardszy wariant tez by przeszedl, ale ten nie
+  #           wywroci strony, gdy kiedys dojdzie osadzenie z zewnatrz.
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+  Cross-Origin-Embedder-Policy: credentialless
+
+  # Przegladarka nie rozwiazuje w tle nazw z odnoscikow — mniej sygnalu o tym,
+  # dokad uzytkownik MOZE pojsc, wysylanego zanim gdziekolwiek pojdzie.
+  X-DNS-Prefetch-Control: off
+
+# ── Zasoby z odciskiem tresci w nazwie ───────────────────────────────────
+# Pliki z /_next/static/ maja hash w nazwie, wiec ich tresc nigdy sie nie
+# zmienia — zmienia sie nazwa. Rok w pamieci podrecznej jest tu bezpieczny
+# i oszczedza kazdemu powracajacemu uzytkownikowi ponownego pobrania.
+/_next/static/*
+  # Nazwy tych plików niosą hash treści — zmiana treści zmienia nazwę,
+  # więc rok i `immutable` są bezpieczne i oszczędzają każde kolejne wejście.
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.html
+  # HTML MUSI być sprawdzany przy każdym wejściu.
+  #
+  # Wcześniej reguła istniała wyłącznie dla `_next/static`, więc strony
+  # dostawały domyślne cache'owanie hostingu. Po publikacji część ludzi
+  # dostawała starą stronę przy nowych, niezmiennych zasobach — czyli
+  # najgorszy możliwy stan: świeży JavaScript pod starym HTML-em.
+  #
+  # `must-revalidate` nie znaczy „nie cachuj": przeglądarka trzyma kopię
+  # i pyta warunkowo (ETag). Gdy nic się nie zmieniło, dostaje 304
+  # i nie pobiera treści drugi raz.
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/sitemap.xml
+  # Pliki, po które sięgają wyszukiwarki — godzina wystarczy, żeby nie
+  # serwować im wczorajszego stanu po publikacji.
+  Cache-Control: public, max-age=3600
+
+/robots.txt
+  Cache-Control: public, max-age=3600
+
+/blog/feed.xml
+  Cache-Control: public, max-age=3600
