@@ -1,0 +1,4 @@
+:HL["/_next/static/chunks/0qc18updkpioy.css","style"]
+:HL["/_next/static/media/GeistMono_subset-s.p.3hrb1b_l8qlnp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/Geist_subset-s.p.0wrueigtmvih5.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"autor","param":null,"prefetchHints":4160,"slots":{"children":{"name":"id","param":{"type":"d","key":"mateusz","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"YhUkz99vQKDBObDXgKXUR"}

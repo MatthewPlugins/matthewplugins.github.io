@@ -1,0 +1,22 @@
+# Kanał zgłaszania podatności — RFC 9116.
+#
+# Ten plik istnieje po to, żeby osoba, która znajdzie w serwisie dziurę,
+# NIE musiała zgadywać, gdzie ją zgłosić. Bez niego typową ścieżką jest
+# formularz kontaktowy albo publiczny issue — czyli ujawnienie problemu
+# zanim zdąży powstać poprawka.
+#
+# PRZED PUBLIKACJĄ PRODUKCYJNĄ: adres `hello@automaticai.pl` zacznie odbierać
+# dopiero po kupieniu domeny. Do tego czasu działa wyłącznie ścieżka
+# GitHub Security Advisories poniżej.
+#
+# `Expires` jest wymagane przez RFC i celowo krótkie: plik z nieaktualnym
+# kontaktem jest gorszy niż jego brak, bo kieruje zgłaszającego w martwy
+# adres. Datę pilnuje `scripts/pilnuj-bezpieczenstwo.mjs` — build pada,
+# gdy do wygaśnięcia zostaje mniej niż 30 dni.
+
+Contact: mailto:hello@automaticai.pl
+Contact: https://github.com/MatthewPlugins/automatic-ai/security/advisories/new
+Expires: 2027-08-19T00:00:00.000Z
+Preferred-Languages: pl, en
+Canonical: https://automaticai.pl/.well-known/security.txt
+Policy: https://github.com/MatthewPlugins/automatic-ai/blob/main/SECURITY.md

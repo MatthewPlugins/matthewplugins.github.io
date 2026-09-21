@@ -1,0 +1,1310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Automatic AI Lab — baza wiedzy</title>
+    <link>https://automaticai.pl/blog/</link>
+    <description>Praktyczna wiedza o AI, automatyzacji i technologiach: od pierwszych kroków po techniczne deep dive’y.</description>
+    <language>pl-PL</language>
+    <copyright>© 2026 Automatic AI</copyright>
+    <lastBuildDate>Thu, 10 Sep 2026 09:00:00 GMT</lastBuildDate>
+    <atom:link href="https://automaticai.pl/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>AI w firmie — od czego naprawdę zacząć?</title>
+      <link>https://automaticai.pl/blog/ai-w-firmie-od-czego-zaczac/</link>
+      <guid isPermaLink="true">https://automaticai.pl/blog/ai-w-firmie-od-czego-zaczac/</guid>
+      <description>Nie od wyboru narzędzia i nie od zatrudniania „specjalisty od AI”. Pierwszy krok jest nudniejszy i tańszy: znaleźć jeden proces, który boli najbardziej. Pokazujemy, jak to zrobić w tydzień.</description>
+      <pubDate>Fri, 14 Aug 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Mariusz Perzyński</dc:creator>
+      <category>AI dla biznesu</category>
+      <content:encoded><![CDATA[<h2 id="najczęstszy-błąd-zaczynanie-od-technologii">Najczęstszy błąd: zaczynanie od technologii<a href="#najczęstszy-błąd-zaczynanie-od-technologii" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Najczęstszy błąd: zaczynanie od technologii"><span aria-hidden="true">#</span></a></h2>
+<p>Większość rozmów o AI w firmach zaczyna się od złej strony: „słyszałem
+o ChatGPT, może byśmy coś z tym zrobili”. Potem jest research narzędzi,
+prezentacja dla zarządu, może warsztat. Po trzech miesiącach zostaje z tego
+folder z notatkami i wrażenie, że „AI to jeszcze nie dla nas”.</p>
+<p>Problem nie leży w technologii. Leży w kolejności. <strong>Narzędzie wybiera się na
+końcu — najpierw trzeba wiedzieć, jaki problem ma rozwiązać.</strong></p>
+<h2 id="krok-1-spisz-co-robicie-ręcznie">Krok 1: spisz, co robicie ręcznie<a href="#krok-1-spisz-co-robicie-ręcznie" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Krok 1: spisz, co robicie ręcznie"><span aria-hidden="true">#</span></a></h2>
+<p>Weź kartkę albo arkusz i przez tydzień notuj z zespołem czynności, które:</p>
+<ul>
+<li>powtarzają się co najmniej kilkanaście razy w miesiącu,</li>
+<li>wyglądają za każdym razem prawie tak samo,</li>
+<li>polegają na przenoszeniu, przepisywaniu albo streszczaniu informacji,</li>
+<li>nie wymagają decyzji, tylko wykonania.</li>
+</ul>
+<p>Typowe pozycje z takich list: przepisywanie danych z maili do CRM, ręczne
+tworzenie ofert na bazie szablonu, odpowiadanie na te same pytania klientów,
+składanie raportów z kilku źródeł, kwalifikowanie zgłoszeń. Dłuższą listę
+— <a href="https://automaticai.pl/blog/10-procesow-ktore-warto-zautomatyzowac/">dziesięć procesów, które powtarzają się najczęściej</a>
+— zebraliśmy osobno.</p>
+<aside class="panel my-7 p-5 border-volt/25"><p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb size-4 text-volt" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg><span class="font-mono text-label-sm tracking-label-4 uppercase text-volt">Test jednego zdania</span></p><div class="mt-2.5 text-base leading-relaxed text-steel [&amp;_code]:text-fg [&amp;_strong]:text-fg"><p>Jeśli potrafisz opisać czynność jednym zdaniem w trybie „gdy X, zrób Y” —
+na przykład „gdy przyjdzie zgłoszenie, sprawdź NIP i załóż kartę w CRM” —
+to jest to niemal na pewno kandydat do automatyzacji.</p></div></aside>
+<h2 id="krok-2-policz-ile-ten-proces-kosztuje">Krok 2: policz, ile ten proces kosztuje<a href="#krok-2-policz-ile-ten-proces-kosztuje" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Krok 2: policz, ile ten proces kosztuje"><span aria-hidden="true">#</span></a></h2>
+<p>Bez tej liczby każda rozmowa o AI jest filozofią. Rachunek jest prosty:</p>
+<figure class="panel my-8 p-5 md:p-6"><div class="flex flex-col items-stretch gap-2 md:flex-row md:items-center"><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Ile razy w miesiącu?</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Ile minut za każdym razem?</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Czyja to stawka?</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-volt/40 bg-volt-poswiata-mocna px-3 py-2 text-center text-sm font-medium text-fg">Koszt roczny</div></div></div><figcaption class="prose-measure mt-4 border-t border-line pt-3 text-sm leading-relaxed text-steel">Przykład: 200 zgłoszeń x 15 minut = 50 godzin miesięcznie. Przy 80 zł/h to 48 000 zł rocznie — na jedną czynność.</figcaption></figure>
+<p>Ten rachunek robi dwie rzeczy naraz: pokazuje, czy temat jest wart zachodu,
+i ustawia budżet. Wdrożenie, które kosztuje mniej niż roczny koszt procesu
+i zdejmuje z niego 60–80 procent pracy, broni się samo — bez slajdów
+o „transformacji cyfrowej”. Rzędy wielkości dla trzech typowych poziomów
+wdrożenia rozpisaliśmy w <a href="https://automaticai.pl/blog/ile-kosztuje-wdrozenie-ai/">ile naprawdę kosztuje wdrożenie AI</a>.</p>
+<h2 id="krok-3-wybierz-jeden-proces-na-start">Krok 3: wybierz JEDEN proces na start<a href="#krok-3-wybierz-jeden-proces-na-start" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Krok 3: wybierz JEDEN proces na start"><span aria-hidden="true">#</span></a></h2>
+<p>Nie trzy, nie „obszar sprzedaży”, nie „komunikację w firmie”. Jeden proces,
+najlepiej taki, który:</p>
+<ol>
+<li>ma policzalny koszt (krok 2),</li>
+<li>ma jasny początek i koniec („przychodzi mail” → „jest wpis w CRM”),</li>
+<li>nie dotyka na starcie niczego krytycznego prawnie ani finansowo,</li>
+<li>ma właściciela — osobę, która dziś go wykonuje i będzie umiała ocenić,
+czy automat działa dobrze.</li>
+</ol>
+<p>Pierwszy projekt jest po to, żeby nauczyć organizację pracy z AI na czymś,
+co widać w wynikach. Zaufanie zbudowane na małym procesie otwiera te większe.</p>
+<aside class="my-9 flex flex-col gap-4 rounded-lg border border-volt/25 bg-volt-poswiata p-5 sm:flex-row sm:items-center sm:justify-between md:p-6"><div><p class="text-base font-semibold tracking-tight text-fg md:text-lg">Masz już swój proces-kandydata?</p><p class="mt-1 text-sm leading-relaxed text-steel">Opowiedz nam o nim — bezpłatnie powiemy, czy automatyzacja ma tu sens i ile może realnie zdjąć pracy.</p></div><a class="group inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors duration-200 h-11 px-5 text-sm bg-volt text-void hover:bg-volt-hover disabled:cursor-not-allowed disabled:opacity-60 shrink-0" href="https://automaticai.pl/kontakt/">Porozmawiajmy<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></aside>
+<h2 id="krok-4-dopiero-teraz-technologia">Krok 4: dopiero teraz technologia<a href="#krok-4-dopiero-teraz-technologia" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Krok 4: dopiero teraz technologia"><span aria-hidden="true">#</span></a></h2>
+<p>Gdy wiesz, co automatyzujesz i ile to jest warte, wybór narzędzi robi się
+prosty — i często okazuje się, że „AI” to tylko część rozwiązania:</p>
+<ul>
+<li><strong>powtarzalne przenoszenie danych</strong> załatwia automatyzacja
+(<a href="https://automaticai.pl/blog/czym-jest-n8n-i-dla-kogo/">n8n</a>, Make),
+czasem w ogóle bez modelu językowego,</li>
+<li><strong>rozumienie treści</strong> — maili, dokumentów, zgłoszeń — to praca dla modelu
+(Claude, GPT) wpiętego w ten workflow,</li>
+<li><strong>samodzielne prowadzenie wieloetapowych zadań</strong> to poziom agenta AI —
+i do niego warto dojść, a nie od niego zaczynać.</li>
+</ul>
+<h2 id="czego-unikać-w-pierwszym-projekcie">Czego unikać w pierwszym projekcie<a href="#czego-unikać-w-pierwszym-projekcie" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Czego unikać w pierwszym projekcie"><span aria-hidden="true">#</span></a></h2>
+<ul>
+<li><strong>Wdrażania „AI wszędzie”</strong> — rozmyty zakres to najkrótsza droga do projektu,
+którego nikt nie umie rozliczyć.</li>
+<li><strong>Startowania od chatbota na stronie</strong> — to najbardziej widoczny, ale rzadko
+najbardziej opłacalny pierwszy krok.</li>
+<li><strong>Czekania na „gotowość organizacji”</strong> — gotowość buduje się działającym
+przykładem, nie szkoleniami.</li>
+<li><strong>Projektu bez wskaźnika</strong> — jeśli po miesiącu nie umiesz powiedzieć, ile
+godzin zeszło z zespołu, projekt nie miał miary sukcesu.</li>
+</ul>
+<h2 id="jak-to-wygląda-z-nami">Jak to wygląda z nami<a href="#jak-to-wygląda-z-nami" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Jak to wygląda z nami"><span aria-hidden="true">#</span></a></h2>
+<p>Nasz proces zaczyna się dokładnie od kroków opisanych wyżej — etap rozpoznania
+to wspólne znalezienie procesu i policzenie jego kosztu, zanim padnie
+jakiekolwiek słowo o technologii. Szczegóły znajdziesz na stronie
+<a href="https://automaticai.pl/proces/">naszego procesu</a>, a gdy będziesz gotowy porozmawiać o konkretach —
+<a href="https://automaticai.pl/kontakt/">napisz do nas</a>.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>RAG — czym jest i kiedy ma sens?</title>
+      <link>https://automaticai.pl/blog/rag-czym-jest-i-kiedy-ma-sens/</link>
+      <guid isPermaLink="true">https://automaticai.pl/blog/rag-czym-jest-i-kiedy-ma-sens/</guid>
+      <description>Model językowy nie zna Twoich dokumentów. RAG to sposób, żeby odpowiadał na ich podstawie — bez trenowania własnego modelu. Wyjaśniamy, jak działa i kiedy się opłaca.</description>
+      <pubDate>Fri, 14 Aug 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Krzysztof Leszczyński</dc:creator>
+      <category>Inżynieria</category>
+      <content:encoded><![CDATA[<h2 id="co-to-daje-firmie">Co to daje firmie?<a href="#co-to-daje-firmie" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Co to daje firmie?"><span aria-hidden="true">#</span></a></h2>
+<p>Każdy model językowy — GPT, Claude, Gemini — zna tylko to, na czym był trenowany.
+Nie zna Twojego cennika, procedur reklamacji ani notatek z wdrożeń. Gdy zapytasz
+go o coś z tej wiedzy, zrobi jedną z dwóch rzeczy: odmówi albo zmyśli.</p>
+<p>RAG (Retrieval-Augmented Generation) rozwiązuje ten problem w prosty koncepcyjnie
+sposób: <strong>zanim model odpowie, system wyszukuje w Twoich dokumentach fragmenty
+pasujące do pytania i dokleja je do zapytania</strong>. Model nie musi niczego „wiedzieć”
+— dostaje materiał źródłowy przy każdym pytaniu, tak jak pracownik, któremu
+podsuwasz właściwy segregator.</p>
+<p>W praktyce oznacza to asystenta, który odpowiada na pytania o <strong>Twoje</strong> umowy,
+<strong>Twoją</strong> dokumentację techniczną i <strong>Twoje</strong> zgłoszenia — i potrafi wskazać,
+z którego dokumentu wzięła się odpowiedź.</p>
+<h2 id="jak-to-działa">Jak to działa?<a href="#jak-to-działa" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Jak to działa?"><span aria-hidden="true">#</span></a></h2>
+<p>Cały system składa się z dwóch przepływów: przygotowania wiedzy (raz, potem
+aktualizacje) i odpowiadania na pytania (za każdym razem).</p>
+<figure class="panel my-8 p-5 md:p-6"><div class="flex flex-col items-stretch gap-2 md:flex-row md:items-center"><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Dokumenty</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Podział na fragmenty</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Embeddingi</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-volt/40 bg-volt-poswiata-mocna px-3 py-2 text-center text-sm font-medium text-fg">Baza wektorowa</div></div></div><figcaption class="prose-measure mt-4 border-t border-line pt-3 text-sm leading-relaxed text-steel">Przygotowanie wiedzy — uruchamiane przy każdej zmianie dokumentów.</figcaption></figure>
+<figure class="panel my-8 p-5 md:p-6"><div class="flex flex-col items-stretch gap-2 md:flex-row md:items-center"><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Pytanie</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Wyszukanie fragmentów</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Kontekst + prompt</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Model</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-volt/40 bg-volt-poswiata-mocna px-3 py-2 text-center text-sm font-medium text-fg">Odpowiedź ze źródłami</div></div></div><figcaption class="prose-measure mt-4 border-t border-line pt-3 text-sm leading-relaxed text-steel">Odpowiadanie — dzieje się przy każdym zapytaniu użytkownika.</figcaption></figure>
+<p>Kluczowe pojęcia po kolei:</p>
+<p><strong>Fragmenty (chunki).</strong> Dokumentów nie wrzuca się do bazy w całości. Tnie się je
+na kawałki po kilkaset tokenów — na tyle małe, żeby wyszukiwanie było precyzyjne,
+i na tyle duże, żeby fragment niósł sens bez otoczenia.</p>
+<p><strong><a href="https://automaticai.pl/blog/embeddings-po-co-sa/">Embeddingi</a>.</strong> Każdy fragment jest zamieniany na wektor liczb, który reprezentuje
+jego znaczenie. Teksty o podobnym sensie mają podobne wektory — dzięki temu
+pytanie „ile trwa zwrot towaru” znajdzie fragment „reklamacje rozpatrujemy
+w 14 dni”, mimo że nie dzielą ani jednego słowa.</p>
+<p><strong>Baza wektorowa.</strong> Przechowuje embeddingi i umie błyskawicznie znaleźć wektory
+najbliższe wektorowi pytania. W małych projektach wystarczy rozszerzenie
+<a href="https://automaticai.pl/blog/supabase-w-projektach-ai/">pgvector w PostgreSQL</a>, którego i tak używasz.</p>
+<figure class="my-8"><div class="relative overflow-hidden rounded-lg border border-line"><img alt="Nad ciemnym biurkiem unosi się kartka dokumentu, która rozpada się w prawo na drobne jasne fragmenty; z lewej strony kadru świeci limonkowa lampka." loading="lazy" width="1600" height="900" decoding="async" data-nimg="1" class="w-full" style="color:transparent;background-size:cover;background-position:50% 50%;background-repeat:no-repeat;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 320 200&#x27;%3E%3Cfilter id=&#x27;b&#x27; color-interpolation-filters=&#x27;sRGB&#x27;%3E%3CfeGaussianBlur stdDeviation=&#x27;20&#x27;/%3E%3CfeColorMatrix values=&#x27;1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1&#x27; result=&#x27;s&#x27;/%3E%3CfeFlood x=&#x27;0&#x27; y=&#x27;0&#x27; width=&#x27;100%25&#x27; height=&#x27;100%25&#x27;/%3E%3CfeComposite operator=&#x27;out&#x27; in=&#x27;s&#x27;/%3E%3CfeComposite in2=&#x27;SourceGraphic&#x27;/%3E%3CfeGaussianBlur stdDeviation=&#x27;20&#x27;/%3E%3C/filter%3E%3Cimage width=&#x27;100%25&#x27; height=&#x27;100%25&#x27; x=&#x27;0&#x27; y=&#x27;0&#x27; preserveAspectRatio=&#x27;none&#x27; style=&#x27;filter: url(%23b);&#x27; href=&#x27;data:image/webp;base64,UklGRsoAAABXRUJQVlA4TL0AAAAvBwABAM1VICICHgjACQQAAIDd99CnHgILBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQCAAIDRCtAQAAHgjGEQMAAMD5574AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAW+KBkMMwAAAAnP/9AAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIUukZ8Vucw32XegIPw+3zAPXD/hKl5vv8azaC+FyR0f0FkgwLg11Q//spILiQEA&#x27;/%3E%3C/svg%3E&quot;)" sizes="(min-width: 1024px) 736px, 100vw" srcset="https://automaticai.pl/_next/static/media/proces.1lutwquwdq_he-320.webp 320w, https://automaticai.pl/_next/static/media/proces.1lutwquwdq_he-400.webp 400w, https://automaticai.pl/_next/static/media/proces.1lutwquwdq_he-480.webp 480w, https://automaticai.pl/_next/static/media/proces.1lutwquwdq_he-640.webp 640w, https://automaticai.pl/_next/static/media/proces.1lutwquwdq_he-800.webp 800w, https://automaticai.pl/_next/static/media/proces.1lutwquwdq_he-1200.webp 1200w, https://automaticai.pl/_next/static/media/proces.1lutwquwdq_he-1600.webp 1600w" src="https://automaticai.pl/_next/static/media/proces.1lutwquwdq_he-1600.webp"/><div aria-hidden="true" class="grain absolute inset-0 opacity-[0.05]"></div></div><figcaption class="mt-3 font-mono text-label-sm tracking-label-2 text-steel uppercase">Przebieg RAG, od dokumentow do odpowiedzi ze zrodlami</figcaption></figure>
+<h2 id="jak-to-wygląda-w-kodzie">Jak to wygląda w kodzie?<a href="#jak-to-wygląda-w-kodzie" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Jak to wygląda w kodzie?"><span aria-hidden="true">#</span></a></h2>
+<p>Minimalny szkielet zapytania RAG wygląda tak:</p>
+<figure class="group my-7 overflow-hidden rounded-lg border border-line bg-[#0b0c10]"><figcaption class="flex items-center justify-between border-b border-line px-4 py-2"><span class="font-mono text-label-sm tracking-label-4 text-steel uppercase">ts</span><button type="button" class="inline-flex items-center gap-1.5 rounded px-2 py-1.5 font-mono text-label-sm tracking-label-3 text-steel uppercase transition-colors hover:text-volt"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy size-3.5" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>Kopiuj</button></figcaption><span aria-live="polite" class="sr-only"></span><pre class="overflow-x-auto p-4 text-sm leading-relaxed" style="background-color:#0b0c10;color:#d3d6dd" tabindex="0" data-language="ts" aria-label="Kod: ts"><code><span class="line"><span style="color:#7A808E;font-style:italic">// 1. Embedding pytania — ten sam model co przy indeksowaniu dokumentów</span></span>
+<span class="line"><span style="color:#C8FF6B">const</span><span style="color:#D3D6DD"> queryEmbedding </span><span style="color:#7E828C">=</span><span style="color:#C8FF6B"> await</span><span style="color:#F0F2F5"> embed</span><span style="color:#D3D6DD">(userQuestion)</span><span style="color:#7E828C">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7A808E;font-style:italic">// 2. Wyszukanie najbliższych fragmentów w bazie wektorowej</span></span>
+<span class="line"><span style="color:#C8FF6B">const</span><span style="color:#D3D6DD"> fragments </span><span style="color:#7E828C">=</span><span style="color:#C8FF6B"> await</span><span style="color:#D3D6DD"> db.</span><span style="color:#F0F2F5">query</span><span style="color:#D3D6DD">(</span></span>
+<span class="line"><span style="color:#AECF8B">  `SELECT tresc, zrodlo FROM dokumenty</span></span>
+<span class="line"><span style="color:#AECF8B">   ORDER BY embedding &lt;=&gt; $1</span></span>
+<span class="line"><span style="color:#AECF8B">   LIMIT 5`</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#D3D6DD">  [queryEmbedding]</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#D3D6DD">)</span><span style="color:#7E828C">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7A808E;font-style:italic">// 3. Model dostaje fragmenty jako kontekst — i twarde reguly</span></span>
+<span class="line"><span style="color:#C8FF6B">const</span><span style="color:#D3D6DD"> answer </span><span style="color:#7E828C">=</span><span style="color:#C8FF6B"> await</span><span style="color:#D3D6DD"> llm.</span><span style="color:#F0F2F5">complete</span><span style="color:#D3D6DD">({</span></span>
+<span class="line"><span style="color:#D3D6DD">  system</span><span style="color:#7E828C">:</span></span>
+<span class="line"><span style="color:#AECF8B">    &quot;Odpowiadasz WYLACZNIE na podstawie przekazanych fragmentow. &quot;</span><span style="color:#7E828C"> +</span></span>
+<span class="line"><span style="color:#AECF8B">    &quot;Jesli fragmenty nie zawieraja odpowiedzi, powiedz to wprost. &quot;</span><span style="color:#7E828C"> +</span></span>
+<span class="line"><span style="color:#AECF8B">    &quot;Zawsze wskazuj zrodlo.&quot;</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#D3D6DD">  messages</span><span style="color:#7E828C">:</span><span style="color:#D3D6DD"> [</span></span>
+<span class="line"><span style="color:#D3D6DD">    {</span></span>
+<span class="line"><span style="color:#D3D6DD">      role</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;user&quot;</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#D3D6DD">      content</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> `Fragmenty:\n${</span><span style="color:#D3D6DD">fragments</span><span style="color:#AECF8B">.</span><span style="color:#F0F2F5">map</span><span style="color:#AECF8B">((</span><span style="color:#D3D6DD">f</span><span style="color:#AECF8B">) </span><span style="color:#C8FF6B">=&gt;</span><span style="color:#D3D6DD"> f</span><span style="color:#AECF8B">.</span><span style="color:#D3D6DD">tresc</span><span style="color:#AECF8B">).</span><span style="color:#F0F2F5">join</span><span style="color:#AECF8B">(</span><span style="color:#AECF8B">&quot;\n---\n&quot;</span><span style="color:#AECF8B">)</span><span style="color:#AECF8B">}\n\nPytanie: ${</span><span style="color:#D3D6DD">userQuestion</span><span style="color:#AECF8B">}`</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#D3D6DD">    }</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#D3D6DD">  ]</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#D3D6DD">})</span><span style="color:#7E828C">;</span></span></code></pre></figure>
+<p>Dwie rzeczy w tym kodzie są ważniejsze, niż wyglądają:</p>
+<aside class="panel my-7 p-5 border-volt/25"><p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb size-4 text-volt" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg><span class="font-mono text-label-sm tracking-label-4 uppercase text-volt">Reguła źródeł</span></p><div class="mt-2.5 text-base leading-relaxed text-steel [&amp;_code]:text-fg [&amp;_strong]:text-fg"><p>Instrukcja „odpowiadaj wyłącznie na podstawie fragmentów” plus wymóg cytowania
+źródła to najtańszy mechanizm kontroli jakości w całym systemie. Bez niej RAG
+degeneruje się do zwykłego czatu, który czasem korzysta z dokumentów, a czasem
+zmyśla.</p></div></aside>
+<aside class="panel my-7 p-5 border-[#ffb454]/25"><p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert lucide-alert-triangle size-4 text-warn" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><span class="font-mono text-label-sm tracking-label-4 uppercase text-warn">Uwaga</span></p><div class="mt-2.5 text-base leading-relaxed text-steel [&amp;_code]:text-fg [&amp;_strong]:text-fg"><p>Embedding pytania i embeddingi dokumentów muszą pochodzić z tego samego modelu.
+Zmiana modelu embeddingów oznacza przeliczenie całej bazy — zaplanuj to,
+zanim zaindeksujesz 50 tysięcy dokumentów.</p></div></aside>
+<h2 id="gdzie-projekty-rag-się-wykładają">Gdzie projekty RAG się wykładają?<a href="#gdzie-projekty-rag-się-wykładają" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Gdzie projekty RAG się wykładają?"><span aria-hidden="true">#</span></a></h2>
+<p>Z naszego doświadczenia problemy prawie nigdy nie leżą w modelu językowym:</p>
+<div class="my-7 overflow-x-auto rounded-lg border border-line"><table><thead><tr><th>Problem</th><th>Objaw</th><th>Rozwiązanie</th></tr></thead><tbody><tr><td>Złe cięcie dokumentów</td><td>odpowiedzi „obok tematu”</td><td>fragmenty wg struktury dokumentu, nie po liczbie znaków</td></tr><tr><td>Śmieciowe dane wejściowe</td><td>model cytuje nieaktualny cennik</td><td>pipeline aktualizacji i wersjonowanie źródeł</td></tr><tr><td>Brak metadanych</td><td>nie da się filtrować po dziale czy dacie</td><td>metadane per fragment już na etapie indeksowania</td></tr><tr><td>Zbyt duży kontekst</td><td>wolno i drogo</td><td>mniej fragmentów, lepszy ranking, reranking</td></tr></tbody></table></div>
+<p>To jest powód, dla którego wdrożenie RAG to w 70 procentach praca na danych,
+a w 30 na kodzie. Sama pętla zapytań jest prosta — jakość robi przygotowanie
+wiedzy.</p>
+<aside class="my-9 flex flex-col gap-4 rounded-lg border border-volt/25 bg-volt-poswiata p-5 sm:flex-row sm:items-center sm:justify-between md:p-6"><div><p class="text-base font-semibold tracking-tight text-fg md:text-lg">Macie dokumenty, po których chcecie pytać?</p><p class="mt-1 text-sm leading-relaxed text-steel">Powiemy szczerze, czy RAG ma u Was sens — i od jakiego zakresu zacząć.</p></div><a class="group inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors duration-200 h-11 px-5 text-sm bg-volt text-void hover:bg-volt-hover disabled:cursor-not-allowed disabled:opacity-60 shrink-0" href="https://automaticai.pl/kontakt/">Porozmawiajmy<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></aside>
+<h2 id="kiedy-rag-ma-sens-a-kiedy-nie">Kiedy RAG ma sens, a kiedy nie?<a href="#kiedy-rag-ma-sens-a-kiedy-nie" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Kiedy RAG ma sens, a kiedy nie?"><span aria-hidden="true">#</span></a></h2>
+<p>RAG jest właściwym narzędziem, gdy:</p>
+<ul>
+<li>odpowiedzi mają wynikać z wewnętrznej, zmieniającej się wiedzy (procedury,
+oferty, dokumentacja, baza zgłoszeń),</li>
+<li>potrzebujesz wskazywania źródeł — w firmie odpowiedź bez źródła jest bezwartościowa,</li>
+<li>wiedza zmienia się zbyt często, żeby myśleć o trenowaniu modelu.</li>
+</ul>
+<p>RAG nie jest właściwym narzędziem, gdy:</p>
+<ul>
+<li>pytania dotyczą wiedzy ogólnej — model radzi sobie bez dodatkowej bazy,</li>
+<li>„dokumentów” jest kilkanaście stron — wtedy prościej wkleić całość do kontekstu,</li>
+<li>problemem jest format odpowiedzi, nie wiedza — to rozwiązuje prompt, nie baza wektorowa.</li>
+</ul>
+<p>Najczęstszy zdrowy początek to jeden wąski przypadek: regulaminy i procedury
+dla zespołu obsługi albo baza ofert dla handlowców. Działa, mierzy się efekt,
+dopiero potem rozszerza zakres.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Claude vs ChatGPT — co wybrać do firmy?</title>
+      <link>https://automaticai.pl/blog/claude-vs-chatgpt-co-wybrac-dla-firmy/</link>
+      <guid isPermaLink="true">https://automaticai.pl/blog/claude-vs-chatgpt-co-wybrac-dla-firmy/</guid>
+      <description>Nie ma jednej odpowiedzi, ale są konkretne kryteria. Porównujemy oba ekosystemy tak, jak wybiera się je do realnej pracy: interfejs dla zespołu, API do automatyzacji, praca na dokumentach i koszty.</description>
+      <pubDate>Fri, 14 Aug 2026 09:00:00 GMT</pubDate>
+      <atom:updated>2026-09-10T09:00:00.000Z</atom:updated>
+      <dc:creator>Krzysztof Leszczyński</dc:creator>
+      <category>Narzędzia</category>
+      <content:encoded><![CDATA[<h2 id="najpierw-rozdziel-dwie-decyzje">Najpierw rozdziel dwie decyzje<a href="#najpierw-rozdziel-dwie-decyzje" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Najpierw rozdziel dwie decyzje"><span aria-hidden="true">#</span></a></h2>
+<p>„Claude czy ChatGPT” to w praktyce dwa osobne pytania:</p>
+<ol>
+<li><strong>Czego ma używać zespół w przeglądarce</strong> — do pisania, analiz, researchu.</li>
+<li><strong>Jakie modele mają napędzać Wasze automatyzacje przez API</strong> — tam, gdzie
+model jest niewidocznym silnikiem procesu.</li>
+</ol>
+<p>Odpowiedzi nie muszą być takie same. Firma może pracować w jednym czacie,
+a w automatyzacjach używać modeli obu dostawców — i to jest zupełnie normalna
+architektura.</p>
+<h2 id="czat-dla-zespołu">Czat dla zespołu<a href="#czat-dla-zespołu" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Czat dla zespołu"><span aria-hidden="true">#</span></a></h2>
+<p>Oba narzędzia są dziś dojrzałe: projekty/przestrzenie robocze, praca na
+plikach, wyszukiwanie w internecie, tryby głosowe. Różnice, które realnie
+czuć w codziennej pracy:</p>
+<ul>
+<li><strong>Długie dokumenty.</strong> Claude od lat słynie z bardzo dużego okna kontekstu
+i konsekwentnej pracy na długich umowach, raportach czy dokumentacji —
+to częsty argument w firmach prawniczych i konsultingowych.</li>
+<li><strong>Styl i przewidywalność.</strong> Claude pisze spokojniej i trzyma się poleceń
+formatu; ChatGPT bywa bardziej „kreatywny”, co pomaga w marketingu,
+a przeszkadza w dokumentach.</li>
+<li><strong>Ekosystem.</strong> ChatGPT ma szerszy wachlarz wtyczek, GPT-sów i integracji
+konsumenckich; Claude mocniej rozwija narzędzia dla pracy z kodem
+i danymi firmowymi (w tym standard <a href="https://automaticai.pl/blog/mcp-co-to-jest-i-dlaczego-warto-znac/">MCP</a>,
+który wspiera coraz więcej narzędzi niezależnie od dostawcy).</li>
+</ul>
+<aside class="panel my-7 p-5 border-volt/25"><p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb size-4 text-volt" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg><span class="font-mono text-label-sm tracking-label-4 uppercase text-volt">Test tygodniowy zamiast religii</span></p><div class="mt-2.5 text-base leading-relaxed text-steel [&amp;_code]:text-fg [&amp;_strong]:text-fg"><p>Weź trzy realne zadania z Waszej pracy (np. analiza umowy, odpowiedź na
+reklamację, research konkurencji) i przepuść przez oba narzędzia.
+Tydzień testu daje więcej niż każdy ranking — także dlatego, że wynik
+zależy od TYPU Waszych zadań.</p></div></aside>
+<h2 id="modele-w-api--tu-wybiera-się-per-zadanie">Modele w API — tu wybiera się per zadanie<a href="#modele-w-api--tu-wybiera-się-per-zadanie" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Modele w API — tu wybiera się per zadanie"><span aria-hidden="true">#</span></a></h2>
+<p>W automatyzacjach nie ma „jednego modelu do wszystkiego”. Dobrą praktyką
+jest dobór do zadania:</p>
+<div class="my-7 overflow-x-auto rounded-lg border border-line"><table><thead><tr><th>Zadanie</th><th>Czego szukać</th><th>Typowy wybór</th></tr></thead><tbody><tr><td>klasyfikacja, routing, ekstrakcja pól</td><td>szybkość i cena</td><td>lekkie modele (Haiku, mini)</td></tr><tr><td>analiza dokumentów, odpowiedzi do klienta</td><td>jakość rozumowania, styl</td><td>średnia/wyższa półka (Sonnet, GPT-4-klasa)</td></tr><tr><td>agenci i złożone przepływy</td><td>niezawodne tool calling, długi kontekst</td><td>topowe modele obu dostawców</td></tr></tbody></table></div>
+<p>Z naszej praktyki wdrożeniowej: modele Claude są wyjątkowo mocne w pracy
+na dokumentach i w zadaniach agentowych (tool calling zachowuje się
+przewidywalnie), modele OpenAI mają świetny stosunek możliwości do ceny
+w niższych klasach i bardzo szeroki tooling. Dlatego typowy workflow
+u naszych klientów używa <strong>obu</strong> — każdy tam, gdzie jest najlepszy.</p>
+<h2 id="koszty-licz-zadania-nie-tokeny">Koszty: licz zadania, nie tokeny<a href="#koszty-licz-zadania-nie-tokeny" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Koszty: licz zadania, nie tokeny"><span aria-hidden="true">#</span></a></h2>
+<p>Cenniki za milion tokenów mylą, bo nie uwzględniają jakości. Właściwa
+metryka to <strong>koszt poprawnie wykonanego zadania</strong>: jeśli tańszy model
+wymaga dwóch przebiegów i ręcznych poprawek co piąte zadanie, jest droższy
+od modelu o wyższej cenie jednostkowej. Mierzymy to w pilotażach — 200–500
+realnych przykładów wystarcza, żeby decyzja podjęła się sama.</p>
+<figure class="my-8"><div class="relative overflow-hidden rounded-lg border border-line"><img alt="Cztery przedmioty w rzędzie na ciemnym stole, każdy w własnym kręgu światła: mały ekran, przemysłowe złącze, dokument i metalowy krążek." loading="lazy" width="1600" height="900" decoding="async" data-nimg="1" class="w-full" style="color:transparent;background-size:cover;background-position:50% 50%;background-repeat:no-repeat;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 320 200&#x27;%3E%3Cfilter id=&#x27;b&#x27; color-interpolation-filters=&#x27;sRGB&#x27;%3E%3CfeGaussianBlur stdDeviation=&#x27;20&#x27;/%3E%3CfeColorMatrix values=&#x27;1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1&#x27; result=&#x27;s&#x27;/%3E%3CfeFlood x=&#x27;0&#x27; y=&#x27;0&#x27; width=&#x27;100%25&#x27; height=&#x27;100%25&#x27;/%3E%3CfeComposite operator=&#x27;out&#x27; in=&#x27;s&#x27;/%3E%3CfeComposite in2=&#x27;SourceGraphic&#x27;/%3E%3CfeGaussianBlur stdDeviation=&#x27;20&#x27;/%3E%3C/filter%3E%3Cimage width=&#x27;100%25&#x27; height=&#x27;100%25&#x27; x=&#x27;0&#x27; y=&#x27;0&#x27; preserveAspectRatio=&#x27;none&#x27; style=&#x27;filter: url(%23b);&#x27; href=&#x27;data:image/webp;base64,UklGRtAAAABXRUJQVlA4TMMAAAAvBwABAM1VICICHggACQAAAIDpZ+YBmDEMAAADAIABDAAAAAAAAAAAAAAAAAAADxhgDxOMgRgDAOCBgNQAAAAAnH/2bQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQNJU54EAmwAAAACc/7blnQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUkh5JDN8HAF6ZqiXviGRGti+7p9Yq8RO+XL8UCIrQISJVpVoHlAsrgoV+47ps3tfivbyHAIA&#x27;/%3E%3C/svg%3E&quot;)" sizes="(min-width: 1024px) 736px, 100vw" srcset="https://automaticai.pl/_next/static/media/kryteria.1e7fsaqoxq00q-320.webp 320w, https://automaticai.pl/_next/static/media/kryteria.1e7fsaqoxq00q-400.webp 400w, https://automaticai.pl/_next/static/media/kryteria.1e7fsaqoxq00q-480.webp 480w, https://automaticai.pl/_next/static/media/kryteria.1e7fsaqoxq00q-640.webp 640w, https://automaticai.pl/_next/static/media/kryteria.1e7fsaqoxq00q-800.webp 800w, https://automaticai.pl/_next/static/media/kryteria.1e7fsaqoxq00q-1200.webp 1200w, https://automaticai.pl/_next/static/media/kryteria.1e7fsaqoxq00q-1600.webp 1600w" src="https://automaticai.pl/_next/static/media/kryteria.1e7fsaqoxq00q-1600.webp"/><div aria-hidden="true" class="grain absolute inset-0 opacity-[0.05]"></div></div><figcaption class="mt-3 font-mono text-label-sm tracking-label-2 text-steel uppercase">Cztery kryteria wyboru, zespol, API, dokumenty, koszty</figcaption></figure>
+<h2 id="czego-ten-wybór-nie-powinien-zamykać">Czego ten wybór nie powinien zamykać<a href="#czego-ten-wybór-nie-powinien-zamykać" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Czego ten wybór nie powinien zamykać"><span aria-hidden="true">#</span></a></h2>
+<p>Jedna zasada oszczędza później dużo pracy: <strong>nie wpisujcie dostawcy
+na stałe w kod automatyzacji</strong>. Wywołanie modelu warto trzymać za własną
+warstwą — jedną funkcją, w której siedzi nazwa modelu, klucz i format
+odpowiedzi. Podmiana dostawcy staje się wtedy zmianą w jednym miejscu,
+a nie przeglądem trzydziestu przepływów.</p>
+<p>To nie jest teoria: modele zmieniają się szybciej niż procesy w firmie.
+Wybór podjęty dziś będzie weryfikowany za pół roku — nie dlatego, że był
+zły, tylko dlatego, że pojawi się coś tańszego albo lepszego w tym
+konkretnym zadaniu.</p>
+<h2 id="dwie-rzeczy-ważniejsze-od-wyboru-dostawcy">Dwie rzeczy ważniejsze od wyboru dostawcy<a href="#dwie-rzeczy-ważniejsze-od-wyboru-dostawcy" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Dwie rzeczy ważniejsze od wyboru dostawcy"><span aria-hidden="true">#</span></a></h2>
+<p><strong>Zgodność i miejsce przetwarzania danych.</strong> Zanim porównacie jakość
+odpowiedzi, ustalcie, jakie dane w ogóle wolno wysłać na zewnątrz i czego
+wymaga Wasza polityka. To zawęża listę szybciej niż jakiekolwiek testy —
+i bywa, że rozstrzyga na rzecz wariantu, którego nie było na liście
+(model lokalny do zadań wrażliwych, dostawca chmurowy do reszty).</p>
+<p><strong>Zestaw testowy na Waszych zadaniach.</strong> Dwadzieścia realnych przypadków
+z oczekiwanym wynikiem, przepuszczonych przez oba modele. To jedyne
+porównanie, które dotyczy Was — rankingi ogólne mierzą coś innego niż
+Wasza klasyfikacja zgłoszeń.</p>
+<h2 id="nasza-reguła-na-dziś">Nasza reguła na dziś<a href="#nasza-reguła-na-dziś" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Nasza reguła na dziś"><span aria-hidden="true">#</span></a></h2>
+<ul>
+<li>Zespół nietechniczny, dużo dokumentów po polsku → zacznij od Claude.</li>
+<li>Zespół mocno osadzony w ekosystemie narzędzi konsumenckich → ChatGPT
+będzie naturalniejszy.</li>
+<li>Automatyzacje → nie wybieraj dostawcy, wybieraj model per zadanie
+i zostaw sobie furtkę na podmianę (abstrakcja na warstwie wywołań).</li>
+</ul>
+<aside class="my-9 flex flex-col gap-4 rounded-lg border border-volt/25 bg-volt-poswiata p-5 sm:flex-row sm:items-center sm:justify-between md:p-6"><div><p class="text-base font-semibold tracking-tight text-fg md:text-lg">Nie chcesz testować na ślepo?</p><p class="mt-1 text-sm leading-relaxed text-steel">Zrobimy pilotaż na Waszych zadaniach i pokażemy liczby: jakość, koszt, czas — dla obu ekosystemów.</p></div><a class="group inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors duration-200 h-11 px-5 text-sm bg-volt text-void hover:bg-volt-hover disabled:cursor-not-allowed disabled:opacity-60 shrink-0" href="https://automaticai.pl/kontakt/">Porozmawiajmy<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></aside></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Agent AI vs chatbot vs automatyzacja — czego naprawdę potrzebujesz?</title>
+      <link>https://automaticai.pl/blog/agent-ai-vs-chatbot-vs-automatyzacja/</link>
+      <guid isPermaLink="true">https://automaticai.pl/blog/agent-ai-vs-chatbot-vs-automatyzacja/</guid>
+      <description>Te trzy pojęcia są używane zamiennie, a oznaczają zupełnie różne rzeczy — o różnych kosztach i różnym ryzyku. Prosty przewodnik, jak dobrać poziom rozwiązania do problemu.</description>
+      <pubDate>Fri, 14 Aug 2026 09:00:00 GMT</pubDate>
+      <atom:updated>2026-09-10T09:00:00.000Z</atom:updated>
+      <dc:creator>Krzysztof Leszczyński</dc:creator>
+      <category>Agenci AI</category>
+      <content:encoded><![CDATA[<h2 id="trzy-poziomy-nie-trzy-nazwy-tego-samego">Trzy poziomy, nie trzy nazwy tego samego<a href="#trzy-poziomy-nie-trzy-nazwy-tego-samego" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Trzy poziomy, nie trzy nazwy tego samego"><span aria-hidden="true">#</span></a></h2>
+<p>W rozmowach z klientami te słowa potrafią paść w jednym zdaniu jako synonimy.
+Tymczasem opisują trzy różne poziomy samodzielności systemu — a od poziomu
+samodzielności zależy wszystko: koszt, czas wdrożenia i to, jak bardzo trzeba
+rozwiązanie pilnować.</p>
+<figure class="panel my-8 p-5 md:p-6"><div class="flex flex-col items-stretch gap-2 md:flex-row md:items-center"><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Automatyzacja: wykonuje plan</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Chatbot: prowadzi rozmowę</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-volt/40 bg-volt-poswiata-mocna px-3 py-2 text-center text-sm font-medium text-fg">Agent: sam układa plan</div></div></div><figcaption class="prose-measure mt-4 border-t border-line pt-3 text-sm leading-relaxed text-steel">Od lewej do prawej rośnie autonomia — a razem z nią koszt budowy i nadzoru.</figcaption></figure>
+<h2 id="automatyzacja-zaplanowane-kroki">Automatyzacja: zaplanowane kroki<a href="#automatyzacja-zaplanowane-kroki" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Automatyzacja: zaplanowane kroki"><span aria-hidden="true">#</span></a></h2>
+<p>Automatyzacja to workflow: „gdy stanie się X, wykonaj kroki A, B, C”.
+Przyszła faktura mailem → odczytaj dane → zapisz w systemie → powiadom
+księgowość. Każdy krok jest z góry zaprojektowany.</p>
+<p>Współczesny twist polega na tym, że <strong>pojedynczym krokiem może być model
+językowy</strong> — na przykład „streść zgłoszenie” albo „wyciągnij kwotę i NIP
+z PDF-a”. To wciąż automatyzacja: model wykonuje zadanie, ale nie decyduje
+o przebiegu procesu.</p>
+<ul>
+<li><strong>Kiedy to jest właściwy wybór:</strong> proces jest powtarzalny i przewidywalny.</li>
+<li><strong>Koszt:</strong> najniższy z całej trójki, efekt widać w tygodnie.</li>
+<li><strong>Ryzyko:</strong> niskie — automat robi dokładnie to, co zaprojektowano.</li>
+</ul>
+<h2 id="chatbot-rozmowa-według-scenariusza-lub-wiedzy">Chatbot: rozmowa według scenariusza lub wiedzy<a href="#chatbot-rozmowa-według-scenariusza-lub-wiedzy" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Chatbot: rozmowa według scenariusza lub wiedzy"><span aria-hidden="true">#</span></a></h2>
+<p>Chatbot to interfejs konwersacyjny. Dobry chatbot oparty o model językowy
+i bazę wiedzy firmy (na przykład przez <a href="https://automaticai.pl/blog/rag-czym-jest-i-kiedy-ma-sens/">RAG</a>)
+potrafi odpowiadać na pytania klientów naprawdę sensownie.</p>
+<p>Ale chatbot nadal głównie <strong>odpowiada</strong>. Nie założy sprawy w systemie,
+nie zweryfikuje płatności, nie podejmie decyzji o zwrocie — chyba że
+zaczniemy mu dodawać narzędzia i uprawnienia. A wtedy niepostrzeżenie
+budujemy już agenta.</p>
+<ul>
+<li><strong>Kiedy to jest właściwy wybór:</strong> duży wolumen powtarzalnych pytań,
+odpowiedzi istnieją w wiedzy firmy.</li>
+<li><strong>Koszt:</strong> średni; większość pracy to jakość bazy wiedzy, nie sam czat.</li>
+<li><strong>Ryzyko:</strong> średnie — złe odpowiedzi widzi klient, więc potrzebna kontrola.</li>
+</ul>
+<h2 id="agent-ai-cel-zamiast-planu">Agent AI: cel zamiast planu<a href="#agent-ai-cel-zamiast-planu" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Agent AI: cel zamiast planu"><span aria-hidden="true">#</span></a></h2>
+<p><a href="https://automaticai.pl/blog/agent-ai-co-to-wlasciwie-jest/">Agentowi</a> nie dajemy listy kroków, tylko cel i narzędzia: „obsłuż to
+zgłoszenie reklamacyjne — masz dostęp do zamówień, płatności i polityki
+zwrotów”. Agent sam sprawdza, czego brakuje, sam wywołuje narzędzia
+i sam decyduje, czy sprawę rozwiązać, czy przekazać człowiekowi.</p>
+<p>To jest najpotężniejszy i zarazem najdroższy poziom — nie przez samą
+technologię, ale przez wszystko wokół niej: definiowanie granic, testowanie
+zachowań, monitoring, ścieżki eskalacji. Pisaliśmy o tym szerzej w artykule
+<a href="https://automaticai.pl/blog/jak-dziala-agent-ai/">jak działa agent AI</a>.</p>
+<ul>
+<li><strong>Kiedy to jest właściwy wybór:</strong> proces wymaga decyzji na podstawie
+zmiennych danych, a ścieżek jest zbyt wiele, żeby je wszystkie zaplanować.</li>
+<li><strong>Koszt:</strong> najwyższy; liczy się też koszt nadzoru po wdrożeniu.</li>
+<li><strong>Ryzyko:</strong> realne — autonomia bez granic to ryzyko operacyjne, dlatego
+granice projektuje się na początku, nie po incydencie.</li>
+</ul>
+<h2 id="co-się-dzieje-gdy-poziom-jest-za-wysoki">Co się dzieje, gdy poziom jest za wysoki<a href="#co-się-dzieje-gdy-poziom-jest-za-wysoki" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Co się dzieje, gdy poziom jest za wysoki"><span aria-hidden="true">#</span></a></h2>
+<p>Wybór za wysokiego poziomu rzadko kończy się awarią — kończy się czymś
+gorszym, bo mniej widocznym. System działa, tylko kosztuje wielokrotnie
+więcej, niż powinien, i wymaga nadzoru, którego nikt nie planował.</p>
+<p>Objawy są dość charakterystyczne: agent wykonuje za każdym razem tę samą
+sekwencję kroków (czyli jest to workflow, tylko droższy i wolniejszy),
+albo chatbot obsługuje pytania, na które odpowiedź jest jedną wartością
+z systemu (czyli wystarczyłby ekran samoobsługi). W obu przypadkach
+rozwiązaniem nie jest lepszy prompt, tylko zejście o poziom niżej.</p>
+<h2 id="a-gdy-poziom-jest-za-niski">A gdy poziom jest za niski<a href="#a-gdy-poziom-jest-za-niski" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: A gdy poziom jest za niski"><span aria-hidden="true">#</span></a></h2>
+<p>Objaw jest odwrotny i łatwiejszy do zauważenia, bo boli od razu: reguł
+w przepływie przybywa szybciej niż spraw, które łapią. Co tydzień dochodzi
+kolejny warunek na kolejny przypadek szczególny, a odsetek spraw
+kończących się u człowieka nie spada.</p>
+<p>To jest moment, w którym warto przejść poziom wyżej — nie wcześniej.
+Dobra automatyzacja doprowadzona do granicy swoich możliwości jest zresztą
+najlepszym możliwym punktem startu dla agenta: proces jest już opisany,
+integracje istnieją, a wyjątki są policzone.</p>
+<h2 id="jak-wybrać-jedna-reguła">Jak wybrać? Jedna reguła<a href="#jak-wybrać-jedna-reguła" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Jak wybrać? Jedna reguła"><span aria-hidden="true">#</span></a></h2>
+<p>Policz w procesie miejsca, w których człowiek dziś <strong>podejmuje decyzję</strong>
+(nie: wykonuje czynność — właśnie decyduje).</p>
+<div class="my-7 overflow-x-auto rounded-lg border border-line"><table><thead><tr><th>Decyzji w procesie</th><th>Właściwe rozwiązanie</th></tr></thead><tbody><tr><td>zero — wszystko jest przewidywalne</td><td>automatyzacja</td></tr><tr><td>decyzje sprowadzają się do „co odpowiedzieć”</td><td>chatbot z bazą wiedzy</td></tr><tr><td>decyzje zmieniają przebieg procesu</td><td>agent AI — albo automatyzacja + człowiek w pętli</td></tr></tbody></table></div>
+<p>W praktyce zaczynamy większość wdrożeń od automatyzacji z modelem w środku,
+a autonomię dokładamy tam, gdzie dane pokażą, że się opłaca. Odwrotna
+kolejność — „zbudujmy agenta, bo brzmi poważnie” — kończy się drogim
+systemem, którego nikt nie chce pilnować.</p>
+<aside class="my-9 flex flex-col gap-4 rounded-lg border border-volt/25 bg-volt-poswiata p-5 sm:flex-row sm:items-center sm:justify-between md:p-6"><div><p class="text-base font-semibold tracking-tight text-fg md:text-lg">Nie wiesz, który poziom pasuje do Twojego procesu?</p><p class="mt-1 text-sm leading-relaxed text-steel">Opisz nam go w kilku zdaniach — odpowiemy, co ma sens technicznie i finansowo.</p></div><a class="group inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors duration-200 h-11 px-5 text-sm bg-volt text-void hover:bg-volt-hover disabled:cursor-not-allowed disabled:opacity-60 shrink-0" href="https://automaticai.pl/kontakt/">Porozmawiajmy<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></aside></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Case study: jak zautomatyzowaliśmy kwalifikację leadów w firmie B2B</title>
+      <link>https://automaticai.pl/blog/jak-zautomatyzowalismy-kwalifikacje-leadow/</link>
+      <guid isPermaLink="true">https://automaticai.pl/blog/jak-zautomatyzowalismy-kwalifikacje-leadow/</guid>
+      <description>Od 20 minut ręcznej analizy na każde zgłoszenie do kwalifikacji w 5 minut z uzasadnieniem. Przebieg wdrożenia etap po etapie: analiza, budowa, uruchomienie i to, co poszło nie po naszej myśli.</description>
+      <pubDate>Fri, 14 Aug 2026 09:00:00 GMT</pubDate>
+      <atom:updated>2026-09-10T09:00:00.000Z</atom:updated>
+      <dc:creator>Zespół</dc:creator>
+      <category>Z naszej praktyki</category>
+      <content:encoded><![CDATA[<h2 id="kontekst">Kontekst<a href="#kontekst" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Kontekst"><span aria-hidden="true">#</span></a></h2>
+<p>Scenariusz wdrożenia oparty na naszej realizacji
+<a href="https://automaticai.pl/realizacje/ai-lead-assistant/">AI Lead Assistant</a> — dane liczbowe są
+poglądowe, do czasu publikacji wyników z produkcji (tak samo oznaczamy je
+w sekcji realizacji).</p>
+<p>Punkt wyjścia: firma B2B, około 400 zgłoszeń miesięcznie z formularza,
+maili i LinkedIn. Każde zgłoszenie handlowiec analizował ręcznie —
+średnio 20 minut: przejrzenie treści, sprawdzenie firmy, decyzja „nasz
+klient / nie nasz”, wpis do CRM, odpowiedź. Łącznie ponad 130 godzin
+miesięcznie, a czas pierwszej reakcji potrafił sięgać dwóch dni.</p>
+<h2 id="przebieg">Przebieg<a href="#przebieg" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Przebieg"><span aria-hidden="true">#</span></a></h2>
+<figure class="panel my-8 p-5 md:p-6"><div class="flex flex-col items-stretch gap-2 md:flex-row md:items-center"><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Problem</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Analiza</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Rozwiązanie</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Implementacja</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-volt/40 bg-volt-poswiata-mocna px-3 py-2 text-center text-sm font-medium text-fg">Rezultat</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Wnioski</div></div></div><figcaption class="prose-measure mt-4 border-t border-line pt-3 text-sm leading-relaxed text-steel">Klasyczna struktura naszych wdrożeń — każdy etap ma swój artefakt: mapę procesu, kryteria, workflow, liczby.</figcaption></figure>
+<h3 id="analiza-tydzień-1">Analiza (tydzień 1)<a href="#analiza-tydzień-1" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Analiza (tydzień 1)"><span aria-hidden="true">#</span></a></h3>
+<p>Najtrudniejsza część nie była techniczna. Kryteria kwalifikacji istniały
+wyłącznie w głowach dwóch najbardziej doświadczonych handlowców — i różniły
+się między nimi. Warsztat sprowadził je do listy: profil firmy, sygnały
+dopasowania do oferty, sygnały budżetu, czerwone flagi. Dopiero ta lista
+stała się specyfikacją dla modelu. To nie był wyjątek — spisaliśmy
+<a href="https://automaticai.pl/blog/czego-nauczylismy-sie-budujac-ai/">pięć rzeczy, których nauczyliśmy się, budując rozwiązania AI</a>.</p>
+<h3 id="budowa-tygodnie-2-3">Budowa (tygodnie 2-3)<a href="#budowa-tygodnie-2-3" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Budowa (tygodnie 2-3)"><span aria-hidden="true">#</span></a></h3>
+<p>Architektura jak w naszym przewodniku po
+<a href="https://automaticai.pl/blog/automatyzacja-leadow-b2b-caly-proces/">automatyzacji leadów</a>:
+przechwycenie ze wszystkich źródeł do CRM, wzbogacenie danymi z bazy firm,
+kwalifikacja modelem ze strukturalnym wynikiem (ocena + uzasadnienie +
+pewność), routing według progów, automatyczna pierwsza odpowiedź.</p>
+<h3 id="uruchomienie-i-kalibracja-tygodnie-4-6">Uruchomienie i kalibracja (tygodnie 4-6)<a href="#uruchomienie-i-kalibracja-tygodnie-4-6" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Uruchomienie i kalibracja (tygodnie 4-6)"><span aria-hidden="true">#</span></a></h3>
+<p>Start w trybie „cień”: model kwalifikował równolegle z ludźmi, bez wpływu
+na proces. Porównanie 300 spraw pokazało zgodność z decyzjami seniorów
+na poziomie dziewięciu na dziesięć — ale też <strong>za ostrożny próg pewności</strong>:
+co trzecia sprawa szła do ręcznej weryfikacji, choć model miał rację.
+Dwa tygodnie kalibracji progów na realnych danych zbiły eskalacje do
+kilkunastu procent.</p>
+<h2 id="rezultat-po-trzech-miesiącach">Rezultat po trzech miesiącach<a href="#rezultat-po-trzech-miesiącach" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Rezultat po trzech miesiącach"><span aria-hidden="true">#</span></a></h2>
+<ul>
+<li>czas ręcznej pracy przy leadach: <strong>minus około 70%</strong>,</li>
+<li>pierwsza odpowiedź do klienta: <strong>poniżej 5 minut</strong>, całą dobę,</li>
+<li>każda kwalifikacja z uzasadnieniem — zespół przestał wierzyć „na słowo”,
+bo może sprawdzić tok rozumowania,</li>
+<li>efekt uboczny, którego nikt nie zamawiał: uporządkowane kryteria
+kwalifikacji stały się materiałem onboardingowym dla nowych handlowców.</li>
+</ul>
+<figure class="my-8"><div class="relative overflow-hidden rounded-lg border border-line"><img alt="Na ciemnej ścianie biura dwa poziome paski światła: długi przygaszony srebrny i pod nim wyraźnie krótszy jaskrawy limonkowy." loading="lazy" width="1600" height="900" decoding="async" data-nimg="1" class="w-full" style="color:transparent;background-size:cover;background-position:50% 50%;background-repeat:no-repeat;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 320 200&#x27;%3E%3Cfilter id=&#x27;b&#x27; color-interpolation-filters=&#x27;sRGB&#x27;%3E%3CfeGaussianBlur stdDeviation=&#x27;20&#x27;/%3E%3CfeColorMatrix values=&#x27;1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1&#x27; result=&#x27;s&#x27;/%3E%3CfeFlood x=&#x27;0&#x27; y=&#x27;0&#x27; width=&#x27;100%25&#x27; height=&#x27;100%25&#x27;/%3E%3CfeComposite operator=&#x27;out&#x27; in=&#x27;s&#x27;/%3E%3CfeComposite in2=&#x27;SourceGraphic&#x27;/%3E%3CfeGaussianBlur stdDeviation=&#x27;20&#x27;/%3E%3C/filter%3E%3Cimage width=&#x27;100%25&#x27; height=&#x27;100%25&#x27; x=&#x27;0&#x27; y=&#x27;0&#x27; preserveAspectRatio=&#x27;none&#x27; style=&#x27;filter: url(%23b);&#x27; href=&#x27;data:image/webp;base64,UklGRtoAAABXRUJQVlA4TM4AAAAvBwABAM1VICICHgiACQMAAIAdCQEPQAECgA4AAAAAAAAAAAAAAAAAAAAAAHgAAKAEQCrA/fumBgAA8EBATgAAAADO/z5FEQYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAGFi9B4KuAgEAAHD+bx+ABE4AAgAFAAAAAAAAAAAAAAAAAAAAoAAAAAAADgEAAIAtMjQ/UuQwAFtiAEDV+XEd/yyubT8LoZmjdL2Y98pj6h8SAjmvXc+XYt2xyx6PIIekD/ps+U5pq6PDAA==&#x27;/%3E%3C/svg%3E&quot;)" sizes="(min-width: 1024px) 736px, 100vw" srcset="https://automaticai.pl/_next/static/media/rezultat.1typaef7f3vaa-320.webp 320w, https://automaticai.pl/_next/static/media/rezultat.1typaef7f3vaa-400.webp 400w, https://automaticai.pl/_next/static/media/rezultat.1typaef7f3vaa-480.webp 480w, https://automaticai.pl/_next/static/media/rezultat.1typaef7f3vaa-640.webp 640w, https://automaticai.pl/_next/static/media/rezultat.1typaef7f3vaa-800.webp 800w, https://automaticai.pl/_next/static/media/rezultat.1typaef7f3vaa-1200.webp 1200w, https://automaticai.pl/_next/static/media/rezultat.1typaef7f3vaa-1600.webp 1600w" src="https://automaticai.pl/_next/static/media/rezultat.1typaef7f3vaa-1600.webp"/><div aria-hidden="true" class="grain absolute inset-0 opacity-[0.05]"></div></div><figcaption class="mt-3 font-mono text-label-sm tracking-label-2 text-steel uppercase">Czas kwalifikacji przed wdrozeniem i po nim</figcaption></figure>
+<p>Poniższe trzy obserwacje są z tego projektu, ale żadna nie jest o technologii
+— wszystkie dotyczą tego, jak wiedza o procesie trafia do systemu.</p>
+<h2 id="jak-wyglądała-kalibracja">Jak wyglądała kalibracja<a href="#jak-wyglądała-kalibracja" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Jak wyglądała kalibracja"><span aria-hidden="true">#</span></a></h2>
+<p>To jest ta część, której nie widać w podsumowaniu projektu, a która zajmuje
+najwięcej czasu po uruchomieniu. Rytm był prosty i powtarzalny.</p>
+<p><strong>Codziennie przez pierwszy tydzień</strong> ktoś z zespołu sprzedaży przeglądał
+oceny z poprzedniego dnia i zaznaczał te, z którymi się nie zgadza —
+bez uzasadniania, jedną kolumną. Chodziło o szybkość, nie o dokumentację.</p>
+<p><strong>Raz w tygodniu</strong> siadaliśmy do niezgód. Każda trafiała do jednego z trzech
+koszyków: brakująca reguła (kryterium, którego nie spisaliśmy), zła waga
+(reguła jest, ale liczy się za mocno albo za słabo), albo złe dane
+(model dostał niepełny kontekst z etapu wzbogacenia). Ostatni koszyk
+okazał się najliczniejszy i to była niespodzianka — poprawki szły
+do integracji, nie do promptu.</p>
+<p><strong>Próg pewności</strong> ruszaliśmy dopiero po drugim tygodniu, gdy było widać,
+jak rozkładają się oceny. Wcześniejsze majstrowanie przy nim maskowało
+problemy z regułami: podniesienie progu zmniejsza liczbę pomyłek, ale
+zwiększa liczbę spraw dla człowieka — czyli zamiata problem do kolejki
+zamiast go rozwiązać.</p>
+<h2 id="czego-ten-projekt-nie-rozwiązał">Czego ten projekt nie rozwiązał<a href="#czego-ten-projekt-nie-rozwiązał" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Czego ten projekt nie rozwiązał"><span aria-hidden="true">#</span></a></h2>
+<p>Uczciwie, bo to też jest wynik. Automatyzacja kwalifikacji nie poprawiła
+jakości samych leadów — poprawiła tempo i konsekwencję ich obsługi.
+Zgłoszenia bez potencjału nadal przychodzą w tej samej liczbie; różnica
+polega na tym, że nikt już nie traci na nie czasu.</p>
+<p>Drugie ograniczenie: system jest tak dobry, jak spisane kryteria. Gdy
+zmienia się profil klienta, którego szuka sprzedaż, kryteria trzeba spisać
+od nowa — automat sam tego nie zauważy. Dlatego przegląd niezgód raz na
+kwartał został w procesie na stałe, także po zakończeniu wdrożenia.</p>
+<h2 id="co-poszło-inaczej-niż-zakładaliśmy">Co poszło inaczej, niż zakładaliśmy<a href="#co-poszło-inaczej-niż-zakładaliśmy" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Co poszło inaczej, niż zakładaliśmy"><span aria-hidden="true">#</span></a></h2>
+<p>Trzy rzeczy warte zapisania, bo powtarzają się w kolejnych projektach.</p>
+<p><strong>Kryteria kwalifikacji nie istniały w formie, którą da się zapisać.</strong>
+Handlowcy oceniali zgłoszenia trafnie i szybko, ale na pytanie „po czym
+poznajesz dobry lead” padały odpowiedzi ogólne. Metodą, która zadziałała,
+było odwrócenie kierunku: zamiast pytać o regułę, wzięliśmy pięćdziesiąt
+zamkniętych zgłoszeń i pytaliśmy przy każdym „dlaczego ten był dobry”.
+Reguły wyszły z konkretów, nie z deklaracji.</p>
+<p><strong>Zbyt ostrożny próg pewności kosztował więcej niż błędy.</strong> Pierwsza wersja
+eskalowała do człowieka wszystko, co budziło wątpliwość — z zamiarem
+„lepiej dmuchać na zimne”. Efekt: zespół dostawał niewiele mniej spraw niż
+przed wdrożeniem i szybko przestał ufać, że system cokolwiek zdejmuje.
+Kalibracja polegała na dopuszczeniu kontrolowanego odsetka pomyłek —
+bo pomyłka w kwalifikacji leada jest odwracalna, a brak oszczędności nie.</p>
+<p><strong>Uzasadnienie oceny okazało się ważniejsze od samej oceny.</strong> Wymóg, żeby
+model przy każdej ocenie pisał, na czym ją oparł, wprowadziliśmy dla
+przejrzystości. W praktyce dał coś więcej: zespół mógł się z oceną nie
+zgodzić w konkretnym punkcie, a te niezgody były najlepszym materiałem
+do poprawiania kryteriów. System bez uzasadnień daje tylko „dobrze”
+albo „źle” — i nie ma z czego się uczyć.</p>
+<h2 id="wnioski-które-zabieramy-do-kolejnych-projektów">Wnioski, które zabieramy do kolejnych projektów<a href="#wnioski-które-zabieramy-do-kolejnych-projektów" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Wnioski, które zabieramy do kolejnych projektów"><span aria-hidden="true">#</span></a></h2>
+<ol>
+<li><strong>Spisanie wiedzy eksperckiej to połowa projektu.</strong> Model jest tak dobry,
+jak kryteria, które dostał.</li>
+<li><strong>Tryb „cień” przed produkcją.</strong> Porównanie z decyzjami ludzi na setkach
+spraw daje liczby do kalibracji i buduje zaufanie zespołu.</li>
+<li><strong>Uzasadnienia to nie ozdobnik.</strong> Bez nich każda pomyłka modelu
+podważa system; z nimi — staje się konkretną poprawką kryteriów.</li>
+</ol>
+<aside class="my-9 flex flex-col gap-4 rounded-lg border border-volt/25 bg-volt-poswiata p-5 sm:flex-row sm:items-center sm:justify-between md:p-6"><div><p class="text-base font-semibold tracking-tight text-fg md:text-lg">Macie podobny proces kwalifikacji?</p><p class="mt-1 text-sm leading-relaxed text-steel">Opowiedz nam o swoim wolumenie i kryteriach — powiemy, jakiego efektu można się spodziewać.</p></div><a class="group inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors duration-200 h-11 px-5 text-sm bg-volt text-void hover:bg-volt-hover disabled:cursor-not-allowed disabled:opacity-60 shrink-0" href="https://automaticai.pl/kontakt/">Porozmawiajmy<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></aside></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Make vs n8n — które narzędzie automatyzacji wybrać?</title>
+      <link>https://automaticai.pl/blog/make-vs-n8n-ktore-narzedzie-wybrac/</link>
+      <guid isPermaLink="true">https://automaticai.pl/blog/make-vs-n8n-ktore-narzedzie-wybrac/</guid>
+      <description>Dwa najpopularniejsze kombajny do automatyzacji, dwie różne filozofie. Porównujemy je tak, jak wybiera się je naprawdę: kosztami przy skali, elastycznością i tym, kto będzie to utrzymywał.</description>
+      <pubDate>Fri, 14 Aug 2026 09:00:00 GMT</pubDate>
+      <atom:updated>2026-09-10T09:00:00.000Z</atom:updated>
+      <dc:creator>Konrad Szydłowski</dc:creator>
+      <category>Narzędzia</category>
+      <content:encoded><![CDATA[<h2 id="dwa-różne-charaktery">Dwa różne charaktery<a href="#dwa-różne-charaktery" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Dwa różne charaktery"><span aria-hidden="true">#</span></a></h2>
+<p><strong>Make</strong> (dawniej Integromat) to platforma SaaS: wizualny edytor, ogromna
+biblioteka gotowych połączeń, płatność za wykonane operacje. Filozofia:
+„kliknij i działa”.</p>
+<p><strong>n8n</strong> to narzędzie open source: możesz używać chmury producenta albo
+postawić je na własnym serwerze. Filozofia: „masz pełną kontrolę — i pełną
+odpowiedzialność”.</p>
+<p>Oba zrobią klasykę automatyzacji: formularz → CRM, mail → zadanie,
+sklep → faktura. Różnice zaczynają się tam, gdzie kończy się demo.</p>
+<figure class="my-8"><div class="relative overflow-hidden rounded-lg border border-line"><img alt="Zbliżenie na dwie powierzchnie obok siebie: gładka ciemna tafla szkła z miękkim światłem oraz otwarty moduł z uporządkowanymi kablami i limonkową diodą." loading="lazy" width="1600" height="900" decoding="async" data-nimg="1" class="w-full" style="color:transparent;background-size:cover;background-position:50% 50%;background-repeat:no-repeat;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 320 200&#x27;%3E%3Cfilter id=&#x27;b&#x27; color-interpolation-filters=&#x27;sRGB&#x27;%3E%3CfeGaussianBlur stdDeviation=&#x27;20&#x27;/%3E%3CfeColorMatrix values=&#x27;1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1&#x27; result=&#x27;s&#x27;/%3E%3CfeFlood x=&#x27;0&#x27; y=&#x27;0&#x27; width=&#x27;100%25&#x27; height=&#x27;100%25&#x27;/%3E%3CfeComposite operator=&#x27;out&#x27; in=&#x27;s&#x27;/%3E%3CfeComposite in2=&#x27;SourceGraphic&#x27;/%3E%3CfeGaussianBlur stdDeviation=&#x27;20&#x27;/%3E%3C/filter%3E%3Cimage width=&#x27;100%25&#x27; height=&#x27;100%25&#x27; x=&#x27;0&#x27; y=&#x27;0&#x27; preserveAspectRatio=&#x27;none&#x27; style=&#x27;filter: url(%23b);&#x27; href=&#x27;data:image/webp;base64,UklGRtoAAABXRUJQVlA4TM4AAAAvBwABAM1VICICHgiACQMAAIA026A6PBACAAACAAAQAAAAAAAAAAAAAAAAAAAAAQAAAzD3Q24yAAAAHgi4DQQAAMD5J/kHBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAArOvFAwFbYQAAADj/u4otAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAafsvsucYI9K5lJrgN2OYZ+/6PBRfrvjTL1+y7zTpxRvgB11SWrNmgcSAJvxPzMtV7FG7odoq8tY1RauqAQ==&#x27;/%3E%3C/svg%3E&quot;)" sizes="(min-width: 1024px) 736px, 100vw" srcset="https://automaticai.pl/_next/static/media/filozofie.2pae7p8k02w-p-320.webp 320w, https://automaticai.pl/_next/static/media/filozofie.2pae7p8k02w-p-400.webp 400w, https://automaticai.pl/_next/static/media/filozofie.2pae7p8k02w-p-480.webp 480w, https://automaticai.pl/_next/static/media/filozofie.2pae7p8k02w-p-640.webp 640w, https://automaticai.pl/_next/static/media/filozofie.2pae7p8k02w-p-800.webp 800w, https://automaticai.pl/_next/static/media/filozofie.2pae7p8k02w-p-1200.webp 1200w, https://automaticai.pl/_next/static/media/filozofie.2pae7p8k02w-p-1600.webp 1600w" src="https://automaticai.pl/_next/static/media/filozofie.2pae7p8k02w-p-1600.webp"/><div aria-hidden="true" class="grain absolute inset-0 opacity-[0.05]"></div></div><figcaption class="mt-3 font-mono text-label-sm tracking-label-2 text-steel uppercase">Dwie filozofie automatyzacji, zamknieta prostota i otwarta kontrola</figcaption></figure>
+<h2 id="koszty-nie-cennik-tylko-rachunek-przy-skali">Koszty: nie cennik, tylko rachunek przy skali<a href="#koszty-nie-cennik-tylko-rachunek-przy-skali" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Koszty: nie cennik, tylko rachunek przy skali"><span aria-hidden="true">#</span></a></h2>
+<p>Cenniki obu narzędzi wyglądają niewinnie. Rachunek robi się ciekawy, gdy
+podstawisz swoje wolumeny:</p>
+<div class="my-7 overflow-x-auto rounded-lg border border-line"><table><thead><tr><th>Kryterium</th><th>Make</th><th>n8n</th></tr></thead><tbody><tr><td>model rozliczeń</td><td>za operacje w scenariuszu</td><td>za wykonania workflow (chmura) albo koszt serwera (self-host)</td></tr><tr><td>10 tys. prostych zadań/mies.</td><td>umiarkowany koszt</td><td>porównywalnie albo taniej</td></tr><tr><td>100 tys.+ operacji/mies.</td><td>koszt rośnie liniowo i boleśnie</td><td>self-host: praktycznie płaski koszt infrastruktury</td></tr><tr><td>nieprzewidywalne piki</td><td>drożej w miesiące pikowe</td><td>bez znaczenia przy self-hostingu</td></tr></tbody></table></div>
+<aside class="panel my-7 p-5 border-[#ffb454]/25"><p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert lucide-alert-triangle size-4 text-warn" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><span class="font-mono text-label-sm tracking-label-4 uppercase text-warn">Najczęstsze zaskoczenie</span></p><div class="mt-2.5 text-base leading-relaxed text-steel [&amp;_code]:text-fg [&amp;_strong]:text-fg"><p>W Make każdy krok scenariusza dla każdego rekordu to osobna operacja.
+Pętla po 5 tysiącach wierszy z pięcioma krokami to 25 tysięcy operacji —
+jedna synchronizacja potrafi zjeść miesięczny pakiet.</p></div></aside>
+<h2 id="elastyczność-gotowe-klocki-vs-własny-kod">Elastyczność: gotowe klocki vs własny kod<a href="#elastyczność-gotowe-klocki-vs-własny-kod" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Elastyczność: gotowe klocki vs własny kod"><span aria-hidden="true">#</span></a></h2>
+<p>Make ma więcej gotowych integracji i lepsze „ostatnie 5 procent” przy
+popularnych narzędziach SaaS — jeśli Twój stack to standardowe aplikacje
+biznesowe, przewaga jest odczuwalna.</p>
+<p>n8n odpowiada dwiema rzeczami: węzłem <strong>Code</strong> (pełny JavaScript, gdy klocka
+brakuje) i <strong>HTTP Request</strong> bez sztucznych limitów. W praktyce: w n8n nie
+zdarzyło nam się utknąć — najwyżej trzeba było napisać kilkanaście linii kodu.</p>
+<p>Dla scenariuszy AI różnica jest większa: n8n ma natywne węzły dla modeli
+językowych, pamięci konwersacji i prostych agentów, a społeczność szybko
+dowozi nowe. W Make zrobisz to samo, ale częściej przez surowe wywołania API.</p>
+<h2 id="utrzymanie-kto-się-tym-zajmie">Utrzymanie: kto się tym zajmie?<a href="#utrzymanie-kto-się-tym-zajmie" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Utrzymanie: kto się tym zajmie?"><span aria-hidden="true">#</span></a></h2>
+<p>To pytanie rozstrzyga więcej wyborów niż cennik:</p>
+<ul>
+<li><strong>Make</strong>: aktualizacje, dostępność i bezpieczeństwo są problemem dostawcy.
+Płacisz za święty spokój.</li>
+<li><strong>n8n self-host</strong>: aktualizacje, kopie zapasowe, monitoring i dostęp — Twoje.
+Jeśli nie masz osoby technicznej, potrzebujesz partnera (tak, robimy to
+dla klientów — ale mówimy o tym wprost, a nie drobnym drukiem).</li>
+</ul>
+<aside class="panel my-7 p-5"><p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info size-4 text-steel" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg><span class="font-mono text-label-sm tracking-label-4 uppercase text-steel">Dane i zgodność</span></p><div class="mt-2.5 text-base leading-relaxed text-steel [&amp;_code]:text-fg [&amp;_strong]:text-fg"><p>Self-hosting n8n bywa decydujący tam, gdzie dane nie mogą opuszczać
+infrastruktury firmy — umowy powierzenia, dane medyczne, sektor publiczny.
+Wtedy porównanie kończy się, zanim się zaczęło.</p></div></aside>
+<h2 id="czego-ten-wybór-nie-rozstrzyga">Czego ten wybór NIE rozstrzyga<a href="#czego-ten-wybór-nie-rozstrzyga" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Czego ten wybór NIE rozstrzyga"><span aria-hidden="true">#</span></a></h2>
+<p>Warto powiedzieć wprost: narzędzie odpowiada za mniejszą część powodzenia
+projektu, niż sugeruje ilość dyskusji, które budzi.</p>
+<p>Ani Make, ani n8n nie rozwiąże za Was trzech rzeczy, które decydują
+o tym, czy automatyzacja przetrwa rok: <strong>opisu procesu</strong> (co ma się dziać
+i w jakich przypadkach), <strong>obsługi wyjątków</strong> (co, gdy dane są niepełne)
+i <strong>właściciela</strong> (kto zauważy, że przepływ przestał działać). Te trzy
+elementy wyglądają tak samo w obu narzędziach — i w obu tak samo boli
+ich brak.</p>
+<h2 id="migracja-jak-trudno-zmienić-zdanie">Migracja: jak trudno zmienić zdanie<a href="#migracja-jak-trudno-zmienić-zdanie" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Migracja: jak trudno zmienić zdanie"><span aria-hidden="true">#</span></a></h2>
+<p>Pytanie, które warto zadać przed wyborem, a nie po roku: co, jeśli się
+pomylimy?</p>
+<p>Odpowiedź jest umiarkowanie optymistyczna. Przepływy nie są przenośne
+między narzędziami — trzeba je zbudować od nowa. Przenosi się natomiast
+to, co kosztowało najwięcej: <strong>opis procesu, reguły decyzyjne i mapa
+integracji</strong>. Odtworzenie działającego przepływu w drugim narzędziu to
+zwykle dni, nie tygodnie, o ile ta dokumentacja istnieje.</p>
+<p>Wniosek praktyczny: opisujcie procesy poza narzędziem. Wtedy wybór
+przestaje być decyzją na zawsze i można go podjąć szybciej.</p>
+<h2 id="nasza-reguła-wyboru">Nasza reguła wyboru<a href="#nasza-reguła-wyboru" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Nasza reguła wyboru"><span aria-hidden="true">#</span></a></h2>
+<figure class="panel my-8 p-5 md:p-6"><div class="flex flex-col items-stretch gap-2 md:flex-row md:items-center"><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Mało wolumenu, standardowy stack</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-volt/40 bg-volt-poswiata-mocna px-3 py-2 text-center text-sm font-medium text-fg">Make</div></div></div><figcaption class="prose-measure mt-4 border-t border-line pt-3 text-sm leading-relaxed text-steel">Szybki start, niskie ryzyko, zero utrzymania.</figcaption></figure>
+<figure class="panel my-8 p-5 md:p-6"><div class="flex flex-col items-stretch gap-2 md:flex-row md:items-center"><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Duże wolumeny, scenariusze AI, wrażliwe dane</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-volt/40 bg-volt-poswiata-mocna px-3 py-2 text-center text-sm font-medium text-fg">n8n</div></div></div><figcaption class="prose-measure mt-4 border-t border-line pt-3 text-sm leading-relaxed text-steel">Kontrola kosztów i architektury — pod warunkiem, że ktoś to utrzymuje.</figcaption></figure>
+<p>Jeżeli dopiero zaczynasz i chcesz sprawdzić, <a href="https://automaticai.pl/blog/jak-znalezc-proces-warty-automatyzacji/">czy proces w ogóle wart jest
+automatyzacji</a> — narzędzie jest
+wtórne: oba pozwolą zbudować pilota. Wybór na lata robi się przy skalowaniu,
+i wtedy warto go zrobić świadomie, z liczbami na stole.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Embeddings — po co są i jak działają w praktyce?</title>
+      <link>https://automaticai.pl/blog/embeddings-po-co-sa/</link>
+      <guid isPermaLink="true">https://automaticai.pl/blog/embeddings-po-co-sa/</guid>
+      <description>Embeddingi zamieniają tekst na liczby, które niosą znaczenie. To one sprawiają, że wyszukiwanie znajduje „urlop” po zapytaniu o „wolne”. Wyjaśniamy bez matematyki — i z jednym wzorem, który warto znać.</description>
+      <pubDate>Fri, 14 Aug 2026 09:00:00 GMT</pubDate>
+      <atom:updated>2026-09-10T09:00:00.000Z</atom:updated>
+      <dc:creator>Krzysztof Leszczyński</dc:creator>
+      <category>Inżynieria</category>
+      <content:encoded><![CDATA[<h2 id="problem-komputer-nie-wie-że-wolne-to-urlop">Problem: komputer nie wie, że „wolne” to „urlop”<a href="#problem-komputer-nie-wie-że-wolne-to-urlop" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Problem: komputer nie wie, że „wolne” to „urlop”"><span aria-hidden="true">#</span></a></h2>
+<p>Klasyczne wyszukiwanie dopasowuje słowa. Zapytanie „ile mam wolnego”
+nie znajdzie dokumentu „wymiar urlopu wypoczynkowego”, bo nie dzielą ani
+jednego wyrazu. Ludzie widzą, że to to samo — maszyna potrzebuje sposobu,
+żeby „to samo” policzyć.</p>
+<p>Tym sposobem są embeddingi: <strong>funkcja, która zamienia tekst na wektor
+kilkuset-kilku tysięcy liczb tak, że teksty o podobnym znaczeniu dostają
+podobne wektory</strong>. „Urlop” i „wolne od pracy” lądują blisko siebie;
+„urlop” i „faktura VAT” — daleko.</p>
+<figure class="panel my-8 p-5 md:p-6"><div class="flex flex-col items-stretch gap-2 md:flex-row md:items-center"><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Tekst</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Model embeddingów</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-volt/40 bg-volt-poswiata-mocna px-3 py-2 text-center text-sm font-medium text-fg">Wektor liczb</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Baza wektorowa</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Wyszukiwanie po znaczeniu</div></div></div></figure>
+<h2 id="jak-mierzy-się-bliskość">Jak mierzy się „bliskość”?<a href="#jak-mierzy-się-bliskość" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Jak mierzy się „bliskość”?"><span aria-hidden="true">#</span></a></h2>
+<p>Standardem jest podobieństwo kosinusowe — kąt między wektorami. Wartość 1
+oznacza identyczny kierunek (to samo znaczenie), okolice zera — brak związku.
+W SQL z pgvector wygląda to tak:</p>
+<figure class="group my-7 overflow-hidden rounded-lg border border-line bg-[#0b0c10]"><figcaption class="flex items-center justify-between border-b border-line px-4 py-2"><span class="font-mono text-label-sm tracking-label-4 text-steel uppercase">sql</span><button type="button" class="inline-flex items-center gap-1.5 rounded px-2 py-1.5 font-mono text-label-sm tracking-label-3 text-steel uppercase transition-colors hover:text-volt"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy size-3.5" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>Kopiuj</button></figcaption><span aria-live="polite" class="sr-only"></span><pre class="overflow-x-auto p-4 text-sm leading-relaxed" style="background-color:#0b0c10;color:#d3d6dd" tabindex="0" data-language="sql" aria-label="Kod: sql"><code><span class="line"><span style="color:#7A808E;font-style:italic">-- operator &lt;=&gt; zwraca odleglosc kosinusowa (mniejsza = blizej)</span></span>
+<span class="line"><span style="color:#C8FF6B">select</span><span style="color:#D3D6DD"> tresc</span></span>
+<span class="line"><span style="color:#C8FF6B">from</span><span style="color:#D3D6DD"> dokumenty</span></span>
+<span class="line"><span style="color:#C8FF6B">order by</span><span style="color:#D3D6DD"> embedding </span><span style="color:#7E828C">&lt;=&gt;</span><span style="color:#D3D6DD"> $zapytanie</span></span>
+<span class="line"><span style="color:#C8FF6B">limit</span><span style="color:#E3C696"> 5</span><span style="color:#D3D6DD">;</span></span></code></pre></figure>
+<p>Cała „magia” wyszukiwania semantycznego to dosłownie ta jedna operacja —
+wykonywana błyskawicznie na milionach rekordów dzięki indeksom (HNSW, IVF).</p>
+<h2 id="nie-tylko-rag">Nie tylko RAG<a href="#nie-tylko-rag" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Nie tylko RAG"><span aria-hidden="true">#</span></a></h2>
+<p><a href="https://automaticai.pl/blog/rag-czym-jest-i-kiedy-ma-sens/">RAG</a> rozsławił embeddingi, ale pracują
+one w wielu miejscach:</p>
+<ul>
+<li><strong>deduplikacja</strong> — dwa zgłoszenia o tym samym problemie mają bliskie
+wektory, nawet gdy są napisane innymi słowami,</li>
+<li><strong>routing</strong> — nowe zgłoszenie trafia do kategorii, której przykłady są
+mu najbliższe,</li>
+<li><strong>rekomendacje</strong> — „podobne artykuły” liczone ze znaczenia, nie z tagów,</li>
+<li><strong>wykrywanie anomalii</strong> — wiadomość daleka od wszystkich znanych klastrów
+to sygnał czegoś nowego.</li>
+</ul>
+<h2 id="ile-to-kosztuje-i-ile-waży">Ile to kosztuje i ile waży<a href="#ile-to-kosztuje-i-ile-waży" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Ile to kosztuje i ile waży"><span aria-hidden="true">#</span></a></h2>
+<p>Dwie liczby, które warto oszacować przed wyborem architektury.</p>
+<p><strong>Koszt policzenia wektorów</strong> jest jednorazowy i zwykle mały: modele
+embeddingów są o rząd wielkości tańsze od modeli generujących tekst,
+a fragment dokumentu to kilkaset tokenów. Baza wiedzy licząca kilkanaście
+tysięcy fragmentów kosztuje w przeliczeniu tyle, co jeden dzień pracy
+asystenta na produkcji. Doliczyć trzeba jednak <strong>przeliczenia</strong>: każda
+zmiana modelu albo sposobu cięcia oznacza policzenie wszystkiego od nowa.</p>
+<p><strong>Rozmiar</strong> bywa zaskoczeniem w drugą stronę. Wektor o 1536 wymiarach
+w liczbach zmiennoprzecinkowych to około 6 kB — czyli często więcej niż
+sam fragment tekstu, z którego powstał. Przy milionie fragmentów mówimy
+o kilku gigabajtach samych wektorów, zanim doliczy się indeks. Stąd
+popularność wektorów o mniejszej liczbie wymiarów i kwantyzacji tam,
+gdzie skala zaczyna mieć znaczenie.</p>
+<h2 id="jak-sprawdzić-czy-to-w-ogóle-działa">Jak sprawdzić, czy to w ogóle działa<a href="#jak-sprawdzić-czy-to-w-ogóle-działa" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Jak sprawdzić, czy to w ogóle działa"><span aria-hidden="true">#</span></a></h2>
+<p>Wyszukiwanie semantyczne ma nieprzyjemną właściwość: <strong>zawsze coś zwróci</strong>.
+Nie ma stanu „nie znalazłem” — jest tylko ranking, w którym na pierwszym
+miejscu stoi coś, co może być kompletnie nie na temat.</p>
+<p>Dlatego jedyny sensowny sposób oceny to zestaw pytań z oczekiwanymi
+fragmentami. Trzydzieści realnych zapytań, przy każdym zapisane, który
+fragment jest poprawną odpowiedzią, i dwie liczby: jak często właściwy
+fragment jest w pierwszej piątce oraz jak często jest na pierwszym miejscu.
+Te dwie liczby porównuje się przy każdej zmianie — modelu, cięcia,
+rerankingu. Bez nich „poprawiliśmy wyszukiwanie” znaczy dokładnie tyle,
+co „zmieniliśmy wyszukiwanie”.</p>
+<p>Warto też ustawić <strong>próg odcięcia</strong>: jeśli najlepszy wynik jest dalej niż
+ustalona granica, lepiej odpowiedzieć „nie mam tego w dokumentach” niż
+podać najbliższy przypadkowy fragment.</p>
+<h2 id="trzy-rzeczy-o-które-rozbijają-się-wdrożenia">Trzy rzeczy, o które rozbijają się wdrożenia<a href="#trzy-rzeczy-o-które-rozbijają-się-wdrożenia" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Trzy rzeczy, o które rozbijają się wdrożenia"><span aria-hidden="true">#</span></a></h2>
+<ol>
+<li><strong>Mieszanie modeli.</strong> Wektor z modelu A i wektor z modelu B to dwa różne
+języki — porównywanie ich daje szum. Jeden model na całą bazę; zmiana
+modelu = przeliczenie wszystkiego.</li>
+<li><strong>Embedding całych dokumentów.</strong> Wektor 40-stronicowej umowy uśrednia
+jej sens do mdłej papki. Embedduje się fragmenty — o cięciu pisaliśmy
+przy okazji RAG.</li>
+<li><strong>Ślepa wiara w ranking.</strong> Najbliższy fragment nie zawsze jest właściwy.
+Systemy produkcyjne dokładają reranking albo filtry metadanych — i mierzą
+trafność na realnych zapytaniach, zamiast zakładać, że „wektor wie”.</li>
+</ol>
+<aside class="my-9 flex flex-col gap-4 rounded-lg border border-volt/25 bg-volt-poswiata p-5 sm:flex-row sm:items-center sm:justify-between md:p-6"><div><p class="text-base font-semibold tracking-tight text-fg md:text-lg">Masz dane, które powinny być przeszukiwalne po znaczeniu?</p><p class="mt-1 text-sm leading-relaxed text-steel">Zbudujemy warstwę wyszukiwania semantycznego na Waszych danych — z pomiarem trafności, nie na wyczucie.</p></div><a class="group inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors duration-200 h-11 px-5 text-sm bg-volt text-void hover:bg-volt-hover disabled:cursor-not-allowed disabled:opacity-60 shrink-0" href="https://automaticai.pl/kontakt/">Porozmawiajmy<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></aside></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>MCP — co to jest i dlaczego warto je znać?</title>
+      <link>https://automaticai.pl/blog/mcp-co-to-jest-i-dlaczego-warto-znac/</link>
+      <guid isPermaLink="true">https://automaticai.pl/blog/mcp-co-to-jest-i-dlaczego-warto-znac/</guid>
+      <description>Model Context Protocol to otwarty standard łączenia modeli AI z narzędziami i danymi firmy. Zamiast pisać osobną integrację dla każdej pary „model + system”, piszesz jeden serwer MCP.</description>
+      <pubDate>Fri, 14 Aug 2026 09:00:00 GMT</pubDate>
+      <atom:updated>2026-09-10T09:00:00.000Z</atom:updated>
+      <dc:creator>Krzysztof Leszczyński</dc:creator>
+      <category>Inżynieria</category>
+      <content:encoded><![CDATA[<h2 id="problem-który-mcp-rozwiązuje">Problem, który MCP rozwiązuje<a href="#problem-który-mcp-rozwiązuje" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Problem, który MCP rozwiązuje"><span aria-hidden="true">#</span></a></h2>
+<p>Każdy, kto łączył model językowy z systemami firmy, zna ten schemat: dla
+każdej integracji piszesz definicje narzędzi, warstwę wywołań, obsługę błędów
+i autoryzację. Potem chcesz użyć tych samych integracji w innym miejscu —
+w innym asystencie, innym produkcie — i piszesz to samo jeszcze raz.</p>
+<p><strong>MCP (Model Context Protocol)</strong> to otwarty standard, który tę pracę
+normalizuje. Integrację piszesz raz — jako <strong>serwer MCP</strong> — a korzysta z niej
+każdy <strong>klient MCP</strong>: aplikacja czatowa, IDE, własny agent, narzędzie
+wewnętrzne.</p>
+<figure class="panel my-8 p-5 md:p-6"><div class="flex flex-col items-stretch gap-2 md:flex-row md:items-center"><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Klient MCP (czat, agent, IDE)</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Protokół MCP</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-volt/40 bg-volt-poswiata-mocna px-3 py-2 text-center text-sm font-medium text-fg">Serwer MCP</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">CRM / baza / API firmy</div></div></div><figcaption class="prose-measure mt-4 border-t border-line pt-3 text-sm leading-relaxed text-steel">Jeden serwer MCP obsługuje wielu klientów — zamiast osobnej integracji dla każdej pary.</figcaption></figure>
+<h2 id="co-wystawia-serwer-mcp">Co wystawia serwer MCP?<a href="#co-wystawia-serwer-mcp" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Co wystawia serwer MCP?"><span aria-hidden="true">#</span></a></h2>
+<p>Serwer deklaruje trzy rodzaje możliwości, a klient (i model) odkrywają je
+w trakcie połączenia:</p>
+<ul>
+<li><strong>Tools</strong> — akcje, które model może wywołać: „utwórz zadanie”,
+„wyszukaj klienta”, „wyślij ofertę”.</li>
+<li><strong>Resources</strong> — dane do czytania: dokumenty, rekordy, pliki konfiguracyjne.</li>
+<li><strong>Prompts</strong> — gotowe szablony interakcji, które użytkownik może uruchomić.</li>
+</ul>
+<p>Kluczowe słowo to <strong>odkrywają</strong>: model nie musi być wcześniej uczony Twojego
+API. Dostaje listę narzędzi z opisami i schematami wejścia — i na tej
+podstawie decyduje, czego użyć.</p>
+<h2 id="jak-wygląda-definicja-narzędzia">Jak wygląda definicja narzędzia?<a href="#jak-wygląda-definicja-narzędzia" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Jak wygląda definicja narzędzia?"><span aria-hidden="true">#</span></a></h2>
+<p>Minimalny serwer MCP w TypeScript (SDK oficjalne) sprowadza się do zadeklarowania
+narzędzia i jego logiki:</p>
+<figure class="group my-7 overflow-hidden rounded-lg border border-line bg-[#0b0c10]"><figcaption class="flex items-center justify-between border-b border-line px-4 py-2"><span class="font-mono text-label-sm tracking-label-4 text-steel uppercase">ts</span><button type="button" class="inline-flex items-center gap-1.5 rounded px-2 py-1.5 font-mono text-label-sm tracking-label-3 text-steel uppercase transition-colors hover:text-volt"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy size-3.5" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>Kopiuj</button></figcaption><span aria-live="polite" class="sr-only"></span><pre class="overflow-x-auto p-4 text-sm leading-relaxed" style="background-color:#0b0c10;color:#d3d6dd" tabindex="0" data-language="ts" aria-label="Kod: ts"><code><span class="line"><span style="color:#C8FF6B">import</span><span style="color:#D3D6DD"> { McpServer } </span><span style="color:#C8FF6B">from</span><span style="color:#AECF8B"> &quot;@modelcontextprotocol/sdk/server/mcp.js&quot;</span><span style="color:#7E828C">;</span></span>
+<span class="line"><span style="color:#C8FF6B">import</span><span style="color:#D3D6DD"> { z } </span><span style="color:#C8FF6B">from</span><span style="color:#AECF8B"> &quot;zod&quot;</span><span style="color:#7E828C">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C8FF6B">const</span><span style="color:#D3D6DD"> server </span><span style="color:#7E828C">=</span><span style="color:#C8FF6B"> new</span><span style="color:#F0F2F5"> McpServer</span><span style="color:#D3D6DD">({ name</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;firmowy-crm&quot;</span><span style="color:#7E828C">,</span><span style="color:#D3D6DD"> version</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;1.0.0&quot;</span><span style="color:#D3D6DD"> })</span><span style="color:#7E828C">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D3D6DD">server.</span><span style="color:#F0F2F5">tool</span><span style="color:#D3D6DD">(</span></span>
+<span class="line"><span style="color:#AECF8B">  &quot;znajdz_klienta&quot;</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#AECF8B">  &quot;Wyszukuje klienta w CRM po nazwie lub NIP&quot;</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#D3D6DD">  { zapytanie</span><span style="color:#7E828C">:</span><span style="color:#D3D6DD"> z.</span><span style="color:#F0F2F5">string</span><span style="color:#D3D6DD">().</span><span style="color:#F0F2F5">describe</span><span style="color:#D3D6DD">(</span><span style="color:#AECF8B">&quot;nazwa firmy albo NIP&quot;</span><span style="color:#D3D6DD">) }</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#C8FF6B">  async</span><span style="color:#D3D6DD"> ({ zapytanie }) </span><span style="color:#C8FF6B">=&gt;</span><span style="color:#D3D6DD"> {</span></span>
+<span class="line"><span style="color:#C8FF6B">    const</span><span style="color:#D3D6DD"> wynik </span><span style="color:#7E828C">=</span><span style="color:#C8FF6B"> await</span><span style="color:#D3D6DD"> crm.</span><span style="color:#F0F2F5">szukaj</span><span style="color:#D3D6DD">(zapytanie)</span><span style="color:#7E828C">;</span></span>
+<span class="line"><span style="color:#C8FF6B">    return</span><span style="color:#D3D6DD"> {</span></span>
+<span class="line"><span style="color:#D3D6DD">      content</span><span style="color:#7E828C">:</span><span style="color:#D3D6DD"> [{ type</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;text&quot;</span><span style="color:#7E828C">,</span><span style="color:#D3D6DD"> text</span><span style="color:#7E828C">:</span><span style="color:#D3D6DD"> JSON.</span><span style="color:#F0F2F5">stringify</span><span style="color:#D3D6DD">(wynik) }]</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#D3D6DD">    }</span><span style="color:#7E828C">;</span></span>
+<span class="line"><span style="color:#D3D6DD">  }</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#D3D6DD">)</span><span style="color:#7E828C">;</span></span></code></pre></figure>
+<p>Z perspektywy modelu to narzędzie wygląda identycznie jak każde inne —
+niezależnie od tego, czy pod spodem jest Twój CRM, PostgreSQL czy
+zewnętrzne API.</p>
+<aside class="panel my-7 p-5 border-volt/25"><p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb size-4 text-volt" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg><span class="font-mono text-label-sm tracking-label-4 uppercase text-volt">Opisy to połowa jakości</span></p><div class="mt-2.5 text-base leading-relaxed text-steel [&amp;_code]:text-fg [&amp;_strong]:text-fg"><p>Model wybiera narzędzia na podstawie ich opisów. Opis „wyszukuje klienta
+w CRM po nazwie lub NIP” działa; opis „handler klienta” — nie. Traktuj
+opisy narzędzi jak dokumentację dla nowego pracownika.</p></div></aside>
+<h2 id="co-z-bezpieczeństwem">Co z bezpieczeństwem?<a href="#co-z-bezpieczeństwem" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Co z bezpieczeństwem?"><span aria-hidden="true">#</span></a></h2>
+<p>MCP przenosi kontrolę tam, gdzie powinna być: <strong>na serwer</strong>. To serwer
+decyduje, jakie narzędzia wystawia, z jakimi uprawnieniami działa i co
+loguje. Dobre praktyki, które stosujemy we wdrożeniach:</p>
+<ol>
+<li>serwer dostaje konto serwisowe o minimalnych uprawnieniach — nigdy
+dostęp administratora,</li>
+<li>operacje zapisu wymagają osobnych narzędzi (łatwiej je wyłączyć albo
+obłożyć potwierdzeniem),</li>
+<li>każde wywołanie trafia do logu z pełnym wejściem i wyjściem — bez tego
+nie ma mowy o audycie,</li>
+<li>narzędzia „niebezpieczne” (kasowanie, wysyłka na zewnątrz) przechodzą
+przez człowieka w pętli.</li>
+</ol>
+<h2 id="czego-mcp-nie-załatwia">Czego MCP nie załatwia<a href="#czego-mcp-nie-załatwia" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Czego MCP nie załatwia"><span aria-hidden="true">#</span></a></h2>
+<p>Standard opisuje, <strong>jak</strong> narzędzia są ogłaszane i wywoływane. Nie mówi nic
+o tym, co się dzieje wokół — a to jest większość pracy przy wdrożeniu:</p>
+<ul>
+<li><strong>uprawnienia</strong> — kto może wywołać które narzędzie i z jakim zakresem
+danych. Serwer musi to rozstrzygnąć sam, na podstawie tożsamości
+wywołującego;</li>
+<li><strong>limity</strong> — liczba wywołań, koszt, tempo. Bez nich pierwsza pętla
+agenta na nietypowej sprawie odbije się na rachunku;</li>
+<li><strong>audyt</strong> — kto, co, kiedy i z jakim skutkiem. To wymóg, który pojawia się
+natychmiast, gdy narzędzia zaczynają zapisywać, a nie tylko czytać;</li>
+<li><strong>jakość danych</strong> — narzędzie zwracające niekompletny rekord będzie
+źródłem błędnych decyzji niezależnie od protokołu.</li>
+</ul>
+<p>Innymi słowy: MCP zdejmuje pracę integracyjną, nie projektową. To i tak
+dużo — ale warto wiedzieć, czego się po nim nie spodziewać.</p>
+<h2 id="jak-wygląda-rozsądny-pierwszy-serwer">Jak wygląda rozsądny pierwszy serwer<a href="#jak-wygląda-rozsądny-pierwszy-serwer" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Jak wygląda rozsądny pierwszy serwer"><span aria-hidden="true">#</span></a></h2>
+<p>Nie „wystawmy CRM przez MCP”, tylko trzy–pięć narzędzi obsługujących jeden
+konkretny scenariusz. Najlepiej <strong>wyłącznie odczyt</strong>: wyszukanie klienta,
+pobranie historii, sprawdzenie statusu.</p>
+<p>Powód jest praktyczny. Odczyt pozwala przejść całą drogę — opisy narzędzi,
+uwierzytelnienie, limity, logowanie, testy z realnymi pytaniami — przy
+ryzyku ograniczonym do wycieku danych do złego odbiorcy, które i tak trzeba
+rozwiązać. Zapis dokłada do tego skutki nieodwracalne i lepiej dokładać go
+wtedy, gdy reszta jest już sprawdzona.</p>
+<p>Dopiero drugi serwer warto budować z myślą o wielu klientach naraz —
+pierwszy ma nauczyć zespół, gdzie ten protokół pomaga, a gdzie tylko dokłada
+warstwę.</p>
+<h2 id="kiedy-warto-postawić-własny-serwer-mcp">Kiedy warto postawić własny serwer MCP?<a href="#kiedy-warto-postawić-własny-serwer-mcp" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Kiedy warto postawić własny serwer MCP?"><span aria-hidden="true">#</span></a></h2>
+<ul>
+<li>Gdy te same dane firmowe mają zasilać więcej niż jedno miejsce z AI —
+czat zespołu, agenta obsługi, narzędzia wewnętrzne.</li>
+<li>Gdy chcesz odseparować logikę integracji od logiki agenta — serwer MCP
+rozwija się niezależnie i testuje jak zwykły backend.</li>
+<li>Gdy planujesz <a href="https://automaticai.pl/blog/jak-dziala-agent-ai/">agentów AI</a> na poważnie —
+MCP porządkuje ich świat narzędzi od pierwszego dnia.</li>
+</ul>
+<p>Jeśli natomiast masz jeden workflow i jedną integrację, zwykłe function
+calling w zupełności wystarczy — protokół dodaje wartość wraz ze skalą,
+nie zamiast niej.</p>
+<aside class="my-9 flex flex-col gap-4 rounded-lg border border-volt/25 bg-volt-poswiata p-5 sm:flex-row sm:items-center sm:justify-between md:p-6"><div><p class="text-base font-semibold tracking-tight text-fg md:text-lg">Chcesz podpiąć systemy firmy pod AI w jednym standardzie?</p><p class="mt-1 text-sm leading-relaxed text-steel">Projektujemy i utrzymujemy serwery MCP — od CRM po wewnętrzne bazy wiedzy.</p></div><a class="group inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors duration-200 h-11 px-5 text-sm bg-volt text-void hover:bg-volt-hover disabled:cursor-not-allowed disabled:opacity-60 shrink-0" href="https://automaticai.pl/kontakt/">Porozmawiajmy<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></aside></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>10 procesów, które najczęściej warto zautomatyzować w pierwszej kolejności</title>
+      <link>https://automaticai.pl/blog/10-procesow-ktore-warto-zautomatyzowac/</link>
+      <guid isPermaLink="true">https://automaticai.pl/blog/10-procesow-ktore-warto-zautomatyzowac/</guid>
+      <description>Lista sprawdzona w praktyce: dziesięć procesów, które w małych i średnich firmach zwracają się najszybciej — z krótkim opisem, co konkretnie robi automat i od czego zależy opłacalność.</description>
+      <pubDate>Fri, 14 Aug 2026 09:00:00 GMT</pubDate>
+      <atom:updated>2026-09-10T09:00:00.000Z</atom:updated>
+      <dc:creator>Konrad Szydłowski</dc:creator>
+      <category>AI dla biznesu</category>
+      <content:encoded><![CDATA[<h2 id="jak-czytać-tę-listę">Jak czytać tę listę<a href="#jak-czytać-tę-listę" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Jak czytać tę listę"><span aria-hidden="true">#</span></a></h2>
+<p>To nie jest ranking „od najlepszego”. Kolejność jest orientacyjna — właściwy
+wybór zależy od tego, <strong>który proces kosztuje najwięcej u Ciebie</strong>. Jak to
+policzyć, opisaliśmy w <a href="https://automaticai.pl/blog/jak-znalezc-proces-warty-automatyzacji/">audycie procesów</a>.</p>
+<h2 id="lista">Lista<a href="#lista" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Lista"><span aria-hidden="true">#</span></a></h2>
+<p><strong>1. Obsługa leadów.</strong> Zgłoszenia z formularzy i maili trafiają same do CRM,
+dostają kwalifikację i pierwszą odpowiedź w minuty. Najczęstszy pierwszy
+projekt w B2B — <a href="https://automaticai.pl/blog/automatyzacja-leadow-b2b-caly-proces/">rozkładamy go na części tutaj</a>.</p>
+<p><strong>2. Faktury kosztowe.</strong> Odczyt PDF-ów, walidacja, zapis do systemu
+księgowego. Zwrot niemal natychmiastowy przy kilkuset dokumentach
+miesięcznie — <a href="https://automaticai.pl/blog/automatyzacja-dokumentow-faktury-zlecenia/">szczegóły</a>.</p>
+<p><strong>3. Raporty cykliczne.</strong> Dane z kilku systemów składają się same w raport
+o stałej porze. Bez AI, czysta integracja — a potrafi oddać komuś pół dnia
+w tygodniu.</p>
+<p><strong>4. Powtarzalne pytania klientów.</strong> Status zamówienia, zwroty, dostępność —
+warstwa AI z bazą wiedzy domyka większość takich spraw
+(<a href="https://automaticai.pl/blog/jak-automatyzowac-obsluge-klienta/">jak to poukładać</a>).</p>
+<p><strong>5. Onboarding klienta lub pracownika.</strong> Sekwencja maili, dostępów, zadań
+i dokumentów odpalana jednym zdarzeniem. Nuda? Tak. Oszczędność? Duża.</p>
+<p><strong>6. Oferty i dokumenty sprzedażowe.</strong> Szkic oferty z danych CRM i szablonu,
+gotowy do korekty przez handlowca. Skraca cykl z dni do godzin.</p>
+<p><strong>7. Windykacja miękka.</strong> Przypomnienia o płatnościach według harmonogramu,
+eskalacja do człowieka przy braku reakcji. Mało efektowne, bardzo skuteczne.</p>
+<p><strong>8. Synchronizacja danych między systemami.</strong> Sklep — magazyn — księgowość —
+CRM. Każde ręczne „przeklikiwanie” między nimi to koszt i źródło błędów.</p>
+<p><strong>9. Rekrutacja: pierwsza selekcja.</strong> Spływające CV opisane i posortowane
+według jawnych kryteriów, z uzasadnieniem — decyzję podejmuje człowiek.</p>
+<p><strong>10. Monitoring i alerty.</strong> Automat pilnuje anomalii (spadek zamówień,
+wzrost reklamacji, kończący się stan) i melduje, zanim zrobi się problem.</p>
+<h2 id="jak-wybrać-z-tej-listy">Jak wybrać z tej listy<a href="#jak-wybrać-z-tej-listy" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Jak wybrać z tej listy"><span aria-hidden="true">#</span></a></h2>
+<p>Trzy liczby wystarczą, żeby uszeregować kandydatów bez dyskusji o tym,
+co komu bardziej przeszkadza:</p>
+<ul>
+<li><strong>Wolumen</strong> — ile razy w miesiącu. Poniżej kilkudziesięciu powtórzeń
+automatyzacja rzadko się zwraca, niezależnie od tego, jak bardzo dana
+czynność irytuje.</li>
+<li><strong>Czas jednostkowy</strong> — ile minut zajmuje raz, razem z poprawkami
+i przełączaniem się między systemami.</li>
+<li><strong>Stabilność</strong> — czy proces wyglądał tak samo pół roku temu. Proces,
+który zmienia się co kwartał, będzie wymagał przeróbek częściej,
+niż zdąży oddać zainwestowany czas.</li>
+</ul>
+<p>Iloczyn dwóch pierwszych daje roczny koszt. Trzecia decyduje, czy ten koszt
+warto ruszać teraz, czy poczekać, aż proces się ustabilizuje.</p>
+<p>Jest jeszcze czwarte kryterium, nieliczbowe, a często rozstrzygające:
+<strong>czy proces ma dziś właściciela</strong>. Automatyzacja procesu niczyjego kończy
+się tak, że po pierwszej zmianie w systemie źródłowym przepływ przestaje
+działać i nikt tego nie zgłasza. Proces z właścicielem, nawet droższy
+w budowie, przetrwa rok. Proces bez właściciela zwykle nie przetrwa
+kwartału. Jeśli samo pojęcie procesu jest tu nowe, zaczynamy od
+<a href="https://automaticai.pl/blog/czym-jest-automatyzacja-procesow/">czym jest automatyzacja procesów biznesowych</a>.</p>
+<h2 id="czego-nie-ma-na-tej-liście-i-dlaczego">Czego nie ma na tej liście i dlaczego<a href="#czego-nie-ma-na-tej-liście-i-dlaczego" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Czego nie ma na tej liście i dlaczego"><span aria-hidden="true">#</span></a></h2>
+<p>Świadomie nie ma tu procesów, w których automatyzacja obiecuje więcej,
+niż jest w stanie oddać:</p>
+<ul>
+<li><strong>negocjacje i decyzje cenowe</strong> — model przygotuje materiał, ale
+odpowiedzialność za decyzję zostaje po stronie człowieka i tak powinno
+zostać;</li>
+<li><strong>sprawy o skutkach prawnych</strong> — wypowiedzenia, reklamacje sporne,
+zgody. Automat może przygotować dokument, nie może go zatwierdzić;</li>
+<li><strong>rekrutacja: decyzja o zatrudnieniu</strong> — pierwsza selekcja to punkt 9,
+ale ostateczna ocena kandydata z listy wypada celowo;</li>
+<li><strong>cokolwiek, czego nikt nie umie opisać krok po kroku</strong> — automatyzacja
+procesu nieopisanego to utrwalenie przypadkowej wersji.</li>
+</ul>
+<p>Wspólny mianownik: automatyzacja świetnie zdejmuje <strong>transport i obróbkę
+informacji</strong>, a słabo zastępuje <strong>odpowiedzialność</strong>. Ta granica jest
+w praktyce stabilniejsza niż możliwości modeli.</p>
+<h2 id="jedna-rada-na-koniec">Jedna rada na koniec<a href="#jedna-rada-na-koniec" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Jedna rada na koniec"><span aria-hidden="true">#</span></a></h2>
+<p>Z tej listy wybierz <strong>jeden</strong> proces — ten z największym rocznym kosztem —
+i zrób go do końca: z pomiarem przed i po. Firma, która ma jeden działający,
+policzony automat, wdraża kolejne łatwo. Firma, która zaczęła pięć projektów
+naraz, zwykle nie kończy żadnego.</p>
+<aside class="my-9 flex flex-col gap-4 rounded-lg border border-volt/25 bg-volt-poswiata p-5 sm:flex-row sm:items-center sm:justify-between md:p-6"><div><p class="text-base font-semibold tracking-tight text-fg md:text-lg">Który z tych procesów boli u Was najbardziej?</p><p class="mt-1 text-sm leading-relaxed text-steel">Napisz — powiemy, jak wygląda wdrożenie i jakiej skali oszczędności można się spodziewać.</p></div><a class="group inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors duration-200 h-11 px-5 text-sm bg-volt text-void hover:bg-volt-hover disabled:cursor-not-allowed disabled:opacity-60 shrink-0" href="https://automaticai.pl/kontakt/">Porozmawiajmy<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></aside></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>5 błędów podczas wdrażania AI, które widzimy najczęściej</title>
+      <link>https://automaticai.pl/blog/5-bledow-podczas-wdrazania-ai/</link>
+      <guid isPermaLink="true">https://automaticai.pl/blog/5-bledow-podczas-wdrazania-ai/</guid>
+      <description>Nie technologia zabija projekty AI — zabijają je decyzje z pierwszych dwóch tygodni. Pięć błędów, które oglądamy regularnie, i proste sposoby, żeby ich nie popełnić.</description>
+      <pubDate>Fri, 14 Aug 2026 09:00:00 GMT</pubDate>
+      <atom:updated>2026-09-10T09:00:00.000Z</atom:updated>
+      <dc:creator>Mariusz Perzyński</dc:creator>
+      <category>Strategia</category>
+      <content:encoded><![CDATA[<h2 id="błąd-1-zakres-ai-w-firmie">Błąd 1: zakres „AI w firmie”<a href="#błąd-1-zakres-ai-w-firmie" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Błąd 1: zakres „AI w firmie”"><span aria-hidden="true">#</span></a></h2>
+<p>Projekt, którego celem jest „wykorzystać AI”, nie ma definicji końca — więc
+się nie kończy. Antidotum jest nudne i skuteczne:
+<a href="https://automaticai.pl/blog/ai-w-firmie-od-czego-zaczac/">jeden proces, jedna miara, jeden termin</a>.
+Wielkie transformacje wygrywają na slajdach; małe zakresy wygrywają
+na produkcji.</p>
+<h2 id="błąd-2-automatyzacja-bałaganu">Błąd 2: automatyzacja bałaganu<a href="#błąd-2-automatyzacja-bałaganu" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Błąd 2: automatyzacja bałaganu"><span aria-hidden="true">#</span></a></h2>
+<p>Jeśli proces dziś działa „każdy robi po swojemu”, to automat utrwali chaos
+i doda mu prędkości. Sygnał ostrzegawczy: na pytanie „jak wygląda ten proces
+krok po kroku” trzy osoby odpowiadają trzema różnymi historiami. Najpierw
+godzina uporządkowania procesu na tablicy, potem
+<a href="https://automaticai.pl/blog/jak-zaprojektowac-workflow-ai/">projektowanie workflow</a> — nigdy odwrotnie.</p>
+<h2 id="błąd-3-projekt-bez-właściciela">Błąd 3: projekt bez właściciela<a href="#błąd-3-projekt-bez-właściciela" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Błąd 3: projekt bez właściciela"><span aria-hidden="true">#</span></a></h2>
+<p>System AI po wdrożeniu żyje: pojawiają się nowe typy spraw, zmieniają się
+API, przesuwają progi. Jeśli nikt konkretny nie odpowiada za jego jakość —
+nie „dział”, tylko osoba z imieniem — system degraduje się w ciszy, aż ktoś
+ogłosi, że „AI nie działa”. Właściciel plus godzina tygodniowo na przegląd
+wyjątków wystarczą, żeby ten scenariusz nie nastąpił.</p>
+<h2 id="błąd-4-brak-pomiaru-przed">Błąd 4: brak pomiaru „przed”<a href="#błąd-4-brak-pomiaru-przed" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Błąd 4: brak pomiaru „przed”"><span aria-hidden="true">#</span></a></h2>
+<p>Żeby pokazać, że wdrożenie skróciło obsługę z 3 dni do 4 godzin, trzeba
+było <strong>zmierzyć te 3 dni przed startem</strong>. Zespoły notorycznie to pomijają —
+a potem sukces jest kwestią wiary, budżet na kolejne projekty kwestią
+polityki. Tydzień mierzenia stanu zerowego to najtańsza inwestycja w całym
+projekcie (<a href="https://automaticai.pl/blog/jak-policzyc-roi-z-automatyzacji/">jak liczyć — tutaj</a>).</p>
+<h2 id="błąd-5-wielki-start-zamiast-pilotażu">Błąd 5: wielki start zamiast pilotażu<a href="#błąd-5-wielki-start-zamiast-pilotażu" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Błąd 5: wielki start zamiast pilotażu"><span aria-hidden="true">#</span></a></h2>
+<p>Wdrożenie od razu na wszystkich klientów i cały wolumen oznacza, że pierwsze
+błędy — a one będą — zobaczy maksymalna możliwa liczba osób. Dojrzała
+ścieżka: <a href="https://automaticai.pl/blog/ai-proof-of-concept-jak-zaczac/">PoC z kryteriami</a> → praca na
+części ruchu → stopniowe rozszerzanie na podstawie liczb. Nudne? Tak.
+Skuteczne? Za każdym razem.</p>
+<p>Wszystkie pięć powyższych ma wspólny mianownik: <strong>to są błędy decyzyjne,
+nie techniczne</strong>. Żadnego z nich nie naprawi lepszy model ani lepsze
+narzędzie — wszystkie pięć zapada na spotkaniach, zanim ktokolwiek dotknie
+konfiguracji. Dlatego wdrożenia ratuje się na etapie ustalania zakresu,
+a nie na etapie debugowania.</p>
+<h2 id="błąd-6-bonus-liczenie-oszczędności-w-etatach">Błąd 6 (bonus): liczenie oszczędności w etatach<a href="#błąd-6-bonus-liczenie-oszczędności-w-etatach" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Błąd 6 (bonus): liczenie oszczędności w etatach"><span aria-hidden="true">#</span></a></h2>
+<p>Najszybszy sposób na zabicie projektu od środka. Gdy uzasadnienie brzmi
+„zaoszczędzimy dwa etaty”, zespół dowiaduje się o tym w tym samym tygodniu
+co zarząd — i od tego momentu pracuje przeciwko wdrożeniu. Cicho,
+skutecznie, przez podawanie niepełnych informacji o procesie. Na samo
+pytanie odpowiadamy osobno i bez wykrętów:
+<a href="https://automaticai.pl/blog/czy-ai-zastapi-pracownikow/">czy AI zastąpi pracowników</a>.</p>
+<p>Uczciwsze i łatwiejsze do obrony liczby to: czas od zgłoszenia do
+odpowiedzi, liczba spraw obsłużonych bez przekazywania dalej, odsetek
+błędów wymagających korekty. Wszystkie da się zmierzyć przed i po,
+żadna nie wymaga rozmowy o zwolnieniach — a jeśli struktura zatrudnienia
+ma się zmienić, to jest osobna rozmowa i nie należy jej chować za projektem
+technicznym.</p>
+<h2 id="jak-wygląda-wdrożenie-bez-tych-błędów">Jak wygląda wdrożenie bez tych błędów<a href="#jak-wygląda-wdrożenie-bez-tych-błędów" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Jak wygląda wdrożenie bez tych błędów"><span aria-hidden="true">#</span></a></h2>
+<p>Sekwencja, która obchodzi wszystkie sześć, jest krótsza, niż się zwykle
+zakłada:</p>
+<figure class="panel my-8 p-5 md:p-6"><div class="flex flex-col items-stretch gap-2 md:flex-row md:items-center"><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Tydzień: pomiar stanu obecnego</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">2-3 tygodnie: PoC z kryteriami</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-volt/40 bg-volt-poswiata-mocna px-3 py-2 text-center text-sm font-medium text-fg">Pilotaż na części ruchu</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Rozszerzenie na podstawie liczb</div></div></div><figcaption class="prose-measure mt-4 border-t border-line pt-3 text-sm leading-relaxed text-steel">Każdy etap ma jawny warunek przejścia dalej — i wolno się na nim zatrzymać.</figcaption></figure>
+<p>Najważniejsza jest ostatnia część zdania pod schematem. Etap, z którego
+nie wolno wrócić, nie jest etapem — jest formalnością przed decyzją, która
+zapadła wcześniej. Projekt, w którym „PoC musi się udać”, nie ma PoC,
+tylko prezentację.</p>
+<aside class="panel my-7 p-5 border-volt/25"><p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb size-4 text-volt" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg><span class="font-mono text-label-sm tracking-label-4 uppercase text-volt">Jedno pytanie kontrolne</span></p><div class="mt-2.5 text-base leading-relaxed text-steel [&amp;_code]:text-fg [&amp;_strong]:text-fg"><p>Przed startem projektu odpowiedzcie pisemnie: „po czym za trzy miesiące
+poznamy, że się udało — i kto będzie tego pilnował?”. Jeśli odpowiedź
+nie przychodzi łatwo, projekt nie jest gotowy do startu.</p></div></aside>
+<aside class="my-9 flex flex-col gap-4 rounded-lg border border-volt/25 bg-volt-poswiata p-5 sm:flex-row sm:items-center sm:justify-between md:p-6"><div><p class="text-base font-semibold tracking-tight text-fg md:text-lg">Planujecie wdrożenie i chcecie uniknąć tych błędów?</p><p class="mt-1 text-sm leading-relaxed text-steel">Nasz proces ma je wbudowane w standard — od rozpoznania po pomiar efektu.</p></div><a class="group inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors duration-200 h-11 px-5 text-sm bg-volt text-void hover:bg-volt-hover disabled:cursor-not-allowed disabled:opacity-60 shrink-0" href="https://automaticai.pl/kontakt/">Porozmawiajmy<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></aside></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Jak policzyć ROI z automatyzacji — bez czarów i bez Excela na 40 zakładek</title>
+      <link>https://automaticai.pl/blog/jak-policzyc-roi-z-automatyzacji/</link>
+      <guid isPermaLink="true">https://automaticai.pl/blog/jak-policzyc-roi-z-automatyzacji/</guid>
+      <description>Prosty model liczenia zwrotu z automatyzacji, którego używamy przy wycenach: koszt procesu, koszt wdrożenia, koszt utrzymania — i trzy pułapki, przez które firmy liczą to źle.</description>
+      <pubDate>Fri, 14 Aug 2026 09:00:00 GMT</pubDate>
+      <atom:updated>2026-09-10T09:00:00.000Z</atom:updated>
+      <dc:creator>Mariusz Perzyński</dc:creator>
+      <category>Strategia</category>
+      <content:encoded><![CDATA[<h2 id="zasada-numer-jeden-licz-proces-nie-transformację">Zasada numer jeden: licz proces, nie „transformację”<a href="#zasada-numer-jeden-licz-proces-nie-transformację" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Zasada numer jeden: licz proces, nie „transformację”"><span aria-hidden="true">#</span></a></h2>
+<p>„Jaki jest ROI z AI?” — na tak postawione pytanie odpowiedzi nie ma. Sensowna
+odpowiedź istnieje na poziomie pojedynczego procesu: kwalifikacji leadów,
+obiegu faktur, odpowiedzi na zgłoszenia. Dlatego zanim policzysz zwrot,
+<a href="https://automaticai.pl/blog/ai-w-firmie-od-czego-zaczac/">wybierz jeden proces</a> i policz jego
+dzisiejszy koszt.</p>
+<h2 id="formuła">Formuła<a href="#formuła" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Formuła"><span aria-hidden="true">#</span></a></h2>
+<figure class="panel my-8 p-5 md:p-6"><div class="flex flex-col items-stretch gap-2 md:flex-row md:items-center"><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Roczny koszt procesu dziś</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">minus koszt wdrożenia</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">minus roczne utrzymanie</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-volt/40 bg-volt-poswiata-mocna px-3 py-2 text-center text-sm font-medium text-fg">= oszczędność netto</div></div></div><figcaption class="prose-measure mt-4 border-t border-line pt-3 text-sm leading-relaxed text-steel">ROI = oszczędność netto / (wdrożenie + utrzymanie). Wynik powyżej 100% w pierwszym roku to w automatyzacjach norma, nie sukces stulecia.</figcaption></figure>
+<p>Przykład z życia (zaokrąglone liczby):</p>
+<div class="my-7 overflow-x-auto rounded-lg border border-line"><table><thead><tr><th>Pozycja</th><th>Wartość</th></tr></thead><tbody><tr><td>proces: ręczna kwalifikacja 400 leadów/mies.</td><td>20 min/lead = 133 h/mies.</td></tr><tr><td>koszt godziny (z narzutami)</td><td>90 zł</td></tr><tr><td>roczny koszt procesu</td><td>ok. 144 000 zł</td></tr><tr><td>automatyzacja zdejmuje</td><td>75% pracy</td></tr><tr><td>roczna oszczędność brutto</td><td>ok. 108 000 zł</td></tr><tr><td>wdrożenie (jednorazowo)</td><td>35 000 zł</td></tr><tr><td>utrzymanie (rocznie)</td><td>6 000 zł</td></tr><tr><td><strong>oszczędność netto w 1. roku</strong></td><td><strong>67 000 zł</strong></td></tr><tr><td><strong>zwrot w 1. roku</strong></td><td><strong>ok. 163%</strong></td></tr></tbody></table></div>
+<p>Od drugiego roku znika koszt wdrożenia i rachunek robi się jeszcze prostszy.</p>
+<h2 id="trzy-pułapki-które-psują-rachunek">Trzy pułapki, które psują rachunek<a href="#trzy-pułapki-które-psują-rachunek" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Trzy pułapki, które psują rachunek"><span aria-hidden="true">#</span></a></h2>
+<p><strong>1. Pominięte utrzymanie.</strong> Automatyzacja to system: API się zmieniają,
+formaty dokumentów też, modele dostają nowe wersje. Realny koszt opieki to
+zwykle 10–20 procent kosztu wdrożenia rocznie. Rachunek bez tej pozycji to
+autopromocja, nie analiza.</p>
+<p><strong>2. Liczenie tylko godzin.</strong> Ręczny proces kosztuje też błędami (źle
+przepisany NIP, zgubiony lead) i opóźnieniem (lead obsłużony po trzech
+dniach jest wart ułamek tego samego leada obsłużonego w 5 minut). Jeśli
+umiesz oszacować te dwie pozycje choćby ostrożnie — dolicz je; często
+przeważają szalę mocniej niż robocizna.</p>
+<p><strong>3. Zakładanie 100% automatyzacji.</strong> Dobre wdrożenia zdejmują 60–85 procent
+pracy, a wyjątki zostawiają ludziom. Obietnica „całkowitej automatyzacji”
+to sygnał ostrzegawczy — także wobec dostawcy, który ją składa. Więcej
+takich obietnic i tego, co z nich zostaje po wdrożeniu, zebraliśmy
+w <a href="https://automaticai.pl/blog/ai-hype-vs-realny-biznes/">AI hype vs realny biznes</a>.</p>
+<aside class="panel my-7 p-5 border-volt/25"><p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb size-4 text-volt" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg><span class="font-mono text-label-sm tracking-label-4 uppercase text-volt">Reguła kciuka do szybkiej oceny</span></p><div class="mt-2.5 text-base leading-relaxed text-steel [&amp;_code]:text-fg [&amp;_strong]:text-fg"><p>Jeśli roczny koszt procesu jest niższy niż sensowny koszt jego
+automatyzacji, odpuść albo poszukaj gotowego narzędzia. Automatyzację
+szytą na miarę uzasadniają procesy kosztujące od kilkudziesięciu tysięcy
+złotych rocznie wzwyż.</p></div></aside>
+<h2 id="dwa-składniki-które-trudno-policzyć-a-które-często-decydują">Dwa składniki, które trudno policzyć, a które często decydują<a href="#dwa-składniki-które-trudno-policzyć-a-które-często-decydują" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Dwa składniki, które trudno policzyć, a które często decydują"><span aria-hidden="true">#</span></a></h2>
+<p>Robocizna jest łatwa do wyceny i dlatego bywa jedynym składnikiem
+rachunku. Dwa pozostałe są trudniejsze, a potrafią przeważyć.</p>
+<p><strong>Koszt błędu.</strong> Nie „ile kosztuje pomyłka”, tylko: częstotliwość razy
+koszt naprawy. Faktura zaksięgowana dwa razy to korekta, telefon do
+dostawcy i wpis w rejestrze — kilkadziesiąt minut pracy dwóch osób,
+kilkanaście razy w roku. To bywa więcej niż samo przepisywanie.</p>
+<p><strong>Koszt opóźnienia.</strong> Lead, który dostaje odpowiedź po dwóch dniach zamiast
+po dwudziestu minutach, konwertuje gorzej — i to jest różnica w przychodzie,
+nie w koszcie. Nie trzeba tu precyzji: wystarczy oszacować, o ile punktów
+procentowych spada skuteczność, i pomnożyć przez wartość szansy.</p>
+<p>Jeśli któryś z tych składników wychodzi porównywalny z robocizną, warto
+go pokazać osobno. Rachunek złożony wyłącznie z zaoszczędzonych godzin
+łatwo podważyć zdaniem „przecież nikogo nie zwolnimy” — a rachunek
+z kosztem błędów i opóźnień tej kontry nie ma.</p>
+<h2 id="co-mierzyć-po-wdrożeniu">Co mierzyć po wdrożeniu?<a href="#co-mierzyć-po-wdrożeniu" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Co mierzyć po wdrożeniu?"><span aria-hidden="true">#</span></a></h2>
+<p>ROI policzony przed projektem to hipoteza. Po wdrożeniu potwierdzają ją
+trzy liczby:</p>
+<ol>
+<li><strong>czas procesu</strong> — mediana od zdarzenia do rezultatu, przed i po,</li>
+<li><strong>udział wyjątków</strong> — ile spraw wraca do człowieka (spadek w czasie
+oznacza, że system dojrzewa),</li>
+<li><strong>koszt jednostkowy</strong> — koszt obsłużenia jednej sprawy, z utrzymaniem.</li>
+</ol>
+<p>Te same liczby pokazujemy klientom w podsumowaniach naszych wdrożeń — bo
+projekt bez pomiaru kończy się dyskusją o wrażeniach, a nie o zwrocie.</p>
+<aside class="my-9 flex flex-col gap-4 rounded-lg border border-volt/25 bg-volt-poswiata p-5 sm:flex-row sm:items-center sm:justify-between md:p-6"><div><p class="text-base font-semibold tracking-tight text-fg md:text-lg">Chcesz policzyć ROI dla swojego procesu?</p><p class="mt-1 text-sm leading-relaxed text-steel">Prześlij nam krótki opis — odeślemy szacunek kosztów i realnego potencjału oszczędności.</p></div><a class="group inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors duration-200 h-11 px-5 text-sm bg-volt text-void hover:bg-volt-hover disabled:cursor-not-allowed disabled:opacity-60 shrink-0" href="https://automaticai.pl/kontakt/">Porozmawiajmy<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></aside></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Function calling — jak model AI wywołuje Twój kod</title>
+      <link>https://automaticai.pl/blog/function-calling-jak-dziala/</link>
+      <guid isPermaLink="true">https://automaticai.pl/blog/function-calling-jak-dziala/</guid>
+      <description>Mechanizm, na którym stoi każdy agent i każda poważna integracja AI: model nie wykonuje kodu — prosi o wywołanie funkcji, a Twój system decyduje i odpowiada. Z przykładem krok po kroku.</description>
+      <pubDate>Fri, 14 Aug 2026 09:00:00 GMT</pubDate>
+      <atom:updated>2026-09-10T09:00:00.000Z</atom:updated>
+      <dc:creator>Krzysztof Leszczyński</dc:creator>
+      <category>Inżynieria</category>
+      <content:encoded><![CDATA[<h2 id="co-to-właściwie-jest">Co to właściwie jest?<a href="#co-to-właściwie-jest" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Co to właściwie jest?"><span aria-hidden="true">#</span></a></h2>
+<p>Function calling (u części dostawców: tool calling) to umowa między Twoim
+kodem a modelem:</p>
+<ol>
+<li>Ty deklarujesz funkcje — nazwa, opis, schemat parametrów.</li>
+<li>Model, gdy uzna, że funkcja pomoże w zadaniu, <strong>zwraca żądanie wywołania</strong>
+z konkretnymi argumentami.</li>
+<li>Twój system funkcję wykonuje (albo nie!) i odsyła wynik.</li>
+<li>Model kontynuuje z nową wiedzą.</li>
+</ol>
+<p>Najważniejsze zdanie tego artykułu: <strong>model nie wykonuje niczego — on tylko
+prosi.</strong> Cała władza (i cała odpowiedzialność) zostaje w Twoim kodzie.</p>
+<h2 id="krok-po-kroku-na-przykładzie">Krok po kroku na przykładzie<a href="#krok-po-kroku-na-przykładzie" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Krok po kroku na przykładzie"><span aria-hidden="true">#</span></a></h2>
+<p>Deklaracja narzędzia (tu: składnia Anthropic, u innych dostawców niemal
+identyczna):</p>
+<figure class="group my-7 overflow-hidden rounded-lg border border-line bg-[#0b0c10]"><figcaption class="flex items-center justify-between border-b border-line px-4 py-2"><span class="font-mono text-label-sm tracking-label-4 text-steel uppercase">json</span><button type="button" class="inline-flex items-center gap-1.5 rounded px-2 py-1.5 font-mono text-label-sm tracking-label-3 text-steel uppercase transition-colors hover:text-volt"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy size-3.5" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>Kopiuj</button></figcaption><span aria-live="polite" class="sr-only"></span><pre class="overflow-x-auto p-4 text-sm leading-relaxed" style="background-color:#0b0c10;color:#d3d6dd" tabindex="0" data-language="json" aria-label="Kod: json"><code><span class="line"><span style="color:#D3D6DD">{</span></span>
+<span class="line"><span style="color:#9CC7D4">  &quot;name&quot;</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;sprawdz_stan_magazynu&quot;</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#9CC7D4">  &quot;description&quot;</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;Zwraca dostepna ilosc produktu w magazynie po SKU&quot;</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#9CC7D4">  &quot;input_schema&quot;</span><span style="color:#7E828C">:</span><span style="color:#D3D6DD"> {</span></span>
+<span class="line"><span style="color:#9CC7D4">    &quot;type&quot;</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;object&quot;</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#9CC7D4">    &quot;properties&quot;</span><span style="color:#7E828C">:</span><span style="color:#D3D6DD"> {</span></span>
+<span class="line"><span style="color:#9CC7D4">      &quot;sku&quot;</span><span style="color:#7E828C">:</span><span style="color:#D3D6DD"> { </span><span style="color:#9CC7D4">&quot;type&quot;</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;string&quot;</span><span style="color:#7E828C">,</span><span style="color:#9CC7D4"> &quot;description&quot;</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;kod produktu, np. BUT-42-CZ&quot;</span><span style="color:#D3D6DD"> }</span></span>
+<span class="line"><span style="color:#D3D6DD">    }</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#9CC7D4">    &quot;required&quot;</span><span style="color:#7E828C">:</span><span style="color:#D3D6DD"> [</span><span style="color:#AECF8B">&quot;sku&quot;</span><span style="color:#D3D6DD">]</span></span>
+<span class="line"><span style="color:#D3D6DD">  }</span></span>
+<span class="line"><span style="color:#D3D6DD">}</span></span></code></pre></figure>
+<p>Użytkownik pyta: „czy macie jeszcze czarne czterdziestkidwójki?”.
+Model odpowiada żądaniem:</p>
+<figure class="group my-7 overflow-hidden rounded-lg border border-line bg-[#0b0c10]"><figcaption class="flex items-center justify-between border-b border-line px-4 py-2"><span class="font-mono text-label-sm tracking-label-4 text-steel uppercase">json</span><button type="button" class="inline-flex items-center gap-1.5 rounded px-2 py-1.5 font-mono text-label-sm tracking-label-3 text-steel uppercase transition-colors hover:text-volt"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy size-3.5" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>Kopiuj</button></figcaption><span aria-live="polite" class="sr-only"></span><pre class="overflow-x-auto p-4 text-sm leading-relaxed" style="background-color:#0b0c10;color:#d3d6dd" tabindex="0" data-language="json" aria-label="Kod: json"><code><span class="line"><span style="color:#D3D6DD">{</span></span>
+<span class="line"><span style="color:#9CC7D4">  &quot;type&quot;</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;tool_use&quot;</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#9CC7D4">  &quot;name&quot;</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;sprawdz_stan_magazynu&quot;</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#9CC7D4">  &quot;input&quot;</span><span style="color:#7E828C">:</span><span style="color:#D3D6DD"> { </span><span style="color:#9CC7D4">&quot;sku&quot;</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;BUT-42-CZ&quot;</span><span style="color:#D3D6DD"> }</span></span>
+<span class="line"><span style="color:#D3D6DD">}</span></span></code></pre></figure>
+<p>Twój kod wywołuje magazyn i odsyła wynik:</p>
+<figure class="group my-7 overflow-hidden rounded-lg border border-line bg-[#0b0c10]"><figcaption class="flex items-center justify-between border-b border-line px-4 py-2"><span class="font-mono text-label-sm tracking-label-4 text-steel uppercase">json</span><button type="button" class="inline-flex items-center gap-1.5 rounded px-2 py-1.5 font-mono text-label-sm tracking-label-3 text-steel uppercase transition-colors hover:text-volt"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy size-3.5" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>Kopiuj</button></figcaption><span aria-live="polite" class="sr-only"></span><pre class="overflow-x-auto p-4 text-sm leading-relaxed" style="background-color:#0b0c10;color:#d3d6dd" tabindex="0" data-language="json" aria-label="Kod: json"><code><span class="line"><span style="color:#D3D6DD">{</span></span>
+<span class="line"><span style="color:#9CC7D4">  &quot;type&quot;</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;tool_result&quot;</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#9CC7D4">  &quot;content&quot;</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;{ \&quot;sku\&quot;: \&quot;BUT-42-CZ\&quot;, \&quot;dostepne\&quot;: 7 }&quot;</span></span>
+<span class="line"><span style="color:#D3D6DD">}</span></span></code></pre></figure>
+<p>Model kończy: „Tak, mamy 7 par na stanie”. Pętla może mieć wiele rund —
+i dokładnie ta pętla, obudowana limitami i uprawnieniami, <a href="https://automaticai.pl/blog/jak-dziala-agent-ai/">robi z modelu
+agenta</a>.</p>
+<h2 id="zasady-które-oszczędzają-problemów">Zasady, które oszczędzają problemów<a href="#zasady-które-oszczędzają-problemów" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Zasady, które oszczędzają problemów"><span aria-hidden="true">#</span></a></h2>
+<ul>
+<li><strong>Waliduj argumenty przed wykonaniem.</strong> Schemat to deklaracja intencji,
+nie gwarancja — SKU sprawdź regexem, zakresy dat logiką.</li>
+<li><strong>Opisy pisz jak dokumentację.</strong> Model wybiera funkcję po opisie; „zwraca
+stan po SKU” działa, „handler magazynu” — nie. Dobre opisy plus przykłady
+w opisie parametrów potrafią podnieść trafność wywołań bardziej niż
+zmiana modelu na droższy.</li>
+<li><strong>Funkcje odczytu i zapisu rozdzielaj.</strong> Odczyty mogą być swobodne;
+zapisy chcesz móc wyłączyć jedną flagą albo obłożyć potwierdzeniem.</li>
+<li><strong>Loguj każdą rundę.</strong> Żądanie, argumenty, wynik — bez tego nie
+zdiagnozujesz, czemu model „dziwnie się zachował” w czwartek o 16:40.</li>
+</ul>
+<h2 id="co-zrobić-gdy-model-wywołuje-źle">Co zrobić, gdy model wywołuje źle<a href="#co-zrobić-gdy-model-wywołuje-źle" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Co zrobić, gdy model wywołuje źle"><span aria-hidden="true">#</span></a></h2>
+<p>Trzy typowe awarie i ich przyczyny — w kolejności częstości, nie dramatyzmu.</p>
+<p><strong>Wywołuje niewłaściwą funkcję.</strong> Prawie zawsze wina opisu, nie modelu.
+Dwie funkcje o podobnych opisach („pobierz dane klienta” i „pobierz
+historię klienta”) będą mylone. Lekarstwo: opisy, które mówią, <strong>kiedy
+użyć</strong>, a nie tylko co robi — „użyj, gdy potrzebujesz danych kontaktowych;
+do historii zamówień użyj X”.</p>
+<p><strong>Halucynuje argumenty.</strong> Model wypełnia wymagane pole zmyśloną wartością,
+bo schemat mówi „required”. Lekarstwo dwustopniowe: pola, których nie da się
+wywnioskować, oznaczaj jako opcjonalne, a w opisie napisz wprost „jeśli
+użytkownik nie podał numeru, zapytaj zamiast zgadywać”.</p>
+<p><strong>Wpada w pętlę.</strong> Wywołuje to samo w kółko, bo wynik go nie zadowala.
+Lekarstwo jest po Waszej stronie i musi być twarde: <strong>limit rund
+i limit wywołań na sprawę</strong>, po przekroczeniu — przekazanie człowiekowi.
+Bez tego pierwszy nietypowy przypadek wygeneruje rachunek, który zapamiętacie.</p>
+<p>Wspólny mianownik całej trójki: żadnej z tych awarii nie naprawia zmiana
+modelu na mocniejszy. Wszystkie trzy mają źródło w tym, co sami podaliśmy
+modelowi — w opisach, schematach i braku limitów. To dobra wiadomość,
+bo są to rzeczy w pełni pod kontrolą zespołu.</p>
+<h2 id="koszt-o-którym-się-zapomina">Koszt, o którym się zapomina<a href="#koszt-o-którym-się-zapomina" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Koszt, o którym się zapomina"><span aria-hidden="true">#</span></a></h2>
+<p>Każda runda to pełny kontekst wysłany od nowa: instrukcja systemowa,
+definicje wszystkich narzędzi, cała dotychczasowa rozmowa i wyniki funkcji.
+Sprawa rozwiązana w pięciu rundach nie kosztuje pięciu wywołań — kosztuje
+znacznie więcej, bo kontekst rośnie z każdą rundą.</p>
+<p>Dwa wnioski praktyczne: <strong>nie podawaj modelowi wszystkich narzędzi naraz</strong>
+(zestaw dobrany do etapu sprawy jest tańszy i trafniejszy) oraz <strong>skracaj
+wyniki funkcji</strong> — zwracanie całego rekordu z bazy, gdy potrzebne są trzy
+pola, płacisz w każdej kolejnej rundzie.</p>
+<aside class="panel my-7 p-5 border-volt/25"><p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb size-4 text-volt" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg><span class="font-mono text-label-sm tracking-label-4 uppercase text-volt">A gdzie w tym MCP?</span></p><div class="mt-2.5 text-base leading-relaxed text-steel [&amp;_code]:text-fg [&amp;_strong]:text-fg"><p>Function calling to mechanizm w rozmowie z jednym modelem. Gdy tych samych
+narzędzi ma używać wiele aplikacji i agentów, warstwę definicji
+standaryzuje <a href="https://automaticai.pl/blog/mcp-co-to-jest-i-dlaczego-warto-znac/">MCP</a> — funkcje
+piszesz raz, w serwerze, a nie w każdej integracji osobno.</p></div></aside>
+<aside class="my-9 flex flex-col gap-4 rounded-lg border border-volt/25 bg-volt-poswiata p-5 sm:flex-row sm:items-center sm:justify-between md:p-6"><div><p class="text-base font-semibold tracking-tight text-fg md:text-lg">Chcesz podpiąć model pod swoje systemy?</p><p class="mt-1 text-sm leading-relaxed text-steel">Projektujemy warstwy narzędzi z walidacją, limitami i logowaniem — tak, żeby dało się temu ufać na produkcji.</p></div><a class="group inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors duration-200 h-11 px-5 text-sm bg-volt text-void hover:bg-volt-hover disabled:cursor-not-allowed disabled:opacity-60 shrink-0" href="https://automaticai.pl/kontakt/">Porozmawiajmy<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></aside></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Automatyzacja leadów B2B — jak wygląda cały proces od formularza do CRM</title>
+      <link>https://automaticai.pl/blog/automatyzacja-leadow-b2b-caly-proces/</link>
+      <guid isPermaLink="true">https://automaticai.pl/blog/automatyzacja-leadow-b2b-caly-proces/</guid>
+      <description>Od chwili, gdy ktoś wypełnia formularz, do umówionego spotkania mija u wielu firm kilka dni ręcznej pracy. Rozkładamy ten proces na części i pokazujemy, co automatyzować w jakiej kolejności.</description>
+      <pubDate>Fri, 14 Aug 2026 09:00:00 GMT</pubDate>
+      <atom:updated>2026-09-10T09:00:00.000Z</atom:updated>
+      <dc:creator>Konrad Szydłowski</dc:creator>
+      <category>Automatyzacja</category>
+      <content:encoded><![CDATA[<h2 id="dlaczego-to-najczęściej-automatyzowany-proces-w-b2b">Dlaczego to najczęściej automatyzowany proces w B2B?<a href="#dlaczego-to-najczęściej-automatyzowany-proces-w-b2b" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Dlaczego to najczęściej automatyzowany proces w B2B?"><span aria-hidden="true">#</span></a></h2>
+<p>Bo łączy trzy rzeczy: jest powtarzalny, jest mierzalny i <strong>czas ma tu
+bezpośrednią cenę</strong>. Badania sprzedażowe od lat pokazują to samo — szansa na
+kontakt z leadem spada wielokrotnie już po pierwszej godzinie od zgłoszenia.
+Tymczasem typowy ręczny proces wygląda tak: zgłoszenie wpada na skrzynkę,
+ktoś je zauważa po kilku godzinach, przepisuje do CRM następnego dnia,
+handlowiec odzywa się „jak znajdzie chwilę”.</p>
+<h2 id="pięć-etapów-łańcucha">Pięć etapów łańcucha<a href="#pięć-etapów-łańcucha" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Pięć etapów łańcucha"><span aria-hidden="true">#</span></a></h2>
+<figure class="panel my-8 p-5 md:p-6"><div class="flex flex-col items-stretch gap-2 md:flex-row md:items-center"><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Przechwycenie</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Wzbogacenie</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-volt/40 bg-volt-poswiata-mocna px-3 py-2 text-center text-sm font-medium text-fg">Kwalifikacja</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Routing</div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right hidden size-4 shrink-0 text-volt/60 md:block" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down mx-auto size-4 shrink-0 text-volt/60 md:hidden" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></div><div class="contents"><div class="flex min-h-11 flex-1 items-center justify-center rounded-md border border-line bg-void/60 px-3 py-2 text-center text-sm text-steel">Follow-up</div></div></div><figcaption class="prose-measure mt-4 border-t border-line pt-3 text-sm leading-relaxed text-steel">Każdy etap działa osobno — można je wdrażać po kolei, zaczynając od najprostszych.</figcaption></figure>
+<h3 id="1-przechwycenie--zero-przepisywania">1. Przechwycenie — zero przepisywania<a href="#1-przechwycenie--zero-przepisywania" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: 1. Przechwycenie — zero przepisywania"><span aria-hidden="true">#</span></a></h3>
+<p>Wszystkie źródła (formularz, mail, LinkedIn, telefon spisany przez recepcję)
+trafiają automatycznie do jednego miejsca — rekordu w CRM (o tym, co agent
+może w nim robić dalej, piszemy w
+<a href="https://automaticai.pl/blog/jak-agent-ai-moze-pracowac-z-crm/">jak agent AI może pracować z Twoim CRM</a>).
+To czysta
+integracja, bez AI, a likwiduje dwa problemy naraz: zgubione zgłoszenia
+i błędy przepisywania.</p>
+<h3 id="2-wzbogacenie--kontekst-zanim-ktokolwiek-spojrzy">2. Wzbogacenie — kontekst zanim ktokolwiek spojrzy<a href="#2-wzbogacenie--kontekst-zanim-ktokolwiek-spojrzy" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: 2. Wzbogacenie — kontekst zanim ktokolwiek spojrzy"><span aria-hidden="true">#</span></a></h3>
+<p>Automat dociąga to, co publiczne: dane z bazy firm po NIP, wielkość
+zatrudnienia, branżę, stronę internetową. Handlowiec otwiera rekord i widzi firmę,
+nie gołego maila.</p>
+<h3 id="3-kwalifikacja--tu-wchodzi-model-ai">3. Kwalifikacja — tu wchodzi model AI<a href="#3-kwalifikacja--tu-wchodzi-model-ai" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: 3. Kwalifikacja — tu wchodzi model AI"><span aria-hidden="true">#</span></a></h3>
+<p>Model czyta treść zgłoszenia i ocenia je według Waszych kryteriów:
+dopasowanie do oferty, sygnały budżetu, pilność, czerwone flagi. Wynik to
+nie „magiczny scoring”, tylko struktura:</p>
+<figure class="group my-7 overflow-hidden rounded-lg border border-line bg-[#0b0c10]"><figcaption class="flex items-center justify-between border-b border-line px-4 py-2"><span class="font-mono text-label-sm tracking-label-4 text-steel uppercase">json</span><button type="button" class="inline-flex items-center gap-1.5 rounded px-2 py-1.5 font-mono text-label-sm tracking-label-3 text-steel uppercase transition-colors hover:text-volt"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy size-3.5" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>Kopiuj</button></figcaption><span aria-live="polite" class="sr-only"></span><pre class="overflow-x-auto p-4 text-sm leading-relaxed" style="background-color:#0b0c10;color:#d3d6dd" tabindex="0" data-language="json" aria-label="Kod: json"><code><span class="line"><span style="color:#D3D6DD">{</span></span>
+<span class="line"><span style="color:#9CC7D4">  &quot;dopasowanie&quot;</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;wysokie&quot;</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#9CC7D4">  &quot;uzasadnienie&quot;</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;Sklep B2B, pyta o integracje ERP - to nasz glowny profil&quot;</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#9CC7D4">  &quot;pilnosc&quot;</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;wysoka - wspomina o wdrozeniu przed Q4&quot;</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#9CC7D4">  &quot;rekomendacja&quot;</span><span style="color:#7E828C">:</span><span style="color:#AECF8B"> &quot;kontakt_24h&quot;</span><span style="color:#7E828C">,</span></span>
+<span class="line"><span style="color:#9CC7D4">  &quot;watpliwosci&quot;</span><span style="color:#7E828C">:</span><span style="color:#D3D6DD"> [</span><span style="color:#AECF8B">&quot;brak informacji o budzecie&quot;</span><span style="color:#D3D6DD">]</span></span>
+<span class="line"><span style="color:#D3D6DD">}</span></span></code></pre></figure>
+<p>Kluczowe: model <strong>uzasadnia</strong> ocenę, a wątpliwości wypisuje wprost. Dzięki
+temu człowiek może się z nim nie zgodzić — i te niezgodności są potem
+paliwem do poprawiania kryteriów.</p>
+<h3 id="4-routing--właściwa-sprawa-do-właściwej-osoby">4. Routing — właściwa sprawa do właściwej osoby<a href="#4-routing--właściwa-sprawa-do-właściwej-osoby" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: 4. Routing — właściwa sprawa do właściwej osoby"><span aria-hidden="true">#</span></a></h3>
+<p>Reguły są zwykle proste: dopasowanie wysokie → senior, pytanie techniczne →
+inżynier, spam → archiwum z etykietą. Ważny jest wyjątek: <strong>gdy model ma
+niską pewność, sprawa idzie do człowieka z pytaniem, nie do kosza</strong>.</p>
+<h3 id="5-follow-up--pierwsza-odpowiedź-w-minuty">5. Follow-up — pierwsza odpowiedź w minuty<a href="#5-follow-up--pierwsza-odpowiedź-w-minuty" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: 5. Follow-up — pierwsza odpowiedź w minuty"><span aria-hidden="true">#</span></a></h3>
+<p>Automat wysyła spersonalizowaną pierwszą odpowiedź (potwierdzenie + jedno
+sensowne pytanie pogłębiające), a handlowiec dostaje powiadomienie z pełnym
+kontekstem. Klient czuje reakcję natychmiast, rozmowa zaczyna się od
+konkretu.</p>
+<aside class="panel my-7 p-5 border-[#ffb454]/25"><p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert lucide-alert-triangle size-4 text-warn" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><span class="font-mono text-label-sm tracking-label-4 uppercase text-warn">Czego nie automatyzować na starcie</span></p><div class="mt-2.5 text-base leading-relaxed text-steel [&amp;_code]:text-fg [&amp;_strong]:text-fg"><p>Negocjacji i wyceny. Pierwsza wersja systemu ma oddać zespołowi czas
+i skrócić reakcję — nie prowadzić sprzedaży za ludzi. Autonomię zwiększa
+się wtedy, gdy dane pokażą, że automat kwalifikuje co najmniej tak dobrze
+jak zespół.</p></div></aside>
+<figure class="my-8"><div class="relative overflow-hidden rounded-lg border border-line"><img alt="Pozioma nić światła przechodzi przez pięć podświetlonych przedmiotów w ciemnej przestrzeni; ostatni z nich, matowy sześcian, świeci limonkowo." loading="lazy" width="1600" height="900" decoding="async" data-nimg="1" class="w-full" style="color:transparent;background-size:cover;background-position:50% 50%;background-repeat:no-repeat;background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 320 200&#x27;%3E%3Cfilter id=&#x27;b&#x27; color-interpolation-filters=&#x27;sRGB&#x27;%3E%3CfeGaussianBlur stdDeviation=&#x27;20&#x27;/%3E%3CfeColorMatrix values=&#x27;1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1&#x27; result=&#x27;s&#x27;/%3E%3CfeFlood x=&#x27;0&#x27; y=&#x27;0&#x27; width=&#x27;100%25&#x27; height=&#x27;100%25&#x27;/%3E%3CfeComposite operator=&#x27;out&#x27; in=&#x27;s&#x27;/%3E%3CfeComposite in2=&#x27;SourceGraphic&#x27;/%3E%3CfeGaussianBlur stdDeviation=&#x27;20&#x27;/%3E%3C/filter%3E%3Cimage width=&#x27;100%25&#x27; height=&#x27;100%25&#x27; x=&#x27;0&#x27; y=&#x27;0&#x27; preserveAspectRatio=&#x27;none&#x27; style=&#x27;filter: url(%23b);&#x27; href=&#x27;data:image/webp;base64,UklGRtgAAABXRUJQVlA4TMwAAAAvBwABAM1VICICHghACgMAAID3vzoAGAaCJkBACAAAAAAAAAAAAAAAAAAAAAAAAAAAMACSYlimLwAAgAcCkgIBAABw/nMJAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCni+344GAowAAAACc/+2rAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAQAPgtkmCzYkqUUQgwBFuLRZRM/BdjiEXQQQwBWLn+j/jM9K9cc6fDTfw67ZePP1SqXlfv0xl1rmfdNjY=&#x27;/%3E%3C/svg%3E&quot;)" sizes="(min-width: 1024px) 736px, 100vw" srcset="https://automaticai.pl/_next/static/media/pipeline.15ra_3u2xz3q5-320.webp 320w, https://automaticai.pl/_next/static/media/pipeline.15ra_3u2xz3q5-400.webp 400w, https://automaticai.pl/_next/static/media/pipeline.15ra_3u2xz3q5-480.webp 480w, https://automaticai.pl/_next/static/media/pipeline.15ra_3u2xz3q5-640.webp 640w, https://automaticai.pl/_next/static/media/pipeline.15ra_3u2xz3q5-800.webp 800w, https://automaticai.pl/_next/static/media/pipeline.15ra_3u2xz3q5-1200.webp 1200w, https://automaticai.pl/_next/static/media/pipeline.15ra_3u2xz3q5-1600.webp 1600w" src="https://automaticai.pl/_next/static/media/pipeline.15ra_3u2xz3q5-1600.webp"/><div aria-hidden="true" class="grain absolute inset-0 opacity-[0.05]"></div></div><figcaption class="mt-3 font-mono text-label-sm tracking-label-2 text-steel uppercase">Piec etapow lancucha, od formularza do umowionego spotkania</figcaption></figure>
+<h2 id="co-zrobić-ze-zgłoszeniem-które-nie-pasuje-nigdzie">Co zrobić ze zgłoszeniem, które nie pasuje nigdzie<a href="#co-zrobić-ze-zgłoszeniem-które-nie-pasuje-nigdzie" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Co zrobić ze zgłoszeniem, które nie pasuje nigdzie"><span aria-hidden="true">#</span></a></h2>
+<p>Każdy łańcuch kwalifikacji ma kategorię „inne” i to w niej rozstrzyga się,
+czy system jest znośny w codziennej pracy.</p>
+<p>Trzy typowe przypadki i co z nimi robić:</p>
+<p><strong>Zgłoszenie niepełne</strong> — sam adres e-mail i zdanie „proszę o kontakt”.
+Nie ma czego kwalifikować. Właściwa reakcja to nie ocena, tylko dopytanie:
+automatyczna odpowiedź z dwoma–trzema pytaniami i wstrzymanie sprawy do
+odpowiedzi. Wrzucenie tego do kolejki handlowca jako „lead o niskiej
+punktacji” marnuje czas dwa razy: jego i klienta.</p>
+<p><strong>Zgłoszenie nie na temat</strong> — oferta współpracy, rekrutacja, spam. Osobna
+ścieżka, osobny adres, zero punktacji. Mieszanie tego z leadami psuje
+wszystkie statystyki, na których potem opiera się decyzje.</p>
+<p><strong>Zgłoszenie nietypowe, ale wartościowe</strong> — duża firma, nieoczywista
+potrzeba, treść, której model nie umie przypisać. To jest najkosztowniejszy
+błąd w całym łańcuchu i dlatego reguła powinna być odwrotna do intuicji:
+<strong>niska pewność oceny to sygnał do ESKALACJI, nie do odrzucenia</strong>. Sprawy,
+których model nie rozumie, są warte spojrzenia człowieka częściej niż te,
+które rozumie doskonale.</p>
+<p>Praktycznie: zamiast jednego progu warto mieć dwa. Powyżej górnego —
+automat prowadzi sprawę. Poniżej dolnego — odrzucenie z uprzejmą
+odpowiedzią. Między nimi — człowiek. Szerokość tego pasa to jedyne
+pokrętło, którym realnie steruje się kompromisem między oszczędnością
+a ryzykiem.</p>
+<h2 id="trzy-liczby-które-pokazują-czy-łańcuch-działa">Trzy liczby, które pokazują, czy łańcuch działa<a href="#trzy-liczby-które-pokazują-czy-łańcuch-działa" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Trzy liczby, które pokazują, czy łańcuch działa"><span aria-hidden="true">#</span></a></h2>
+<p>Po uruchomieniu łatwo mierzyć rzeczy, które ładnie wyglądają, i pominąć te,
+które faktycznie coś mówią.</p>
+<p><strong>Czas do pierwszej odpowiedzi, liczony w medianie.</strong> Średnia jest tu myląca
+— kilka spraw obsłużonych po dwóch dniach potrafi ją zepsuć, a jednocześnie
+ukryć fakt, że reszta idzie w minuty. Mediana pokazuje typowy przypadek,
+i to ona odpowiada doświadczeniu klienta.</p>
+<p><strong>Odsetek leadów zakwalifikowanych bez człowieka</strong> — osobno dla każdego
+źródła. Formularz ze strony i zapytanie z targów to dwa różne światy;
+uśrednienie ukrywa, które źródło wymaga pracy.</p>
+<p><strong>Trafność kwalifikacji sprawdzona po fakcie.</strong> Po kwartale wiadomo,
+które leady zamieniły się w rozmowy. Zestawienie tego z pierwotną oceną
+modelu jest jedyną miarą, która mówi o jakości, a nie o szybkości.
+Bez niej można mieć system, który błyskawicznie odrzuca dobrych klientów.</p>
+<h2 id="najczęstszy-błąd-w-kolejności-wdrażania">Najczęstszy błąd w kolejności wdrażania<a href="#najczęstszy-błąd-w-kolejności-wdrażania" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Najczęstszy błąd w kolejności wdrażania"><span aria-hidden="true">#</span></a></h2>
+<p>Zespoły zaczynają od kwalifikacji, bo to najciekawszy etap — tam jest model
+i tam widać „AI”. To jest zwykle błąd: kwalifikacja wymaga spisanych
+kryteriów, których jeszcze nie ma, i danych, które przychodzą z etapu
+wzbogacenia.</p>
+<p>Kolejność, która działa, jest odwrotna do atrakcyjności: <strong>przechwycenie,
+routing, follow-up, wzbogacenie, kwalifikacja</strong>. Pierwsze trzy etapy to
+czysta integracja bez modelu, dają natychmiastową poprawę czasu reakcji
+i budują komplet danych, na których dopiero opłaca się uczyć kryteriów.</p>
+<h2 id="od-czego-zacząć-jeśli-dziś-wszystko-jest-ręczne">Od czego zacząć, jeśli dziś wszystko jest ręczne?<a href="#od-czego-zacząć-jeśli-dziś-wszystko-jest-ręczne" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Od czego zacząć, jeśli dziś wszystko jest ręczne?"><span aria-hidden="true">#</span></a></h2>
+<p>Zanim wybierzesz etap, warto sprawdzić, czy to w ogóle ten proces — opisaliśmy to w tekście <a href="https://automaticai.pl/blog/jak-znalezc-proces-warty-automatyzacji/">jak znaleźć proces warty automatyzacji</a>.</p>
+<p>Kolejność, która sprawdza się najczęściej:</p>
+<ol>
+<li><strong>Przechwycenie + routing</strong> — tydzień pracy, natychmiastowy efekt
+w czasie reakcji.</li>
+<li><strong>Follow-up automatyczny</strong> — kolejny szybki zysk, widoczny dla klientów.</li>
+<li><strong>Wzbogacenie</strong> — poprawia komfort zespołu.</li>
+<li><strong>Kwalifikacja AI</strong> — największy zysk, ale wymaga zdefiniowania kryteriów;
+najlepiej po 2–4 tygodniach zbierania danych z etapów 1–3.</li>
+</ol>
+<p>Każdy z tych etapów da się wycenić osobno — metodę liczenia zwrotu podałem w <a href="https://automaticai.pl/blog/jak-policzyc-roi-z-automatyzacji/">jak policzyć ROI z automatyzacji</a>.</p>
+<p>Podobny układ opisaliśmy w scenariuszu naszej realizacji
+<a href="https://automaticai.pl/realizacje/ai-lead-assistant/">AI Lead Assistant</a> — tam znajdziesz liczby
+przed i po. Są poglądowe, do czasu publikacji wyników z produkcji.</p>
+<aside class="my-9 flex flex-col gap-4 rounded-lg border border-volt/25 bg-volt-poswiata p-5 sm:flex-row sm:items-center sm:justify-between md:p-6"><div><p class="text-base font-semibold tracking-tight text-fg md:text-lg">Ile leadów miesięcznie przechodzi przez Wasz zespół?</p><p class="mt-1 text-sm leading-relaxed text-steel">Jeśli ponad sto, ten proces prawie na pewno się spina finansowo. Sprawdźmy to razem.</p></div><a class="group inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors duration-200 h-11 px-5 text-sm bg-volt text-void hover:bg-volt-hover disabled:cursor-not-allowed disabled:opacity-60 shrink-0" href="https://automaticai.pl/kontakt/">Porozmawiajmy<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></aside></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>5 rzeczy, których nauczyliśmy się, budując rozwiązania AI</title>
+      <link>https://automaticai.pl/blog/czego-nauczylismy-sie-budujac-ai/</link>
+      <guid isPermaLink="true">https://automaticai.pl/blog/czego-nauczylismy-sie-budujac-ai/</guid>
+      <description>Notatki z pola, bez lukru: o danych, które kłamią, użytkownikach, którzy obchodzą systemy, promptach, które nie są programowaniem, i o tym, dlaczego nudne rozwiązania wygrywają.</description>
+      <pubDate>Fri, 14 Aug 2026 09:00:00 GMT</pubDate>
+      <atom:updated>2026-09-10T09:00:00.000Z</atom:updated>
+      <dc:creator>Zespół</dc:creator>
+      <category>Z naszej praktyki</category>
+      <content:encoded><![CDATA[<h2 id="1-dane-zawsze-są-gorsze-niż-mówi-brief">1. Dane zawsze są gorsze, niż mówi brief<a href="#1-dane-zawsze-są-gorsze-niż-mówi-brief" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: 1. Dane zawsze są gorsze, niż mówi brief"><span aria-hidden="true">#</span></a></h2>
+<p>„Mamy uporządkowany CRM” oznacza zwykle: trzy formaty numerów telefonów,
+duplikaty i pole „notatki”, w którym żyje cała prawdziwa wiedza. Nauczyliśmy
+się zaczynać każdy projekt od audytu próbki danych — godzina patrzenia
+w realne rekordy oszczędza tydzień zdziwień na testach.</p>
+<h2 id="2-użytkownicy-obchodzą-systemy-które-im-przeszkadzają">2. Użytkownicy obchodzą systemy, które im przeszkadzają<a href="#2-użytkownicy-obchodzą-systemy-które-im-przeszkadzają" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: 2. Użytkownicy obchodzą systemy, które im przeszkadzają"><span aria-hidden="true">#</span></a></h2>
+<p>Najlepszy technicznie system przegra, jeśli dokłada zespołowi kliknięć.
+Widzieliśmy automatyzacje omijane mailami „na boku”, bo tak było szybciej.
+Od tamtej pory pytanie „czy to zmniejsza, czy zwiększa liczbę czynności
+użytkownika” zadajemy przy każdym elemencie interfejsu — i projektujemy
+z ludźmi, którzy będą z tego korzystać, nie tylko z ich szefami.</p>
+<h2 id="3-prompt-engineering-to-w-80-inżynieria-kontekstu">3. Prompt engineering to w 80% inżynieria kontekstu<a href="#3-prompt-engineering-to-w-80-inżynieria-kontekstu" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: 3. Prompt engineering to w 80% inżynieria kontekstu"><span aria-hidden="true">#</span></a></h2>
+<p>Magiczne formułki w promptach starzeją się szybko. To, co działa trwale,
+jest prozaiczne: dać modelowi właściwe dane (nie wszystkie!), jasne
+kryteria, <a href="https://automaticai.pl/blog/jak-zaprojektowac-workflow-ai/">strukturę wyjścia</a> i dobre
+opisy <a href="https://automaticai.pl/blog/function-calling-jak-dziala/">narzędzi</a>. Gdy prompt puchnie
+ponad ekran, to prawie zawsze znak, że problem leży w danych albo
+w podziale zadania — nie w słowach.</p>
+<h2 id="4-wyjątki-to-najcenniejsze-dane-w-systemie">4. Wyjątki to najcenniejsze dane w systemie<a href="#4-wyjątki-to-najcenniejsze-dane-w-systemie" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: 4. Wyjątki to najcenniejsze dane w systemie"><span aria-hidden="true">#</span></a></h2>
+<p>Sprawy, które automat oddaje ludziom, traktowaliśmy kiedyś jak koszt.
+Błąd: to darmowa lista rzeczy do poprawy. Przegląd wyjątków raz w tygodniu
+(pół godziny!) systematycznie zbija ich odsetek — a przy okazji buduje
+zaufanie zespołu, bo ludzie widzą, że system się uczy na ich decyzjach.</p>
+<h2 id="5-model-to-najmniejsza-część-systemu">5. Model to najmniejsza część systemu<a href="#5-model-to-najmniejsza-część-systemu" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: 5. Model to najmniejsza część systemu"><span aria-hidden="true">#</span></a></h2>
+<p>Gdy pokazujemy klientowi architekturę wdrożenia, model jest jednym
+prostokątem pośród kilkunastu. Reszta to pobranie danych, walidacja,
+uprawnienia, obsługa błędów, kolejka, dziennik i interfejs dla człowieka,
+który przejmuje wyjątki.</p>
+<p>To zaskakuje, bo publiczna dyskusja o AI dotyczy prawie wyłącznie tego
+jednego prostokąta. W rachunku za wdrożenie odpowiada on za mniejszość
+kosztu — i za mniejszość ryzyka.</p>
+<h2 id="6-zmiana-modelu-to-zmiana-produktu">6. Zmiana modelu to zmiana produktu<a href="#6-zmiana-modelu-to-zmiana-produktu" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: 6. Zmiana modelu to zmiana produktu"><span aria-hidden="true">#</span></a></h2>
+<p>Model to zależność zewnętrzna, która potrafi zmienić zachowanie bez
+Waszego udziału: nowa wersja bywa lepsza w rozumieniu, a jednocześnie
+inaczej formatuje odpowiedź — i psuje krok, który na tym formacie polegał.</p>
+<p>Wniosek jest prozaiczny i kosztował nas trochę nerwów: <strong>zestaw
+kilkudziesięciu realnych przypadków z oczekiwanym wynikiem</strong>, przepuszczany
+przed każdą zmianą modelu albo promptu. Nie jest to wyrafinowane narzędzie,
+tylko lista przypadków — ale to jedyna rzecz, która zamienia „chyba działa”
+w „wiem, że działa”.</p>
+<h2 id="5-nudne-wygrywa">5. Nudne wygrywa<a href="#5-nudne-wygrywa" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: 5. Nudne wygrywa"><span aria-hidden="true">#</span></a></h2>
+<p>Nasze najbardziej udane wdrożenia to te, o których nie ma co opowiadać:
+dokumenty się księgują, leady dostają odpowiedź, raporty się składają —
+tak jak w <a href="https://automaticai.pl/blog/jak-zautomatyzowalismy-kwalifikacje-leadow/">scenariuszu kwalifikacji leadów</a>.
+Zero efektu wow, sto procent efektu w liczbach. Jeśli mamy jedną radę
+z całej tej listy, brzmi ona: <strong>wybierajcie projekty, które będą nudne
+po wdrożeniu</strong> — ekscytujące niech zostaną prezentacje konkurencji.</p>
+<p>Więcej o tym, jak te lekcje przekładamy na sposób pracy, znajdziesz
+na stronie <a href="https://automaticai.pl/proces/">naszego procesu</a>.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Ile naprawdę kosztuje wdrożenie AI w firmie?</title>
+      <link>https://automaticai.pl/blog/ile-kosztuje-wdrozenie-ai/</link>
+      <guid isPermaLink="true">https://automaticai.pl/blog/ile-kosztuje-wdrozenie-ai/</guid>
+      <description>Widełki, składniki kosztów i rzeczy, które dostawcy przemilczają. Bez obietnic „od 99 zł miesięcznie” i bez straszenia — konkretne przedziały dla trzech typowych poziomów wdrożeń.</description>
+      <pubDate>Fri, 14 Aug 2026 09:00:00 GMT</pubDate>
+      <atom:updated>2026-09-10T09:00:00.000Z</atom:updated>
+      <dc:creator>Mariusz Perzyński</dc:creator>
+      <category>AI dla biznesu</category>
+      <content:encoded><![CDATA[<h2 id="trzy-składniki-zawsze-te-same">Trzy składniki, zawsze te same<a href="#trzy-składniki-zawsze-te-same" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Trzy składniki, zawsze te same"><span aria-hidden="true">#</span></a></h2>
+<p>Każdy budżet wdrożenia AI składa się z tej samej trójki:</p>
+<ol>
+<li><strong>Budowa</strong> — analiza procesu, integracje, logika, testy, wdrożenie.
+Jednorazowo; to tu idzie większość pieniędzy.</li>
+<li><strong>Koszty bieżące technologii</strong> — wywołania API modeli, hosting,
+ewentualne licencje narzędzi. Miesięcznie; zwykle zaskakująco małe.</li>
+<li><strong>Utrzymanie</strong> — opieka nad systemem: zmiany w API, poprawki, drobny
+rozwój. Rocznie ok. 10–20% kosztu budowy.</li>
+</ol>
+<aside class="panel my-7 p-5 border-volt/25"><p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb size-4 text-volt" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg><span class="font-mono text-label-sm tracking-label-4 uppercase text-volt">Pytanie, które warto zadać każdemu dostawcy</span></p><div class="mt-2.5 text-base leading-relaxed text-steel [&amp;_code]:text-fg [&amp;_strong]:text-fg"><p>„Ile będzie kosztować utrzymanie tego w drugim roku?” Jeśli odpowiedź
+brzmi „nic, samo działa” — rozmawiasz z kimś, kto nie utrzymywał jeszcze
+żadnego systemu na produkcji.</p></div></aside>
+<h2 id="widełki-dla-trzech-poziomów">Widełki dla trzech poziomów<a href="#widełki-dla-trzech-poziomów" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Widełki dla trzech poziomów"><span aria-hidden="true">#</span></a></h2>
+<p>Zakresy z naszej praktyki dla małych i średnich firm (netto, bez VAT):</p>
+<div class="my-7 overflow-x-auto rounded-lg border border-line"><table><thead><tr><th>Poziom</th><th>Przykład</th><th>Budowa</th><th>Bieżące /mies.</th></tr></thead><tbody><tr><td>automatyzacja procesu</td><td>leady do CRM z kwalifikacją i odpowiedzią</td><td>8–35 tys. zł</td><td>100–500 zł</td></tr><tr><td>system z AI</td><td>obieg dokumentów z odczytem i walidacją; asystent z bazą wiedzy</td><td>25–80 tys. zł</td><td>300–1500 zł</td></tr><tr><td>agent AI</td><td>samodzielna obsługa spraw w kilku systemach</td><td>od 60 tys. zł wzwyż</td><td>500–3000 zł</td></tr></tbody></table></div>
+<p>Rozrzut wewnątrz przedziałów robią dwie rzeczy: <strong>liczba integracji</strong>
+(każdy system to punkt styku do zbudowania i przetestowania) oraz <strong>jakość
+danych</strong> (bałagan w danych wejściowych to dodatkowe tygodnie pracy).</p>
+<h2 id="dlaczego-api-modeli-to-nie-jest-problem-budżetowy">Dlaczego API modeli to nie jest problem budżetowy?<a href="#dlaczego-api-modeli-to-nie-jest-problem-budżetowy" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Dlaczego API modeli to nie jest problem budżetowy?"><span aria-hidden="true">#</span></a></h2>
+<p>Przy typowych wolumenach MŚP — tysiące, nie miliony operacji miesięcznie —
+rachunki za modele językowe wynoszą setki, rzadko pojedyncze tysiące
+złotych. Obsługa jednego zgłoszenia czy dokumentu kosztuje w API grosze.
+Budżet wdrożenia konsumuje praca ludzi: projektowanie, integracje, testy,
+obsługa wyjątków.</p>
+<h2 id="co-zwykle-wypada-poza-wycenę">Co zwykle wypada poza wycenę<a href="#co-zwykle-wypada-poza-wycenę" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Co zwykle wypada poza wycenę"><span aria-hidden="true">#</span></a></h2>
+<p>Cztery pozycje, które rzadko stoją w ofercie, a zawsze mają swój koszt:</p>
+<p><strong>Czas Waszego zespołu.</strong> Wywiady o procesie, przekazanie wiedzy,
+odbiory, testy na realnych sprawach. Realnie kilkanaście–kilkadziesiąt
+godzin osób, które i tak mają co robić. To jest prawdziwy koszt i warto
+go zaplanować, zamiast odkrywać w trakcie.</p>
+<p><strong>Porządkowanie danych.</strong> Duplikaty w CRM, brakujące pola, trzy formaty
+tego samego. Automatyzacja tego nie naprawia — wymaga tego przed startem.</p>
+<p><strong>Zmiana w procesie.</strong> Automat rzadko wchodzi w proces bez ruszania go:
+zwykle trzeba coś przestawić po stronie ludzi. To praca organizacyjna,
+której nie zrobi dostawca.</p>
+<p><strong>Dostępy i integracje po Waszej stronie.</strong> Klucze do API, konta
+techniczne, zgody działu IT. Nic z tego nie kosztuje pieniędzy — potrafi
+kosztować tygodnie.</p>
+<h2 id="jak-porównać-dwie-oferty">Jak porównać dwie oferty<a href="#jak-porównać-dwie-oferty" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Jak porównać dwie oferty"><span aria-hidden="true">#</span></a></h2>
+<p>Cena rzadko jest porównywalna wprost, bo zakresy się różnią. Pięć pytań
+sprowadza je do wspólnego mianownika:</p>
+<ol>
+<li><strong>Co dokładnie jest w zakresie odbioru</strong> — jakie kryteria muszą być
+spełnione, żeby uznać wdrożenie za wykonane?</li>
+<li><strong>Kto płaci za integracje</strong>, które okażą się trudniejsze, niż zakładano?</li>
+<li><strong>Czyja jest własność</strong> kodu, konfiguracji i danych po zakończeniu?</li>
+<li><strong>Ile kosztuje drugi rok</strong> — utrzymanie, zmiany w API dostawców, drobny
+rozwój?</li>
+<li><strong>Co się dzieje, gdy odejdziecie od tego dostawcy</strong> — czy system da się
+przejąć, czy jest zamknięty?</li>
+</ol>
+<p>Oferta tańsza w punkcie pierwszym bywa najdroższa w punktach 4 i 5.</p>
+<h2 id="kiedy-koszt-się-broni">Kiedy koszt się broni?<a href="#kiedy-koszt-się-broni" class="kotwica-naglowka" aria-label="Odnośnik do sekcji: Kiedy koszt się broni?"><span aria-hidden="true">#</span></a></h2>
+<p>Wracamy do rachunku, który przewija się przez całą naszą bazę wiedzy:
+policz <a href="https://automaticai.pl/blog/jak-policzyc-roi-z-automatyzacji/">roczny koszt procesu</a>
+i zestaw go z widełkami powyżej. Proces za 100+ tysięcy złotych rocznie
+uzasadnia każdy poziom z tabeli. Proces za 10 tysięcy — najwyżej gotowe
+narzędzie z półki.</p>
+<aside class="my-9 flex flex-col gap-4 rounded-lg border border-volt/25 bg-volt-poswiata p-5 sm:flex-row sm:items-center sm:justify-between md:p-6"><div><p class="text-base font-semibold tracking-tight text-fg md:text-lg">Chcesz wycenę dla konkretnego procesu?</p><p class="mt-1 text-sm leading-relaxed text-steel">Opisz go w kilku zdaniach — odeślemy realne widełki i rekomendację poziomu, bez zobowiązań.</p></div><a class="group inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors duration-200 h-11 px-5 text-sm bg-volt text-void hover:bg-volt-hover disabled:cursor-not-allowed disabled:opacity-60 shrink-0" href="https://automaticai.pl/kontakt/">Porozmawiajmy<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></aside></div>]]></content:encoded>
+    </item>
+  </channel>
+</rss>
